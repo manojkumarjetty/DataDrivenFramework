@@ -1,0 +1,991 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">13</td><td class="num">0</td><td class="num">0</td><td class="num attn">40</td><td class="num">7,136,006</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.disuite.test.thoughtspot.AmazonS3DfCreationTest</td><td><a href="#m0">as3DfCreationTest</a></td><td rowspan="1">1604593640222</td><td rowspan="1">147639</td></tr><tr class="failedodd"><td rowspan="1">com.disuite.test.thoughtspot.AzureBlobStorageDataFlowCreationTest</td><td><a href="#m1">azureBlobStorageCreationTest</a></td><td rowspan="1">1604593794777</td><td rowspan="1">51392</td></tr><tr class="failedeven"><td rowspan="1">com.disuite.test.thoughtspot.BigQueryDataFlowCreationTest</td><td><a href="#m2">smDfCreationTest</a></td><td rowspan="1">1604594204436</td><td rowspan="1">288885</td></tr><tr class="failedodd"><td rowspan="6">com.disuite.test.thoughtspot.CreateFileConnectionTest</td><td><a href="#m3">tsDpCreationTest</a></td><td rowspan="6">1604593191432</td><td rowspan="6">77904</td></tr><tr class="failedodd"><td><a href="#m4">tsDpCreationTest</a></td></tr><tr class="failedodd"><td><a href="#m5">tsDpCreationTest</a></td></tr><tr class="failedodd"><td><a href="#m6">tsDpCreationTest</a></td></tr><tr class="failedodd"><td><a href="#m7">tsDpCreationTest</a></td></tr><tr class="failedodd"><td><a href="#m8">tsDpCreationTest</a></td></tr><tr class="failedeven"><td rowspan="2">com.disuite.test.thoughtspot.DB2DataFlowCreationTest</td><td><a href="#m9">smDfCreationTest</a></td><td rowspan="2">1604595675443</td><td rowspan="2">97614</td></tr><tr class="failedeven"><td><a href="#m10">smDfCreationTest</a></td></tr><tr class="failedodd"><td rowspan="1">com.disuite.test.thoughtspot.DbdlDataFlowCreationTest</td><td><a href="#m11">dbdlDfCreationTest</a></td><td rowspan="1">1604594097183</td><td rowspan="1">64941</td></tr><tr class="failedeven"><td rowspan="1">com.disuite.test.thoughtspot.DenodoFileCreationTest</td><td><a href="#m12">denodoConnectionTest</a></td><td rowspan="1">1604594168986</td><td rowspan="1">28616</td></tr><tr class="failedodd"><td rowspan="3">com.disuite.test.thoughtspot.GCSDataFlowCreationTest</td><td><a href="#m13">gcsDfCreationTest</a></td><td rowspan="3">1604594851393</td><td rowspan="3">81721</td></tr><tr class="failedodd"><td><a href="#m14">gcsDfCreationTest</a></td></tr><tr class="failedodd"><td><a href="#m15">gcsDfCreationTest</a></td></tr><tr class="failedeven"><td rowspan="2">com.disuite.test.thoughtspot.HiveDataFlowCreationTest</td><td><a href="#m16">smDfCreationTest</a></td><td rowspan="2">1604595086364</td><td rowspan="2">170915</td></tr><tr class="failedeven"><td><a href="#m17">smDfCreationTest</a></td></tr><tr class="failedodd"><td rowspan="1">com.disuite.test.thoughtspot.JdbcDataFlowCreationTest</td><td><a href="#m18">jdbcDfCreationTest</a></td><td rowspan="1">1604595779987</td><td rowspan="1">72961</td></tr><tr class="failedeven"><td rowspan="1">com.disuite.test.thoughtspot.MariaDbDataFlowCreationTest</td><td><a href="#m19">mariaDbDfCreationTest</a></td><td rowspan="1">1604595860112</td><td rowspan="1">221045</td></tr><tr class="failedodd"><td rowspan="1">com.disuite.test.thoughtspot.MongoDBDataFlowCreationTest</td><td><a href="#m20">mongoDbDfCreationTest</a></td><td rowspan="1">1604596203744</td><td rowspan="1">30068</td></tr><tr class="failedeven"><td rowspan="1">com.disuite.test.thoughtspot.MySqlDataFlowCreationTest</td><td><a href="#m21">sfDfCreationTest</a></td><td rowspan="1">1604596240643</td><td rowspan="1">221806</td></tr><tr class="failedodd"><td rowspan="1">com.disuite.test.thoughtspot.NetezzaDataFlowCreationTest</td><td><a href="#m22">netezzaDFCreation</a></td><td rowspan="1">1604596600575</td><td rowspan="1">218881</td></tr><tr class="failedeven"><td rowspan="2">com.disuite.test.thoughtspot.OracleDataFlowCreationTest</td><td><a href="#m23">oracleDFCreation</a></td><td rowspan="2">1604596826395</td><td rowspan="2">157509</td></tr><tr class="failedeven"><td><a href="#m24">oracleDFCreation</a></td></tr><tr class="failedodd"><td rowspan="3">com.disuite.test.thoughtspot.PostGreSqlDfCreationTest</td><td><a href="#m25">pgsDfCreationTest</a></td><td rowspan="3">1604597453032</td><td rowspan="3">236201</td></tr><tr class="failedodd"><td><a href="#m26">pgsDfCreationTest</a></td></tr><tr class="failedodd"><td><a href="#m27">pgsDfCreationTest</a></td></tr><tr class="failedeven"><td rowspan="3">com.disuite.test.thoughtspot.SAPSQLAnywhereDataFlowCreationTest</td><td><a href="#m28">smDfCreationTest</a></td><td rowspan="3">1604597935670</td><td rowspan="3">198738</td></tr><tr class="failedeven"><td><a href="#m29">smDfCreationTest</a></td></tr><tr class="failedeven"><td><a href="#m30">smDfCreationTest</a></td></tr><tr class="failedodd"><td rowspan="1">com.disuite.test.thoughtspot.SQLServerDataFlowCreationTest</td><td><a href="#m31">sqlServerConnectionTest</a></td><td rowspan="1">1604598353396</td><td rowspan="1">199183</td></tr><tr class="failedeven"><td rowspan="3">com.disuite.test.thoughtspot.SalesforceDataFlowCreationTest</td><td><a href="#m32">salesForceDfCreationTest</a></td><td rowspan="3">1604598925239</td><td rowspan="3">49453</td></tr><tr class="failedeven"><td><a href="#m33">salesForceDfCreationTest</a></td></tr><tr class="failedeven"><td><a href="#m34">salesForceDfCreationTest</a></td></tr><tr class="failedodd"><td rowspan="1">com.disuite.test.thoughtspot.SnowflakeDataFlowCreationTest</td><td><a href="#m35">sfDfCreationTest</a></td><td rowspan="1">1604598981540</td><td rowspan="1">95622</td></tr><tr class="failedeven"><td rowspan="3">com.disuite.test.thoughtspot.SpliceMachineDataFlowCreationTest</td><td><a href="#m36">smDfCreationTest</a></td><td rowspan="3">1604599423160</td><td rowspan="3">52686</td></tr><tr class="failedeven"><td><a href="#m37">smDfCreationTest</a></td></tr><tr class="failedeven"><td><a href="#m38">smDfCreationTest</a></td></tr><tr class="failedodd"><td rowspan="1">com.disuite.test.thoughtspot.TeraDataDataFlowCreationTest</td><td><a href="#m39">tsDfCreationTest</a></td><td rowspan="1">1604599541727</td><td rowspan="1">302344</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.disuite.test.thoughtspot.BigQueryDataFlowCreationTest</td><td><a href="#m40">smDfCreationTest</a></td><td rowspan="1">1604594500374</td><td rowspan="1">256305</td></tr><tr class="passedodd"><td rowspan="2">com.disuite.test.thoughtspot.CassandraDataFlowCreationTest</td><td><a href="#m41">cassandraDfCreationTest</a></td><td rowspan="2">1604593975732</td><td rowspan="2">114487</td></tr><tr class="passedodd"><td><a href="#m42">cassandraDfCreationTest</a></td></tr><tr class="passedeven"><td rowspan="1">com.disuite.test.thoughtspot.DB2DataFlowCreationTest</td><td><a href="#m43">smDfCreationTest</a></td><td rowspan="1">1604595522319</td><td rowspan="1">146157</td></tr><tr class="passedodd"><td rowspan="1">com.disuite.test.thoughtspot.MariaDbDataFlowCreationTest</td><td><a href="#m44">mariaDbDfCreationTest</a></td><td rowspan="1">1604596088136</td><td rowspan="1">108648</td></tr><tr class="passedeven"><td rowspan="1">com.disuite.test.thoughtspot.MySqlDataFlowCreationTest</td><td><a href="#m45">sfDfCreationTest</a></td><td rowspan="1">1604596469356</td><td rowspan="1">124213</td></tr><tr class="passedodd"><td rowspan="1">com.disuite.test.thoughtspot.OracleDataFlowCreationTest</td><td><a href="#m46">oracleDFCreation</a></td><td rowspan="1">1604596990889</td><td rowspan="1">117652</td></tr><tr class="passedeven"><td rowspan="2">com.disuite.test.thoughtspot.SQLServerDataFlowCreationTest</td><td><a href="#m47">sqlServerConnectionTest</a></td><td rowspan="2">1604598559508</td><td rowspan="2">122710</td></tr><tr class="passedeven"><td><a href="#m48">sqlServerConnectionTest</a></td></tr><tr class="passedodd"><td rowspan="2">com.disuite.test.thoughtspot.SnowflakeDataFlowCreationTest</td><td><a href="#m49">sfDfCreationTest</a></td><td rowspan="2">1604599207995</td><td rowspan="2">153189</td></tr><tr class="passedodd"><td><a href="#m50">sfDfCreationTest</a></td></tr><tr class="passedeven"><td rowspan="2">com.disuite.test.thoughtspot.TeraDataDataFlowCreationTest</td><td><a href="#m51">tsDfCreationTest</a></td><td rowspan="2">1604599851034</td><td rowspan="2">200862</td></tr><tr class="passedeven"><td><a href="#m52">tsDfCreationTest</a></td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">com.disuite.test.thoughtspot.AmazonS3DfCreationTest#as3DfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=TESTDATA_SIMPLE.dat, SelectValue=Amazon S3, Bucket=ditestbucket-west1, Dbname=Filesort, otherDelimiter=, SecretKey=f0Hw/tOjChaOWpa/fsPh1gjS5NRbHte/58CRLGa2, Runmode=Y, ConnectionName=CONN_AS3_ATN, TsTable=AS3_ATN_TSDA_SIMPLE, DBtype=, AccessKey=AKIAI2MCUUS3KLAMBZDQ, ExtractType=[Extract Type : AWS_API], columnDelimiter=Pipe (|), AmazonS3URL=https://s3-us-west-1.amazonaws.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;text-success fs-12&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63659}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 234e95faf6ab97e996c8b1ded978ef66
+*** Element info: {Using=xpath, value=//div[@class=&apos;text-success fs-12&apos;]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:427)
+	at com.disuite.pages.thoughtspot.AmazonS3DfCreation.s3DfCreation(AmazonS3DfCreation.java:45)
+	at com.disuite.test.thoughtspot.AmazonS3DfCreationTest.as3DfCreationTest(AmazonS3DfCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.disuite.test.thoughtspot.AzureBlobStorageDataFlowCreationTest#azureBlobStorageCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{SelectValue=Azure Blob Storage, Dbname=Iphone_Users.dat, Account=azuresqldiag, azureKey=6rsOB0DOSlMfm8rQENy9C0FTlyXdRRRRqkvcyZJ3Nkk1BBijh3CS27/g3arTht3qyJ3lIAOcpnWnZxQ5mvzs6Q==, Container=diyotta, Runmode=Y, ConnectionName=AzureBlobstorage_conn_SAS1, TsTable=Iphone_Users_ATN_TS, AzureauthTypeInput=Azure account key , ExtractionMode=[Extraction Mode : File], ExtractType=[Extract Type : BLOBSTORAGE_API]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63794}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b403b2e1b4f29173c47b8f0a7c38205a
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.tsdfCreation(DataFlowCreation.java:39)
+	at com.disuite.test.thoughtspot.AzureBlobStorageDataFlowCreationTest.azureBlobStorageCreationTest(AzureBlobStorageDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.disuite.test.thoughtspot.BigQueryDataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{syncColumnDelimiter=1, Dbname=cdc_demo, SelectValue=Google BigQuery, AddTableSync=sel_medium, AzureauthTypeInput=Service Account, postSyncQuery=ALTER TABLE &quot;DataFlow_DB&quot;.&quot;falcon_default_schema&quot;.&quot;Test_tql&quot; DROP COLUMN BQ_M;, TsTable=ATN_BQ_MED, syncProperty=Yes, escapeCharacter=&quot;, ExtractionMode=[Extraction Mode : File], enclosingCharacterInput=DOUBLE, tsLoadOptions=test, waitForFile=/home/admin/Automation_test/Bigquery_medium.dat, Runmode=Y, allowLargeResultSet=true, fetchSize=1000, ConnectionName=CONN_BQ_MED, azureKey={
+  &quot;type&quot;: &quot;service_account&quot;,
+  &quot;project_id&quot;: &quot;phrasal-indexer-243307&quot;,
+  &quot;private_key_id&quot;: &quot;d76c8f1cc0a368e91da71e5bd84957bef1fa0c92&quot;,
+  &quot;private_key&quot;: &quot;-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC5vp5D1AdZBbss\nfSpRlLaKAqSmjIAogfcd+qsu7bT0qHljdzphS8yf7YztH2rW8jucsSFFoAvD7Pfy\nvq81XTmP4slP3Vele4F+sotcvmd/A+JXjZmyfdP+Eg7FNGv5Tx2Q6ub8nHgE5Jzf\n20YTnqbC05NpNaG8P3Ym1wJDknpRmvFFF48bQ/xocZppVHzaayFI22l6vBgEpgxv\njC9m8LfO1/sC0/gcwWBoF4YMO1ZG04CJn/nCyEMJBL7Gjs57uEmV5esYf1svRMDA\nd0LpZG6xcMoBUM+uxwyxS70CPYSofFyRu+Ohq3FneNI+LdJgLFxymr11BwFz06gD\n+6GlUsuXAgMBAAECggEAA5gAj+dmTP6jZHT3gKST84+hh+doA2CgW2AiN8I5ohIw\nZxBDfOZuixmZhGz7MDV3mcyDjElQcPYAxh2SXkHzfykwI+9wZq9BDiZ+M8krT3XP\nx0niE2YD2AKZbo9ZF3XEaK1i0rhkShPyRRKFBJQpPdPCImL7Qh0oOBAo5w3KeBGy\n6nkj+3p5055wfDeuuztZitRCrwVDqobEJGPQLLmraq4OmGFHNlnUKKfLx22InNRa\n+psp+x0Bs0QfQJKi/kA5MNJR+TMlruiIWCsGLE/3Vb72H/1oILRkE8AQeZn8dOi/\nTQzzgNEFjVIC8BkiUsdw+Zt+3ht0FO7OjWPQXvpRYQKBgQDr7RnUta8IntZsIXLp\ns+NRCUQMjhOdH/ieJ5cINdatyS1rh3lTH78GU+nduWqNgShZ0T6uG6fflmWXo2kV\nwwLTXLyYbwVo+che+GTMm/KJOWd5XkUa9n8vS2XJgnpcPbIDzy6y0nBv8CHmuVBP\ndTooJugI3R1VLjfzkMnAbLJeHQKBgQDJjHjKbFqLMB0tvo9qLv5ev6GOVNhkUtLZ\nDQOTTC/QnTEq2d2NpMYVvccCHt2yfZlsYYmOOLGWRQeg8LJTmJBtIQh0rUm3phkz\nm8iAIJi7ISmk1gRp/z4EIgihmRuTPVLIpjxSXt9FowlXTr5VthkEb/GZnrZaoRaP\nQxIHa8SyQwKBgQDoQgS5+RqVe/lPfiZomCVi86JAUeZROtZArGztMkNj1reWMkpo\nYMpn6lhDZXPWVp5ovavdL3C2lpLxE3gyakbv2U35KuLCk5SEmjhxjdzY5uBNBVc2\n0hAneSx9kqvu/vWu9lncxXrXWCmnwCul7ZwRRywK/dMQtm1ypMlZXCjEqQKBgQCP\nAanvTySLoC8D9zNBT2jTh7s1B4Sm4pGSyoYf7K38opxxYDawuxqF8KsVGRuK+01y\nNl7o19dB3WcFTePqJtVLaWXbi91DfophMQb5yqc0F9q5h9WH9EBnpFJlfwKu3ZMw\npaslcwWPHpiRJ2Er5dIocNmHe7K96ZDdQ+S1+USOiwKBgQCVfrWax4JNfP1XBfko\n0P1gN6lQqSkAUo4yq5SwvriU+jNiKvHRyXveUCIv42w+NGp8GKPoQ0BKZ0TNCJhN\nCdQXJdye9JpMX6Y1ef7goOod2kt879JMZC5NnNptETy5DZrQMwMwcgBiBfKaQOS4\n+RR7/09NuNihJDdLWAZqqrZvvg==\n-----END PRIVATE KEY-----\n&quot;,
+  &quot;client_email&quot;: &quot;diyotta@phrasal-indexer-243307.iam.gserviceaccount.com&quot;,
+  &quot;client_id&quot;: &quot;105738357913910739210&quot;,
+  &quot;auth_uri&quot;: &quot;https://accounts.google.com/o/oauth2/auth&quot;,
+  &quot;token_uri&quot;: &quot;https://oauth2.googleapis.com/token&quot;,
+  &quot;auth_provider_x509_cert_url&quot;: &quot;https://www.googleapis.com/oauth2/v1/certs&quot;,
+  &quot;client_x509_cert_url&quot;: &quot;https://www.googleapis.com/robot/v1/metadata/x509/diyotta%40phrasal-indexer-243307.iam.gserviceaccount.com&quot;
+}, preSyncQuery=ALTER TABLE &quot;DataFlow_DB&quot;.&quot;falcon_default_schema&quot;.&quot;Test_tql&quot; ADD COLUMN BQ_M varchar(20) default null;, Account=phrasal-indexer-243307, ExtractType=[Extract Type : BQAPI], addCondition=FIRST_NAME =&apos;Lavonda&apos;, dataloadingModeInput=File, syncMode=Append}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 96a200ea44585969297b67c1a5766ecf
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.BigQueryDataFlowCreationMethod.tsdfCreation(BigQueryDataFlowCreationMethod.java:69)
+	at com.disuite.test.thoughtspot.BigQueryDataFlowCreationTest.smDfCreationTest(BigQueryDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.disuite.test.thoughtspot.CreateFileConnectionTest#tsDpCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{FilePath=/home/admin/Automation_test, SelectValue=Files, otherDelimiter=, Runmode=Y, ConnectionName=CONNEC_FF_SEMICOLON, EnterTable=test_semicolon.dat, TsTable=ATN_FF_SEMICOLON, ExtractionMode=[Extraction Mode : File], ExtractType=[Extract Type : FILE], columnDelimiter=Semicolon (;)}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: extraction mode does not matched expected [[Extraction Mode : File]] but found [[Extraction Mode : F]]
+	at com.disuite.pages.thoughtspot.DataFlowCreation.verifyExtractionMode(DataFlowCreation.java:444)
+	at com.disuite.pages.thoughtspot.CreateFileConnection.createFileConnection(CreateFileConnection.java:72)
+	at com.disuite.test.thoughtspot.CreateFileConnectionTest.tsDpCreationTest(CreateFileConnectionTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.disuite.test.thoughtspot.CreateFileConnectionTest#tsDpCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{FilePath=/home/admin/Automation_test, SelectValue=Files, otherDelimiter=, Runmode=Y, ConnectionName=CONNEC_FF_TS, EnterTable=test_tab.dat, TsTable=ATN_FF_TAB, ExtractionMode=[Extraction Mode : File], ExtractType=[Extract Type : FILE], columnDelimiter=Tab}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;text-success fs-12&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63483}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8a45e67eb7da7a5d2fef5602a5100aa6
+*** Element info: {Using=xpath, value=//div[@class=&apos;text-success fs-12&apos;]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:427)
+	at com.disuite.pages.thoughtspot.CreateFileConnection.createFileConnection(CreateFileConnection.java:70)
+	at com.disuite.test.thoughtspot.CreateFileConnectionTest.tsDpCreationTest(CreateFileConnectionTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.disuite.test.thoughtspot.CreateFileConnectionTest#tsDpCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{FilePath=/home/admin/Automation_test, SelectValue=Files, otherDelimiter=, Runmode=Y, ConnectionName=CONNEC_FF_COMMA, EnterTable=test_comma.dat, TsTable=ATN_FF_COMMAA, ExtractionMode=[Extraction Mode : File], ExtractType=[Extract Type : FILE], columnDelimiter=Comma (,)}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63138}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d49b81a04f6be30e2451728eb245d262
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.CreateFileConnection.createFileConnection(CreateFileConnection.java:70)
+	at com.disuite.test.thoughtspot.CreateFileConnectionTest.tsDpCreationTest(CreateFileConnectionTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.disuite.test.thoughtspot.CreateFileConnectionTest#tsDpCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{FilePath=/home/admin/Automation_test, SelectValue=Files, otherDelimiter=*, Runmode=Y, ConnectionName=CONNEC_FF_OTHER, EnterTable=test_other.dat, TsTable=ATN_FF_OTHER, ExtractionMode=[Extraction Mode : File], ExtractType=[Extract Type : FILE], columnDelimiter=Other}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//bk-select[@name=&apos;schTaskCalenderRepeatId&apos;]//div[@id=&apos;selectHeadId&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63579}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 72704136b7d7b22583b85d24dd70dfbb
+*** Element info: {Using=xpath, value=//bk-select[@name=&apos;schTaskCalenderRepeatId&apos;]//div[@id=&apos;selectHeadId&apos;]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.scheduleDoesNotRepeat(DataFlowCreation.java:165)
+	at com.disuite.pages.thoughtspot.CreateFileConnection.createFileConnection(CreateFileConnection.java:48)
+	at com.disuite.test.thoughtspot.CreateFileConnectionTest.tsDpCreationTest(CreateFileConnectionTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.disuite.test.thoughtspot.CreateFileConnectionTest#tsDpCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{FilePath=/home/admin/Automation_test, SelectValue=Files, otherDelimiter=, Runmode=Y, ConnectionName=CONNEC_FF_SPACE, EnterTable=test_space.dat, TsTable=ATN_FF_SPACE, ExtractionMode=[Extraction Mode : File], ExtractType=[Extract Type : FILE], columnDelimiter=Space}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63406}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 556fe846f7069c1590c641ab5004db66
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.CreateFileConnection.createFileConnection(CreateFileConnection.java:70)
+	at com.disuite.test.thoughtspot.CreateFileConnectionTest.tsDpCreationTest(CreateFileConnectionTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.disuite.test.thoughtspot.CreateFileConnectionTest#tsDpCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{FilePath=/home/admin/Automation_test, SelectValue=Files, otherDelimiter=, Runmode=Y, ConnectionName=CONNEC_FF_PIPE, EnterTable=test_pipe.dat, TsTable=ATN_FF_PIPE, ExtractionMode=[Extraction Mode : File], ExtractType=[Extract Type : FILE], columnDelimiter=Pipe (|)}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;text-success fs-12&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63306}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: aec596a1e1b8d514211013ac452c9b7d
+*** Element info: {Using=xpath, value=//div[@class=&apos;text-success fs-12&apos;]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:427)
+	at com.disuite.pages.thoughtspot.CreateFileConnection.createFileConnection(CreateFileConnection.java:70)
+	at com.disuite.test.thoughtspot.CreateFileConnectionTest.tsDpCreationTest(CreateFileConnectionTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.disuite.test.thoughtspot.DB2DataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_str!ct #%^&amp;*()_+-=n@me, SelectValue=IBM Db2, Username=diqauser, Dbname=DIQA_DM, Host=172.40.9.201, Runmode=Y, dbAlias=diqadb2, ConnectionName=CONNEC_DB2_SN1, Port=50001, Database=diqadb2, Password=t!h^84hv7B?si3hG, TsTable=ATN_DB2_SNM, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC], platformValueInput=LUW, vesionInput=10.x, codePageInput=ASCII}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//bk-select[@name=&apos;schTaskCalenderRepeatId&apos;]//div[@id=&apos;selectHeadId&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49175}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c1a732378c4a8ec89a0017cb8d6b9d0c
+*** Element info: {Using=xpath, value=//bk-select[@name=&apos;schTaskCalenderRepeatId&apos;]//div[@id=&apos;selectHeadId&apos;]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.scheduleDoesNotRepeat(DataFlowCreation.java:165)
+	at com.disuite.pages.thoughtspot.DB2ConnectionMethods.createDB2Connection(DB2ConnectionMethods.java:44)
+	at com.disuite.test.thoughtspot.DB2DataFlowCreationTest.smDfCreationTest(DB2DataFlowCreationTest.java:27)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.disuite.test.thoughtspot.DB2DataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_medium, SelectValue=IBM Db2, Username=diqauser, Dbname=DIQA_DM, Host=172.40.9.201, Runmode=Y, dbAlias=diqadb2, ConnectionName=CONNEC_DB2_MED4, Port=50001, Database=diqadb2, Password=t!h^84hv7B?si3hG, TsTable=sel_pre_post_db23, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC], platformValueInput=LUW, vesionInput=10.x, codePageInput=ASCII}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65176}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b094993eea0a1eb0ead61531c18cd820
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.DB2ConnectionMethods.createDB2Connection(DB2ConnectionMethods.java:68)
+	at com.disuite.test.thoughtspot.DB2DataFlowCreationTest.smDfCreationTest(DB2DataFlowCreationTest.java:27)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">com.disuite.test.thoughtspot.DbdlDataFlowCreationTest#dbdlDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{ClusterId=0807-073904-grout714, AddTableSync=sel_medium, SelectValue=Databricks Delta Lake, Dbname=default, DBFSStageLocation=/dataflow/stage, Serverhostname=dbc-b8a5b15e-8cce.cloud.databricks.com, Runmode=Y, HTTPpath=sql/protocolv1/o/1509076772673197/0807-073904-grout714, ConnectionName=CONN_DBDL_MED, Port=443, TsTable=DBDL_ATN_MDM, Protocol=https, accessToken=dapie672a2758ac6f2042ddfba4ebf1ba36d, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : Spark API]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64095}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: e8864e9ea69cb4234055d675359271d3
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.DbdlConnectionMethods.createDbdlConnection(DbdlConnectionMethods.java:30)
+	at com.disuite.test.thoughtspot.DbdlDataFlowCreationTest.dbdlDfCreationTest(DbdlDataFlowCreationTest.java:29)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">com.disuite.test.thoughtspot.DenodoFileCreationTest#denodoConnectionTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=all_data_types, SelectValue=Denodo, Username=admin, Dbname=didb, Host=172.40.9.96, Runmode=Y, ConnectionName=CONNEC_DENODO_ADT, Port=9999, Database=didb, Password=admin, TsTable=DENODO_ATN_ADT, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.fiveFieldsConn(DataFlowCreation.java:367)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.enterConnectionDetails(DataFlowCreation.java:237)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.tsdfCreation(DataFlowCreation.java:34)
+	at com.disuite.test.thoughtspot.DenodoFileCreationTest.denodoConnectionTest(DenodoFileCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">com.disuite.test.thoughtspot.GCSDataFlowCreationTest#gcsDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=Semicolon.dat, SelectValue=Google Cloud Storage, Dbname=Automation, Account=phrasal-indexer-243307, azureKey={
+  &quot;type&quot;: &quot;service_account&quot;,
+  &quot;project_id&quot;: &quot;phrasal-indexer-243307&quot;,
+  &quot;private_key_id&quot;: &quot;d76c8f1cc0a368e91da71e5bd84957bef1fa0c92&quot;,
+  &quot;private_key&quot;: &quot;-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC5vp5D1AdZBbss\nfSpRlLaKAqSmjIAogfcd+qsu7bT0qHljdzphS8yf7YztH2rW8jucsSFFoAvD7Pfy\nvq81XTmP4slP3Vele4F+sotcvmd/A+JXjZmyfdP+Eg7FNGv5Tx2Q6ub8nHgE5Jzf\n20YTnqbC05NpNaG8P3Ym1wJDknpRmvFFF48bQ/xocZppVHzaayFI22l6vBgEpgxv\njC9m8LfO1/sC0/gcwWBoF4YMO1ZG04CJn/nCyEMJBL7Gjs57uEmV5esYf1svRMDA\nd0LpZG6xcMoBUM+uxwyxS70CPYSofFyRu+Ohq3FneNI+LdJgLFxymr11BwFz06gD\n+6GlUsuXAgMBAAECggEAA5gAj+dmTP6jZHT3gKST84+hh+doA2CgW2AiN8I5ohIw\nZxBDfOZuixmZhGz7MDV3mcyDjElQcPYAxh2SXkHzfykwI+9wZq9BDiZ+M8krT3XP\nx0niE2YD2AKZbo9ZF3XEaK1i0rhkShPyRRKFBJQpPdPCImL7Qh0oOBAo5w3KeBGy\n6nkj+3p5055wfDeuuztZitRCrwVDqobEJGPQLLmraq4OmGFHNlnUKKfLx22InNRa\n+psp+x0Bs0QfQJKi/kA5MNJR+TMlruiIWCsGLE/3Vb72H/1oILRkE8AQeZn8dOi/\nTQzzgNEFjVIC8BkiUsdw+Zt+3ht0FO7OjWPQXvpRYQKBgQDr7RnUta8IntZsIXLp\ns+NRCUQMjhOdH/ieJ5cINdatyS1rh3lTH78GU+nduWqNgShZ0T6uG6fflmWXo2kV\nwwLTXLyYbwVo+che+GTMm/KJOWd5XkUa9n8vS2XJgnpcPbIDzy6y0nBv8CHmuVBP\ndTooJugI3R1VLjfzkMnAbLJeHQKBgQDJjHjKbFqLMB0tvo9qLv5ev6GOVNhkUtLZ\nDQOTTC/QnTEq2d2NpMYVvccCHt2yfZlsYYmOOLGWRQeg8LJTmJBtIQh0rUm3phkz\nm8iAIJi7ISmk1gRp/z4EIgihmRuTPVLIpjxSXt9FowlXTr5VthkEb/GZnrZaoRaP\nQxIHa8SyQwKBgQDoQgS5+RqVe/lPfiZomCVi86JAUeZROtZArGztMkNj1reWMkpo\nYMpn6lhDZXPWVp5ovavdL3C2lpLxE3gyakbv2U35KuLCk5SEmjhxjdzY5uBNBVc2\n0hAneSx9kqvu/vWu9lncxXrXWCmnwCul7ZwRRywK/dMQtm1ypMlZXCjEqQKBgQCP\nAanvTySLoC8D9zNBT2jTh7s1B4Sm4pGSyoYf7K38opxxYDawuxqF8KsVGRuK+01y\nNl7o19dB3WcFTePqJtVLaWXbi91DfophMQb5yqc0F9q5h9WH9EBnpFJlfwKu3ZMw\npaslcwWPHpiRJ2Er5dIocNmHe7K96ZDdQ+S1+USOiwKBgQCVfrWax4JNfP1XBfko\n0P1gN6lQqSkAUo4yq5SwvriU+jNiKvHRyXveUCIv42w+NGp8GKPoQ0BKZ0TNCJhN\nCdQXJdye9JpMX6Y1ef7goOod2kt879JMZC5NnNptETy5DZrQMwMwcgBiBfKaQOS4\n+RR7/09NuNihJDdLWAZqqrZvvg==\n-----END PRIVATE KEY-----\n&quot;,
+  &quot;client_email&quot;: &quot;diyotta@phrasal-indexer-243307.iam.gserviceaccount.com&quot;,
+  &quot;client_id&quot;: &quot;105738357913910739210&quot;,
+  &quot;auth_uri&quot;: &quot;https://accounts.google.com/o/oauth2/auth&quot;,
+  &quot;token_uri&quot;: &quot;https://oauth2.googleapis.com/token&quot;,
+  &quot;auth_provider_x509_cert_url&quot;: &quot;https://www.googleapis.com/oauth2/v1/certs&quot;,
+  &quot;client_x509_cert_url&quot;: &quot;https://www.googleapis.com/robot/v1/metadata/x509/diyotta%40phrasal-indexer-243307.iam.gserviceaccount.com&quot;
+}, Container=diyottacloud, Runmode=Y, ConnectionName=GCS_CONN_SEMICOLON_ATMN, TsTable=SemicolonATN_TABLE.dat, AzureauthTypeInput=Service Account}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64785}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8b1a55a8d6fa76da65e609895a2be6ba
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.GCSConnection.gcsConnection(GCSConnection.java:33)
+	at com.disuite.test.thoughtspot.GCSDataFlowCreationTest.gcsDfCreationTest(GCSDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">com.disuite.test.thoughtspot.GCSDataFlowCreationTest#gcsDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=Space.dat, SelectValue=Google Cloud Storage, Dbname=Automation, Account=phrasal-indexer-243307, azureKey={
+  &quot;type&quot;: &quot;service_account&quot;,
+  &quot;project_id&quot;: &quot;phrasal-indexer-243307&quot;,
+  &quot;private_key_id&quot;: &quot;d76c8f1cc0a368e91da71e5bd84957bef1fa0c92&quot;,
+  &quot;private_key&quot;: &quot;-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC5vp5D1AdZBbss\nfSpRlLaKAqSmjIAogfcd+qsu7bT0qHljdzphS8yf7YztH2rW8jucsSFFoAvD7Pfy\nvq81XTmP4slP3Vele4F+sotcvmd/A+JXjZmyfdP+Eg7FNGv5Tx2Q6ub8nHgE5Jzf\n20YTnqbC05NpNaG8P3Ym1wJDknpRmvFFF48bQ/xocZppVHzaayFI22l6vBgEpgxv\njC9m8LfO1/sC0/gcwWBoF4YMO1ZG04CJn/nCyEMJBL7Gjs57uEmV5esYf1svRMDA\nd0LpZG6xcMoBUM+uxwyxS70CPYSofFyRu+Ohq3FneNI+LdJgLFxymr11BwFz06gD\n+6GlUsuXAgMBAAECggEAA5gAj+dmTP6jZHT3gKST84+hh+doA2CgW2AiN8I5ohIw\nZxBDfOZuixmZhGz7MDV3mcyDjElQcPYAxh2SXkHzfykwI+9wZq9BDiZ+M8krT3XP\nx0niE2YD2AKZbo9ZF3XEaK1i0rhkShPyRRKFBJQpPdPCImL7Qh0oOBAo5w3KeBGy\n6nkj+3p5055wfDeuuztZitRCrwVDqobEJGPQLLmraq4OmGFHNlnUKKfLx22InNRa\n+psp+x0Bs0QfQJKi/kA5MNJR+TMlruiIWCsGLE/3Vb72H/1oILRkE8AQeZn8dOi/\nTQzzgNEFjVIC8BkiUsdw+Zt+3ht0FO7OjWPQXvpRYQKBgQDr7RnUta8IntZsIXLp\ns+NRCUQMjhOdH/ieJ5cINdatyS1rh3lTH78GU+nduWqNgShZ0T6uG6fflmWXo2kV\nwwLTXLyYbwVo+che+GTMm/KJOWd5XkUa9n8vS2XJgnpcPbIDzy6y0nBv8CHmuVBP\ndTooJugI3R1VLjfzkMnAbLJeHQKBgQDJjHjKbFqLMB0tvo9qLv5ev6GOVNhkUtLZ\nDQOTTC/QnTEq2d2NpMYVvccCHt2yfZlsYYmOOLGWRQeg8LJTmJBtIQh0rUm3phkz\nm8iAIJi7ISmk1gRp/z4EIgihmRuTPVLIpjxSXt9FowlXTr5VthkEb/GZnrZaoRaP\nQxIHa8SyQwKBgQDoQgS5+RqVe/lPfiZomCVi86JAUeZROtZArGztMkNj1reWMkpo\nYMpn6lhDZXPWVp5ovavdL3C2lpLxE3gyakbv2U35KuLCk5SEmjhxjdzY5uBNBVc2\n0hAneSx9kqvu/vWu9lncxXrXWCmnwCul7ZwRRywK/dMQtm1ypMlZXCjEqQKBgQCP\nAanvTySLoC8D9zNBT2jTh7s1B4Sm4pGSyoYf7K38opxxYDawuxqF8KsVGRuK+01y\nNl7o19dB3WcFTePqJtVLaWXbi91DfophMQb5yqc0F9q5h9WH9EBnpFJlfwKu3ZMw\npaslcwWPHpiRJ2Er5dIocNmHe7K96ZDdQ+S1+USOiwKBgQCVfrWax4JNfP1XBfko\n0P1gN6lQqSkAUo4yq5SwvriU+jNiKvHRyXveUCIv42w+NGp8GKPoQ0BKZ0TNCJhN\nCdQXJdye9JpMX6Y1ef7goOod2kt879JMZC5NnNptETy5DZrQMwMwcgBiBfKaQOS4\n+RR7/09NuNihJDdLWAZqqrZvvg==\n-----END PRIVATE KEY-----\n&quot;,
+  &quot;client_email&quot;: &quot;diyotta@phrasal-indexer-243307.iam.gserviceaccount.com&quot;,
+  &quot;client_id&quot;: &quot;105738357913910739210&quot;,
+  &quot;auth_uri&quot;: &quot;https://accounts.google.com/o/oauth2/auth&quot;,
+  &quot;token_uri&quot;: &quot;https://oauth2.googleapis.com/token&quot;,
+  &quot;auth_provider_x509_cert_url&quot;: &quot;https://www.googleapis.com/oauth2/v1/certs&quot;,
+  &quot;client_x509_cert_url&quot;: &quot;https://www.googleapis.com/robot/v1/metadata/x509/diyotta%40phrasal-indexer-243307.iam.gserviceaccount.com&quot;
+}, Container=diyottacloud, Runmode=Y, ConnectionName=GCS_CONN_SPACE_ATMN, TsTable=ATN_TABLE_Space.dat, AzureauthTypeInput=Service Account}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64870}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: fa1788082124334c3238e8c054555609
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.GCSConnection.gcsConnection(GCSConnection.java:33)
+	at com.disuite.test.thoughtspot.GCSDataFlowCreationTest.gcsDfCreationTest(GCSDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">com.disuite.test.thoughtspot.GCSDataFlowCreationTest#gcsDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=Pipe.dat, SelectValue=Google Cloud Storage, Dbname=Automation, Account=phrasal-indexer-243307, azureKey={
+  &quot;type&quot;: &quot;service_account&quot;,
+  &quot;project_id&quot;: &quot;phrasal-indexer-243307&quot;,
+  &quot;private_key_id&quot;: &quot;d76c8f1cc0a368e91da71e5bd84957bef1fa0c92&quot;,
+  &quot;private_key&quot;: &quot;-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC5vp5D1AdZBbss\nfSpRlLaKAqSmjIAogfcd+qsu7bT0qHljdzphS8yf7YztH2rW8jucsSFFoAvD7Pfy\nvq81XTmP4slP3Vele4F+sotcvmd/A+JXjZmyfdP+Eg7FNGv5Tx2Q6ub8nHgE5Jzf\n20YTnqbC05NpNaG8P3Ym1wJDknpRmvFFF48bQ/xocZppVHzaayFI22l6vBgEpgxv\njC9m8LfO1/sC0/gcwWBoF4YMO1ZG04CJn/nCyEMJBL7Gjs57uEmV5esYf1svRMDA\nd0LpZG6xcMoBUM+uxwyxS70CPYSofFyRu+Ohq3FneNI+LdJgLFxymr11BwFz06gD\n+6GlUsuXAgMBAAECggEAA5gAj+dmTP6jZHT3gKST84+hh+doA2CgW2AiN8I5ohIw\nZxBDfOZuixmZhGz7MDV3mcyDjElQcPYAxh2SXkHzfykwI+9wZq9BDiZ+M8krT3XP\nx0niE2YD2AKZbo9ZF3XEaK1i0rhkShPyRRKFBJQpPdPCImL7Qh0oOBAo5w3KeBGy\n6nkj+3p5055wfDeuuztZitRCrwVDqobEJGPQLLmraq4OmGFHNlnUKKfLx22InNRa\n+psp+x0Bs0QfQJKi/kA5MNJR+TMlruiIWCsGLE/3Vb72H/1oILRkE8AQeZn8dOi/\nTQzzgNEFjVIC8BkiUsdw+Zt+3ht0FO7OjWPQXvpRYQKBgQDr7RnUta8IntZsIXLp\ns+NRCUQMjhOdH/ieJ5cINdatyS1rh3lTH78GU+nduWqNgShZ0T6uG6fflmWXo2kV\nwwLTXLyYbwVo+che+GTMm/KJOWd5XkUa9n8vS2XJgnpcPbIDzy6y0nBv8CHmuVBP\ndTooJugI3R1VLjfzkMnAbLJeHQKBgQDJjHjKbFqLMB0tvo9qLv5ev6GOVNhkUtLZ\nDQOTTC/QnTEq2d2NpMYVvccCHt2yfZlsYYmOOLGWRQeg8LJTmJBtIQh0rUm3phkz\nm8iAIJi7ISmk1gRp/z4EIgihmRuTPVLIpjxSXt9FowlXTr5VthkEb/GZnrZaoRaP\nQxIHa8SyQwKBgQDoQgS5+RqVe/lPfiZomCVi86JAUeZROtZArGztMkNj1reWMkpo\nYMpn6lhDZXPWVp5ovavdL3C2lpLxE3gyakbv2U35KuLCk5SEmjhxjdzY5uBNBVc2\n0hAneSx9kqvu/vWu9lncxXrXWCmnwCul7ZwRRywK/dMQtm1ypMlZXCjEqQKBgQCP\nAanvTySLoC8D9zNBT2jTh7s1B4Sm4pGSyoYf7K38opxxYDawuxqF8KsVGRuK+01y\nNl7o19dB3WcFTePqJtVLaWXbi91DfophMQb5yqc0F9q5h9WH9EBnpFJlfwKu3ZMw\npaslcwWPHpiRJ2Er5dIocNmHe7K96ZDdQ+S1+USOiwKBgQCVfrWax4JNfP1XBfko\n0P1gN6lQqSkAUo4yq5SwvriU+jNiKvHRyXveUCIv42w+NGp8GKPoQ0BKZ0TNCJhN\nCdQXJdye9JpMX6Y1ef7goOod2kt879JMZC5NnNptETy5DZrQMwMwcgBiBfKaQOS4\n+RR7/09NuNihJDdLWAZqqrZvvg==\n-----END PRIVATE KEY-----\n&quot;,
+  &quot;client_email&quot;: &quot;diyotta@phrasal-indexer-243307.iam.gserviceaccount.com&quot;,
+  &quot;client_id&quot;: &quot;105738357913910739210&quot;,
+  &quot;auth_uri&quot;: &quot;https://accounts.google.com/o/oauth2/auth&quot;,
+  &quot;token_uri&quot;: &quot;https://oauth2.googleapis.com/token&quot;,
+  &quot;auth_provider_x509_cert_url&quot;: &quot;https://www.googleapis.com/oauth2/v1/certs&quot;,
+  &quot;client_x509_cert_url&quot;: &quot;https://www.googleapis.com/robot/v1/metadata/x509/diyotta%40phrasal-indexer-243307.iam.gserviceaccount.com&quot;
+}, Container=diyottacloud, Runmode=Y, ConnectionName=GCS_CONN_PIPE, TsTable=Pipes_ATN_TL.dat, AzureauthTypeInput=Service Account}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64690}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6c8e110eded0ab19b5aec1a5fdd168c2
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.GCSConnection.gcsConnection(GCSConnection.java:33)
+	at com.disuite.test.thoughtspot.GCSDataFlowCreationTest.gcsDfCreationTest(GCSDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">com.disuite.test.thoughtspot.HiveDataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{yarnTimelineWebappHost=lvclabhdp132.diyotta.com, rpcProtectionInput=None, zooperQuorumHost=lvclabhdp112.diyotta.com:2181,lvclabhdp142.diyotta.com:2181,lvclabhdp132.diyotta.com:2181, dfsNameNode=nn1,nn2, Dbname=demo_stg, hiveSecurityAuthentication=Kerberos, queueName=default, SelectValue=Hive, AddTableSync=sel_all_data_types, userKeytab=/home/admin/labuser_112.keytab, hadoopDistribution=Hortonworks, TsTable=ATN_HIVE_ADTP, tempLocation=/tmp, dfsLocation=/tmp, ExtractionMode=[Extraction Mode : Pipe], kDCHost=172.40.8.112, hiveTransportMode=binary, RpcAddressNode2=lvclabhdp132.diyotta.com:8020, RpcAddressNode1=lvclabhdp112.diyotta.com:8020, zookeeperClientPort=2181, hiveZookeeperNamespace=hiveserver2, Runmode=Y, defaultRealm=labhdp.diyotta.com, hdpConfigPath=$DI_HOME/app/control/hadoop/hdp112, dfssecAuth=Kerberos, userPrincipal=labuser@labhdp.diyotta.com, ConnectionName=CONNEC_HIVE_ADT, distributionVersion=3.1.4, ExtractType=[Extract Type : JDBC], dfsNameService=labhdfs, dfsConfigChecked=Yes, yarnTimelineWebappPort=8188, hivePrincipal=hive/_HOST@labhdp.diyotta.com, hiveConfigChecked=Yes, nameNodePrinicipal=hdfs-diyottalab@labhdp.diyotta.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;text-success fs-12&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65023}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d971d4596c920a905b67596f6187d5b0
+*** Element info: {Using=xpath, value=//div[@class=&apos;text-success fs-12&apos;]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:427)
+	at com.disuite.pages.thoughtspot.HiveConnectionMethods.createHiveConnection(HiveConnectionMethods.java:77)
+	at com.disuite.test.thoughtspot.HiveDataFlowCreationTest.smDfCreationTest(HiveDataFlowCreationTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">com.disuite.test.thoughtspot.HiveDataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{yarnTimelineWebappHost=lvclabhdp132.diyotta.com, rpcProtectionInput=None, zooperQuorumHost=lvclabhdp112.diyotta.com:2181,lvclabhdp142.diyotta.com:2181,lvclabhdp132.diyotta.com:2181, dfsNameNode=nn1,nn2, Dbname=demo_stg, hiveSecurityAuthentication=Kerberos, queueName=default, SelectValue=Hive, AddTableSync=sel_medium, userKeytab=/home/admin/labuser_112.keytab, hadoopDistribution=Hortonworks, TsTable=sel_pre_post_hive4, tempLocation=/tmp, dfsLocation=/tmp, ExtractionMode=[Extraction Mode : Pipe], kDCHost=172.40.8.112, hiveTransportMode=binary, RpcAddressNode2=lvclabhdp132.diyotta.com:8020, RpcAddressNode1=lvclabhdp112.diyotta.com:8020, zookeeperClientPort=2181, hiveZookeeperNamespace=hiveserver2, Runmode=Y, defaultRealm=labhdp.diyotta.com, hdpConfigPath=$DI_HOME/app/control/hadoop/hdp112, dfssecAuth=Kerberos, userPrincipal=labuser@labhdp.diyotta.com, ConnectionName=CONNEC_HIVE_MED4, distributionVersion=3.1.4, ExtractType=[Extract Type : JDBC], dfsNameService=labhdfs, dfsConfigChecked=Yes, yarnTimelineWebappPort=8188, hivePrincipal=hive/_HOST@labhdp.diyotta.com, hiveConfigChecked=Yes, nameNodePrinicipal=hdfs-diyottalab@labhdp.diyotta.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Add connection&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64965}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 5cbc35cd09bec2abc983290ac7d9247f
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;Add connection&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addConnection(DataFlowCreation.java:110)
+	at com.disuite.pages.thoughtspot.HiveConnectionMethods.createHiveConnection(HiveConnectionMethods.java:41)
+	at com.disuite.test.thoughtspot.HiveDataFlowCreationTest.smDfCreationTest(HiveDataFlowCreationTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">com.disuite.test.thoughtspot.JdbcDataFlowCreationTest#jdbcDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_medium, JDBCDriverJar=I:\sudheer\mssql-jdbc-6.5.1.jar, SelectValue=JDBC, Username=diappuser, Dbname=dbo, Runmode=Y, schEncChar=&quot;, ConnectionName=CONNEC_JDBC_MED, Password=P2wd_4321, TsTable=ATN_JDBC_MEDM, DBtype=diappdb_stg, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC], JDBCUrl=jdbc:sqlserver://172.40.9.201:1444;databaseName=diappdb_stg, DriverName=com.microsoft.sqlserver.jdbc.SQLServerDriver}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49284}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0bfa44b8bd43dcbafd5b89373d5eb1b2
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.JdbcConnectionMethods.createJdbcConnection(JdbcConnectionMethods.java:37)
+	at com.disuite.test.thoughtspot.JdbcDataFlowCreationTest.jdbcDfCreationTest(JdbcDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">com.disuite.test.thoughtspot.MariaDbDataFlowCreationTest#mariaDbDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_medium, SelectValue=MariaDB, Username=diqausr, Dbname=diqadb_src, Host=172.40.9.130, Runmode=Y, ConnectionName=CONNEC_MADB_MED4, Port=3306, Database=, Password=P2wd_4321, DBtype=, TsTable=ATN_MADB_MEDM4, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49370}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 160307d730325719bb9cf99502ef0380
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.MariaDbDataFlowCreationMethod.tsdfCreation(MariaDbDataFlowCreationMethod.java:77)
+	at com.disuite.test.thoughtspot.MariaDbDataFlowCreationTest.mariaDbDfCreationTest(MariaDbDataFlowCreationTest.java:29)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">com.disuite.test.thoughtspot.MongoDBDataFlowCreationTest#mongoDbDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=inventoryObject_7, SelectValue=MongoDB, Username=mongo_user, Dbname=test, Host=172.40.9.51, Runmode=Y, ConnectionName=CONN_MONGO, Port=27017, Database=test, Password=p2wd1234, TsTable=ATN_MONGO_INVE, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.fiveFieldsConn(DataFlowCreation.java:367)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.enterConnectionDetails(DataFlowCreation.java:240)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.tsdfCreation(DataFlowCreation.java:34)
+	at com.disuite.test.thoughtspot.MongoDBDataFlowCreationTest.mongoDbDfCreationTest(MongoDBDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">com.disuite.test.thoughtspot.MySqlDataFlowCreationTest#sfDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_medium, SelectValue=MySQL, Username=diqauser, Dbname=diqadb, Host=172.40.9.120, Runmode=Y, ConnectionName=MYSQL_CONN_MED, Port=3306, Database=, Password=P2wd_4321, DBtype=, TsTable=sel_pre_post_mysql4, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50159}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ea7fd8e26a91dc9335a050a145d02a3f
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.MySqlDataFlowCreation.createMySqlConnection(MySqlDataFlowCreation.java:62)
+	at com.disuite.test.thoughtspot.MySqlDataFlowCreationTest.sfDfCreationTest(MySqlDataFlowCreationTest.java:31)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">com.disuite.test.thoughtspot.NetezzaDataFlowCreationTest#netezzaDFCreation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_medium, SelectValue=Netezza, Username=diqauser, Dbname=DIQADB_SRC, Host=172.40.8.30, Runmode=Y, ConnectionName=NZ_CON_MED22, Port=5480, Database=, Password=p2wd1234, DBtype=Netezza, TsTable=sel_pre_post_nz12342, tdAuthenticationType=, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50581}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 1c0c6e903a36bcdd22183203f27fe264
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.NetezzaDataFlowCreation.createNetezzaConnection(NetezzaDataFlowCreation.java:65)
+	at com.disuite.test.thoughtspot.NetezzaDataFlowCreationTest.netezzaDFCreation(NetezzaDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">com.disuite.test.thoughtspot.OracleDataFlowCreationTest#oracleDFCreation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_medium, SelectValue=Oracle, Username=diappuser, Dbname=diappdb_stg, Host=172.40.9.202, Runmode=Y, ConnectionName=OR_CONN_MEDIUM, Port=1523, Database=idxoradb03, Password=p2wd1234, DBtype=Oracle, TsTable=sel_pre_post_orcl1, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;text-success fs-12&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50879}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 96ed4828ee869764808da309d39efc17
+*** Element info: {Using=xpath, value=//div[@class=&apos;text-success fs-12&apos;]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:427)
+	at com.disuite.pages.thoughtspot.OracleDataFlowCreation.createOracleConnection(OracleDataFlowCreation.java:64)
+	at com.disuite.test.thoughtspot.OracleDataFlowCreationTest.oracleDFCreation(OracleDataFlowCreationTest.java:29)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">com.disuite.test.thoughtspot.OracleDataFlowCreationTest#oracleDFCreation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_all_data_types, SelectValue=Oracle, Username=diappuser, Dbname=diappdb_stg, Host=172.40.9.202, Runmode=Y, ConnectionName=OR_CONN_ADT, Port=1523, Database=idxoradb03, Password=p2wd1234, DBtype=Oracle, TsTable=ATN_ORC_ADT, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//bk-select[@name=&apos;schTaskCalenderRepeatId&apos;]//div[@id=&apos;selectHeadId&apos;]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51146}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 05065cd805e20889857573872a759e33
+*** Element info: {Using=xpath, value=//bk-select[@name=&apos;schTaskCalenderRepeatId&apos;]//div[@id=&apos;selectHeadId&apos;]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.scheduleDoesNotRepeat(DataFlowCreation.java:165)
+	at com.disuite.pages.thoughtspot.OracleDataFlowCreation.createOracleConnection(OracleDataFlowCreation.java:41)
+	at com.disuite.test.thoughtspot.OracleDataFlowCreationTest.oracleDFCreation(OracleDataFlowCreationTest.java:29)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">com.disuite.test.thoughtspot.PostGreSqlDfCreationTest#pgsDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_str!ct #%^&amp;*()_+-=n@me, SelectValue=PostgreSQL, Username=didbusr, Dbname=rni_test, Host=172.40.4.4, Runmode=Y, ConnectionName=PG_CONNEC_SN, Port=5432, Database=di_tform, Password=p2wd1234, DBtype=PostgreSQL, TsTable=ATN_PGSQL_$tr!ct #%^&amp;*()_+-=n@me, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51452}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d824e1e57489dd0aa61ff2c4a6938639
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.PostGreSqlDataFlowCreationMethod.tsdfCreation(PostGreSqlDataFlowCreationMethod.java:68)
+	at com.disuite.test.thoughtspot.PostGreSqlDfCreationTest.pgsDfCreationTest(PostGreSqlDfCreationTest.java:31)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">com.disuite.test.thoughtspot.PostGreSqlDfCreationTest#pgsDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_all_data_types, SelectValue=PostgreSQL, Username=didbusr, Dbname=rni_test, Host=172.40.4.4, Runmode=Y, ConnectionName=PGS_CONNEC_ADT, Port=5432, Database=di_tform, Password=p2wd1234, DBtype=PostgreSQL, TsTable=ATN_PGS_ADT, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51661}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 5605b15caf968bffbc811704b5501960
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.PostGreSqlDataFlowCreationMethod.tsdfCreation(PostGreSqlDataFlowCreationMethod.java:68)
+	at com.disuite.test.thoughtspot.PostGreSqlDfCreationTest.pgsDfCreationTest(PostGreSqlDfCreationTest.java:31)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">com.disuite.test.thoughtspot.PostGreSqlDfCreationTest#pgsDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_medium, SelectValue=PostgreSQL, Username=didbusr, Dbname=rni_test, Host=172.40.4.4, Runmode=Y, ConnectionName=PGS_CONNEC_MED4, Port=5432, Database=di_tform, Password=p2wd1234, DBtype=PostgreSQL, TsTable=ATN_PGSQL_MEDM4, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51233}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a935bcbb5fdccf534dbd030b418597aa
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.PostGreSqlDataFlowCreationMethod.tsdfCreation(PostGreSqlDataFlowCreationMethod.java:68)
+	at com.disuite.test.thoughtspot.PostGreSqlDfCreationTest.pgsDfCreationTest(PostGreSqlDfCreationTest.java:31)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m28">com.disuite.test.thoughtspot.SAPSQLAnywhereDataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_medium, SelectValue=SAP SQL Anywhere, Username=dba, Dbname=DBA, Host=172.40.4.3, Runmode=Y, ConnectionName=CONN_SYBASE_MED4, Port=2638, Password=sql, TsTable=sel_pre_post_sany4, DBtype=demo, tdAuthenticationType=, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51864}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 91371407982773ae57790ef8e78ab1c8
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.SAPSQLAnywhereDataFlowCreation.createSAPSQLAnywhereConnection(SAPSQLAnywhereDataFlowCreation.java:65)
+	at com.disuite.test.thoughtspot.SAPSQLAnywhereDataFlowCreationTest.smDfCreationTest(SAPSQLAnywhereDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m29">com.disuite.test.thoughtspot.SAPSQLAnywhereDataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_str!ct #%^&amp;*()_+-=n@me, SelectValue=SAP SQL Anywhere, Username=dba, Dbname=DBA, Host=172.40.4.3, Runmode=Y, ConnectionName=CONN_SYBASE_SN1, Port=2638, Password=sql, TsTable=ATN_SYB_#%&amp;*()@1*, DBtype=testdb, tdAuthenticationType=, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Set up Sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52137}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 28c8cbdb08712542ede0e34368c15c35
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;Set up Sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.setUpSync(DataFlowCreation.java:158)
+	at com.disuite.pages.thoughtspot.SAPSQLAnywhereDataFlowCreation.createSAPSQLAnywhereConnection(SAPSQLAnywhereDataFlowCreation.java:39)
+	at com.disuite.test.thoughtspot.SAPSQLAnywhereDataFlowCreationTest.smDfCreationTest(SAPSQLAnywhereDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m30">com.disuite.test.thoughtspot.SAPSQLAnywhereDataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_all_data_types, SelectValue=SAP SQL Anywhere, Username=dba, Dbname=DBA, Host=172.40.4.3, Runmode=Y, ConnectionName=CONN_SYBASE_ADT, Port=2638, Password=sql, TsTable=ATN_SYB_ADTP, DBtype=testdb, tdAuthenticationType=, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Set up Sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52046}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 992ba207544d8ffd0ff95f830d81bf1f
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;Set up Sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.setUpSync(DataFlowCreation.java:158)
+	at com.disuite.pages.thoughtspot.SAPSQLAnywhereDataFlowCreation.createSAPSQLAnywhereConnection(SAPSQLAnywhereDataFlowCreation.java:39)
+	at com.disuite.test.thoughtspot.SAPSQLAnywhereDataFlowCreationTest.smDfCreationTest(SAPSQLAnywhereDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m31">com.disuite.test.thoughtspot.SQLServerDataFlowCreationTest#sqlServerConnectionTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_medium, SelectValue=SQL Server, Username=diappuser, Dbname=dbo, Host=172.40.9.201, Runmode=Y, ConnectionName=CONNEC_SQLSERVER_MED6, Port=1444, Password=P2wd_4321, TsTable=sel_pre_post_mssql12, DBtype=diappdb_stg, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52241}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0cca7c8264e41677f9a1f7e835fdb9d1
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.SQLServerDataFlowCreation.sqlServerDataFlowCreation(SQLServerDataFlowCreation.java:63)
+	at com.disuite.test.thoughtspot.SQLServerDataFlowCreationTest.sqlServerConnectionTest(SQLServerDataFlowCreationTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m32">com.disuite.test.thoughtspot.SalesforceDataFlowCreationTest#salesForceDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{SelectValue=Salesforce, Username=diyotta_cloud@outlook.com, Dbname=Testdata_Simple__c, Runmode=Y, ConnectionName=SALESFORCE_TEST_SIMPLE_Conn, Password=P2wd_4321_2, TsTable=sf_ts_ts_tgt, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type :Salesforce API]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52774}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 109e6460b4fd38243597b8e1e7cffa77
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.SalesforceDataFlowCreationMethod.tsdfCreation(SalesforceDataFlowCreationMethod.java:39)
+	at com.disuite.test.thoughtspot.SalesforceDataFlowCreationTest.salesForceDfCreationTest(SalesforceDataFlowCreationTest.java:31)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m33">com.disuite.test.thoughtspot.SalesforceDataFlowCreationTest#salesForceDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{SelectValue=Salesforce, Username=diyotta_cloud@outlook.com, Dbname=account_strict_p__c, Runmode=Y, ConnectionName=SALESFORCE_SN_Conn, Password=P2wd_4321_2, TsTable=sf_ts_sn_tgt, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type :Salesforce API]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52706}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ad5c4a86986e9ee533c1ae86140e7de8
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.SalesforceDataFlowCreationMethod.tsdfCreation(SalesforceDataFlowCreationMethod.java:39)
+	at com.disuite.test.thoughtspot.SalesforceDataFlowCreationTest.salesForceDfCreationTest(SalesforceDataFlowCreationTest.java:31)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m34">com.disuite.test.thoughtspot.SalesforceDataFlowCreationTest#salesForceDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{SelectValue=Salesforce, Username=diyotta_cloud@outlook.com, Dbname=AllDataTypes__c, Runmode=Y, ConnectionName=SALESFORCE_ADT_Conn, Password=P2wd_4321_2, TsTable=sf_ts_adt_tgt442, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : Salesforce API] }</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52648}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 901602d30aaa7102279e553012a587a5
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.SalesforceDataFlowCreationMethod.tsdfCreation(SalesforceDataFlowCreationMethod.java:39)
+	at com.disuite.test.thoughtspot.SalesforceDataFlowCreationTest.salesForceDfCreationTest(SalesforceDataFlowCreationTest.java:31)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m35">com.disuite.test.thoughtspot.SnowflakeDataFlowCreationTest#sfDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=SEL_MEDIUM, SelectValue=Snowflake, Username=diyotta, Warehouse=DIYOTTA, Dbname=PUBLIC, Account=diyotta.us-east-1, Runmode=Y, ConnectionName=SNF_CONNEC_MED, Password=P@ssw0rd2020, DBtype=DEMO_SRC, TsTable=sel_pre_post_snf5, Role=SYSADMIN, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : BULK_EXPORT]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;ng-binding&quot;&gt;...&lt;/div&gt; is not clickable at point (295, 24). Other element would receive the click: &lt;div class=&quot;popup-overlay d-block&quot; style=&quot;z-index: 9999;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=86.0.4240.111)
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52838}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4a398030fc77b46d129fbc1f486b8527
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:316)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnTable(DataFlowCreation.java:394)
+	at com.disuite.pages.thoughtspot.SnowFlakeDataFlowCreation.snowFlakeDataFlowCreation(SnowFlakeDataFlowCreation.java:79)
+	at com.disuite.test.thoughtspot.SnowflakeDataFlowCreationTest.sfDfCreationTest(SnowflakeDataFlowCreationTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m36">com.disuite.test.thoughtspot.SpliceMachineDataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=HDP_3.1.4, AddTableSync=sel_$tr!ct #%^&amp;*()_+-=n@me, SelectValue=Splice Machine, Username=splice, Dbname=SPLICE, Host=172.40.9.127, Runmode=Y, ConnectionName=SM_CONN_STN, Port=1527, Database=splicedb, Password=admin, TsTable=TABLE_TD_SN4, DBtype=, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53251}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: aff1098dfaf88220f6ba15bbcab1051f
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.SpliceMachineDataFlowCreation.createSpliceMachineConnection(SpliceMachineDataFlowCreation.java:37)
+	at com.disuite.test.thoughtspot.SpliceMachineDataFlowCreationTest.smDfCreationTest(SpliceMachineDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m37">com.disuite.test.thoughtspot.SpliceMachineDataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=HDP_3.1.4, AddTableSync=sel_all_data_types, SelectValue=Splice Machine, Username=splice, Dbname=SPLICE, Host=172.40.9.127, Runmode=Y, ConnectionName=SM_CONN_ADT, Port=1527, Database=splicedb, Password=admin, TsTable=TABLE_TD_MED4, DBtype=, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53314}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 08419e7645079a682131af1a2926a7df
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.SpliceMachineDataFlowCreation.createSpliceMachineConnection(SpliceMachineDataFlowCreation.java:37)
+	at com.disuite.test.thoughtspot.SpliceMachineDataFlowCreationTest.smDfCreationTest(SpliceMachineDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m38">com.disuite.test.thoughtspot.SpliceMachineDataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=HDP_3.1.4, AddTableSync=sel_medium, SelectValue=Splice Machine, Username=splice, Dbname=SPLICE, Host=172.40.9.129, Runmode=Y, ConnectionName=SM_CONN_MEDIUM5, Port=1527, Database=splicedb, Password=admin, TsTable=sel_pre_post_sm5, DBtype=, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53192}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3df5eb7abf262f4ca1040a8842f5105e
+*** Element info: {Using=xpath, value=//div[@class=&apos;mt-4&apos;]//span[@class=&apos;rd-button-text&apos;][contains(text(),&apos;Add table sync&apos;)]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.addTableSync(DataFlowCreation.java:117)
+	at com.disuite.pages.thoughtspot.SpliceMachineDataFlowCreation.createSpliceMachineConnection(SpliceMachineDataFlowCreation.java:37)
+	at com.disuite.test.thoughtspot.SpliceMachineDataFlowCreationTest.smDfCreationTest(SpliceMachineDataFlowCreationTest.java:30)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m39">com.disuite.test.thoughtspot.TeraDataDataFlowCreationTest#tsDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_medium, SelectValue=Teradata, Username=diappuser, Dbname=diappdb_stg, Host=172.40.9.15, Runmode=Y, ConnectionName=TD_CONNEC_MED_JDBC, Port=1025, Database=, Password=p2wd1234, DBtype=Teradata, TsTable=ATN_TDT_MEDM_JDBC, tdAuthenticationType=Simple, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;tabulator-cell&apos;]//span//a//img&quot;}
+  (Session info: chrome=86.0.4240.111)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-5&apos;, revision: &apos;b3a0d621cc&apos;
+System info: host: &apos;WSTINR231&apos;, ip: &apos;172.40.4.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.111, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\sysadmin\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53375}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a18e69c667034e70f1437f65d82a6284
+*** Element info: {Using=xpath, value=//div[@class=&apos;tabulator-cell&apos;]//span//a//img}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at com.disuite.pages.thoughtspot.DataFlowCreation.clickOnViewLogIcon(DataFlowCreation.java:428)
+	at com.disuite.pages.thoughtspot.TeraDataDataFlowCreation.createTeradataConnection(TeraDataDataFlowCreation.java:64)
+	at com.disuite.test.thoughtspot.TeraDataDataFlowCreationTest.tsDfCreationTest(TeraDataDataFlowCreationTest.java:28)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m40">com.disuite.test.thoughtspot.BigQueryDataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{syncColumnDelimiter=1, Dbname=cdc_demo, SelectValue=Google BigQuery, AddTableSync=sel_all_data_types, AzureauthTypeInput=Service Account, postSyncQuery=ALTER TABLE &quot;DataFlow_DB&quot;.&quot;falcon_default_schema&quot;.&quot;Test_tql&quot; DROP COLUMN BQ_ADT;, TsTable=ATN_BQ_ADT, syncProperty=, escapeCharacter=&quot;, ExtractionMode=[Extraction Mode : Pipe], enclosingCharacterInput=SINGLE, tsLoadOptions=test, waitForFile=/home/admin/Automation_test/Bigquery_adt.dat, Runmode=Y, allowLargeResultSet=true, fetchSize=1000, ConnectionName=CONN_BQ_ADT, azureKey={
+  &quot;type&quot;: &quot;service_account&quot;,
+  &quot;project_id&quot;: &quot;phrasal-indexer-243307&quot;,
+  &quot;private_key_id&quot;: &quot;d76c8f1cc0a368e91da71e5bd84957bef1fa0c92&quot;,
+  &quot;private_key&quot;: &quot;-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC5vp5D1AdZBbss\nfSpRlLaKAqSmjIAogfcd+qsu7bT0qHljdzphS8yf7YztH2rW8jucsSFFoAvD7Pfy\nvq81XTmP4slP3Vele4F+sotcvmd/A+JXjZmyfdP+Eg7FNGv5Tx2Q6ub8nHgE5Jzf\n20YTnqbC05NpNaG8P3Ym1wJDknpRmvFFF48bQ/xocZppVHzaayFI22l6vBgEpgxv\njC9m8LfO1/sC0/gcwWBoF4YMO1ZG04CJn/nCyEMJBL7Gjs57uEmV5esYf1svRMDA\nd0LpZG6xcMoBUM+uxwyxS70CPYSofFyRu+Ohq3FneNI+LdJgLFxymr11BwFz06gD\n+6GlUsuXAgMBAAECggEAA5gAj+dmTP6jZHT3gKST84+hh+doA2CgW2AiN8I5ohIw\nZxBDfOZuixmZhGz7MDV3mcyDjElQcPYAxh2SXkHzfykwI+9wZq9BDiZ+M8krT3XP\nx0niE2YD2AKZbo9ZF3XEaK1i0rhkShPyRRKFBJQpPdPCImL7Qh0oOBAo5w3KeBGy\n6nkj+3p5055wfDeuuztZitRCrwVDqobEJGPQLLmraq4OmGFHNlnUKKfLx22InNRa\n+psp+x0Bs0QfQJKi/kA5MNJR+TMlruiIWCsGLE/3Vb72H/1oILRkE8AQeZn8dOi/\nTQzzgNEFjVIC8BkiUsdw+Zt+3ht0FO7OjWPQXvpRYQKBgQDr7RnUta8IntZsIXLp\ns+NRCUQMjhOdH/ieJ5cINdatyS1rh3lTH78GU+nduWqNgShZ0T6uG6fflmWXo2kV\nwwLTXLyYbwVo+che+GTMm/KJOWd5XkUa9n8vS2XJgnpcPbIDzy6y0nBv8CHmuVBP\ndTooJugI3R1VLjfzkMnAbLJeHQKBgQDJjHjKbFqLMB0tvo9qLv5ev6GOVNhkUtLZ\nDQOTTC/QnTEq2d2NpMYVvccCHt2yfZlsYYmOOLGWRQeg8LJTmJBtIQh0rUm3phkz\nm8iAIJi7ISmk1gRp/z4EIgihmRuTPVLIpjxSXt9FowlXTr5VthkEb/GZnrZaoRaP\nQxIHa8SyQwKBgQDoQgS5+RqVe/lPfiZomCVi86JAUeZROtZArGztMkNj1reWMkpo\nYMpn6lhDZXPWVp5ovavdL3C2lpLxE3gyakbv2U35KuLCk5SEmjhxjdzY5uBNBVc2\n0hAneSx9kqvu/vWu9lncxXrXWCmnwCul7ZwRRywK/dMQtm1ypMlZXCjEqQKBgQCP\nAanvTySLoC8D9zNBT2jTh7s1B4Sm4pGSyoYf7K38opxxYDawuxqF8KsVGRuK+01y\nNl7o19dB3WcFTePqJtVLaWXbi91DfophMQb5yqc0F9q5h9WH9EBnpFJlfwKu3ZMw\npaslcwWPHpiRJ2Er5dIocNmHe7K96ZDdQ+S1+USOiwKBgQCVfrWax4JNfP1XBfko\n0P1gN6lQqSkAUo4yq5SwvriU+jNiKvHRyXveUCIv42w+NGp8GKPoQ0BKZ0TNCJhN\nCdQXJdye9JpMX6Y1ef7goOod2kt879JMZC5NnNptETy5DZrQMwMwcgBiBfKaQOS4\n+RR7/09NuNihJDdLWAZqqrZvvg==\n-----END PRIVATE KEY-----\n&quot;,
+  &quot;client_email&quot;: &quot;diyotta@phrasal-indexer-243307.iam.gserviceaccount.com&quot;,
+  &quot;client_id&quot;: &quot;105738357913910739210&quot;,
+  &quot;auth_uri&quot;: &quot;https://accounts.google.com/o/oauth2/auth&quot;,
+  &quot;token_uri&quot;: &quot;https://oauth2.googleapis.com/token&quot;,
+  &quot;auth_provider_x509_cert_url&quot;: &quot;https://www.googleapis.com/oauth2/v1/certs&quot;,
+  &quot;client_x509_cert_url&quot;: &quot;https://www.googleapis.com/robot/v1/metadata/x509/diyotta%40phrasal-indexer-243307.iam.gserviceaccount.com&quot;
+}, preSyncQuery=ALTER TABLE &quot;DataFlow_DB&quot;.&quot;falcon_default_schema&quot;.&quot;Test_tql&quot; ADD COLUMN BQ_ADT varchar(20) default null;, Account=phrasal-indexer-243307, ExtractType=[Extract Type : BQAPI], addCondition=C_INT=105, dataloadingModeInput=Pipe, syncMode=Append}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m41">com.disuite.test.thoughtspot.CassandraDataFlowCreationTest#cassandraDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_all_data_types, SelectValue=Cassandra, Username=cassandra, Dbname=demodb_dm, Host=172.40.9.96, Runmode=Y, ConnectionName=CONNEC_CASSANDRA_ADT, Port=9042, Database=None, Password=cassandra, TsTable=CAS_ATN_ADTP, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m42">com.disuite.test.thoughtspot.CassandraDataFlowCreationTest#cassandraDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_medium, SelectValue=Cassandra, Username=cassandra, Dbname=demodb_dm, Host=172.40.9.96, Runmode=Y, ConnectionName=CONNEC_CASSANDRA_MED, Port=9042, Database=None, Password=cassandra, TsTable=CAS_ATN_MEDI, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m43">com.disuite.test.thoughtspot.DB2DataFlowCreationTest#smDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_all_data_types, SelectValue=IBM Db2, Username=diqauser, Dbname=DIQA_DM, Host=172.40.9.201, Runmode=Y, dbAlias=diqadb2, ConnectionName=CONNEC_DB2_ADTY1, Port=50001, Database=diqadb2, Password=t!h^84hv7B?si3hG, TsTable=ATN_DB2_ADTP, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC], platformValueInput=LUW, vesionInput=10.x, codePageInput=ASCII}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m44">com.disuite.test.thoughtspot.MariaDbDataFlowCreationTest#mariaDbDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_all_data_types, SelectValue=MariaDB, Username=diqausr, Dbname=diqadb_src, Host=172.40.9.130, Runmode=Y, ConnectionName=CONNEC_MADB_ADT, Port=3306, Database=, Password=P2wd_4321, DBtype=, TsTable=ATN_MADB_ADTP, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m45">com.disuite.test.thoughtspot.MySqlDataFlowCreationTest#sfDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_all_data_types, SelectValue=MySQL, Username=diqauser, Dbname=diqadb, Host=172.40.9.120, Runmode=Y, ConnectionName=CONNEC_MYS_ADT, Port=3306, Database=, Password=P2wd_4321, DBtype=, TsTable=ATN_MYS_ADTP, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m46">com.disuite.test.thoughtspot.OracleDataFlowCreationTest#oracleDFCreation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_$tr!ct #%^&amp;*()_+-=n@me, SelectValue=Oracle, Username=diappuser, Dbname=diappdb_stg, Host=172.40.9.202, Runmode=Y, ConnectionName=OR_CONN_STN, Port=1523, Database=idxoradb03, Password=p2wd1234, DBtype=Oracle, TsTable=ATN_ORC_$tr!ct #%^&amp;*()_+-=n@me, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m47">com.disuite.test.thoughtspot.SQLServerDataFlowCreationTest#sqlServerConnectionTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_$tr!ct #%^&amp;*()_+-=n@me, SelectValue=SQL Server, Username=diappuser, Dbname=dbo, Host=172.40.9.201, Runmode=Y, ConnectionName=CONNEC_SQLSERVER_SN, Port=1444, Password=P2wd_4321, TsTable=ATN_SQL_SNM, DBtype=diappdb_stg, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m48">com.disuite.test.thoughtspot.SQLServerDataFlowCreationTest#sqlServerConnectionTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_all_data_types, SelectValue=SQL Server, Username=diappuser, Dbname=dbo, Host=172.40.9.201, Runmode=Y, ConnectionName=CONNEC_SQLSERVER_ADT, Port=1444, Password=P2wd_4321, TsTable=ATN_SQL_ADTP, DBtype=diappdb_stg, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m49">com.disuite.test.thoughtspot.SnowflakeDataFlowCreationTest#sfDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=sel_$tr!ct #%^&amp;*()_+-=n@me, SelectValue=Snowflake, Username=diyotta, Warehouse=DIYOTTA, Dbname=PUBLIC, Account=diyotta.us-east-1, Runmode=Y, ConnectionName=SNF_CONNEC_SN, Password=P@ssw0rd2020, DBtype=DEMO_SRC, TsTable=ATN_SNFLK_SNM, Role=SYSADMIN, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : BULK_EXPORT]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m50">com.disuite.test.thoughtspot.SnowflakeDataFlowCreationTest#sfDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{AddTableSync=SEL_ALL_DATA_TYPES, SelectValue=Snowflake, Username=diyotta, Warehouse=DIYOTTA, Dbname=PUBLIC, Account=diyotta.us-east-1, Runmode=Y, ConnectionName=SNF_CONNEC_ADT, Password=P@ssw0rd2020, DBtype=DEMO_SRC, TsTable=ATN_SNFLK_ADTP, Role=SYSADMIN, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : BULK_EXPORT]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m51">com.disuite.test.thoughtspot.TeraDataDataFlowCreationTest#tsDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_all_data_types, SelectValue=Teradata, Username=diappuser, Dbname=diappdb_stg, Host=172.40.9.15, Runmode=Y, ConnectionName=TD_CONNEC_ADT1, Port=1025, Database=, Password=p2wd1234, DBtype=Teradata, TsTable=ATN_TDT_ADTP1, tdAuthenticationType=Simple, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m52">com.disuite.test.thoughtspot.TeraDataDataFlowCreationTest#tsDfCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Version=, AddTableSync=sel_$tr!ct #%^&amp;*()_+-=n@me, SelectValue=Teradata, Username=diappuser, Dbname=diappdb_stg, Host=172.40.9.15, Runmode=Y, ConnectionName=TD_CONNEC_SN, Port=1025, Database=, Password=p2wd1234, DBtype=Teradata, TsTable=ATN_TDT_SNM, tdAuthenticationType=Simple, ExtractionMode=[Extraction Mode : Pipe], ExtractType=[Extract Type : JDBC]}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

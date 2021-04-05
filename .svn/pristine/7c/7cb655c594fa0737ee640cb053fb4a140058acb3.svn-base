@@ -1,0 +1,53 @@
+package com.disuite.pages.thoughtspot;
+
+import org.openqa.selenium.JavascriptExecutor;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class GCSConnection extends BaseClass {
+	URLNavigations url = new URLNavigations();
+	DataFlowCreation tsdf = new DataFlowCreation();
+	ViewLog vl = new ViewLog();
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	CreateFileConnection cfc = new CreateFileConnection();
+	
+	
+	public GCSConnection gcsConnection(String ConnectionName, String SelectValue, String Host,
+			String Port, String tdAuthenticationType, String Username, String Password, String Database, String Version, String jdbcoptions,
+			String Config_Version, String FilePath, String FileProtocol, String FileHost, String FilePort,
+			String FileUsername, String FilePassword, String Keyfile, String AuthenticationType, String EnterTable,
+			String TsTable, String Passphrasekey, String AzureauthTypeInput, 
+			String azureKey, String Container, String Account, String prestoAuthenticationType,String User,String catalogName,String schemaName, String DBtype, String Dbname, 
+			String AddTableSync) throws InterruptedException {
+		url.openThoughtSpot();
+		tsdf.headerVerification();
+		tsdf.clickOnConnections();
+		tsdf.addConnection();
+		tsdf.enterConnectionDetails(ConnectionName, SelectValue, Host, Port, tdAuthenticationType, Username, Password,
+				Database, Version, jdbcoptions, prestoAuthenticationType, User, catalogName, schemaName, Config_Version,
+				FilePath, FileProtocol, FileHost, FilePort, FileUsername, FilePassword, Keyfile, AuthenticationType,
+				Passphrasekey, Account, AzureauthTypeInput, azureKey, Container);
+		pause(1000);
+		//verifyConnectionSuccess();
+		tsdf.addTableSync();
+		tsdf.tableSetup(DBtype, Dbname, AddTableSync);
+		cfc.checkHeaderRow();
+		tsdf.setUpSync();
+		tsdf.scheduleDoesNotRepeat();
+		tsdf.advancedSetup();
+		tsdf.mapTableAndColumns(TsTable);
+		pause(10000);
+		tsdf.clickOnTable();
+		driver.navigate().refresh();
+		tsdf.selectConnection(TsTable);
+		Thread.sleep(3000);
+		driver.navigate().refresh();
+		tsdf.clickOnViewLogIcon();
+		tsdf.numberOfRows();
+		tsdf.clickOnClose();
+		tsdf.tsLogout();
+		
+		return new GCSConnection();
+	}
+}

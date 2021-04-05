@@ -1,0 +1,183 @@
+#Studio elements
+HOME_PAGE_TITLE = Diyotta
+TS_HOME_PAGE_TITLE = TS DataFlow
+HOME_LOGIN = //input[@id='login_Id']
+HOME_PASSWORD = //input[@id='password']
+TS_USERNAME = //input[@id='loginUsernameId']
+TS_PASSWORD = //input[@id='loginPasswordId']
+TS_LOGIN_BUTTON = //rd-button[@id='login-signin']
+TS_HEADER = //h2[contains(text(),'DataFlow Home')]
+HOME_LOGOUT = //a[contains(text(),'Logout')]
+LOGIN_BUTTON = //button[@class='btn btn-tc3 mr-2']
+MODULE_STUDIO = //span[contains(text(),'STUDIO')]
+LEFTMENU_DATAPOINT = //span[contains(text(),'Data Point')]
+LEFTMENU_DATAFLOW = //span[contains(text(),'Data Flow')]
+LEFTMENU_DATAOBJECT = //span[contains(text(),'Data Object')]
+LEFTMENU_IMPORTSCHEMA = //p[contains(text(),'Import Schema')]
+DO_DATAPOINT = //div[@id='importConnObjectsGridId']//div[@class='tabulator-cell'][contains(text(),'A_SPLICE')]
+DO_DP_RNITEST = //div[@id='importConnObjectsGridId']//div[@class='tabulator-cell'][contains(text(),'rni_test')]
+DO_IMPORT_SELECTION = //div[contains(text(),'emp_3')]
+DO_TECH_IMPORT = //div[contains(text(),'tech_details')]
+BUTTON_IMPORT = //button[contains(text(),'Import')]
+MENU_NEW = //div[contains(text(),'New')]
+SUB_MENU_NEW = //div[@class='dropdown dropdown-actions show']//a[1]
+SPLICEMACHINE_DATAPLATFORM = //p[contains(text(),'Splice Machine')]
+SNOWFLAKE_DATAPLATFORM = //p[contains(text(),'Snowflake')]
+GENERAL_PROPERTIES_DP = //input[@id='repConnName']
+BUTTON_OK_NEW = //div[@class='popup-frame large-popup']//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Ok')]
+PROPERTIES_BUTTON = //div[@class='p-0 h-100 overflow-hidden']//a[2]
+PROPERTIES_LINKTEXT = Properties
+INPUT_HOST = //div[@class='col-md-6 p-2']//app-repconn-properties//div//input[@id='input_1']
+INPUT_PORT = //div[@class='col-md-6 p-2']//app-repconn-properties//div//input[@id='input_2']
+INPUT_APP_USER = //div[@class='col-md-6 p-2']//app-repconn-properties//div//input[@id='input_3']
+INPUT_PASSWORD = //input[@id='input_4']
+INPUT_DATABASE = //input[@id='input_7']
+SELECT_DATABASE = //select[@id='input_8']
+SAVE_MENU = //div[contains(text(),'Save')]
+TEST_DATA_POINT = //div[contains(text(),'Test Data Point')]
+DP_SUCCESS_MESSAGE = //div[@class='toast-message ng-star-inserted']
+DP_SCHEMAS = //a[contains(text(),'Schemas')]
+DO_NEXT = //app-import-dataobjects-popup//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Next')]
+BUTTON_RUN = //div[contains(text(),'Run')]
+
+
+CHECKBOX_DATAPOINT = //div[@id='dataPointsList']//div[@class='tabulator-tableHolder']//input
+POPUP_NEXT = //app-design-create-popup//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Next')]
+DATAFLOW_OBJECT_NAME = //input[@id='objectName']
+CREATE_BUTTON = //button[contains(text(),'Create')]
+SOURCE_SPLICEMACHINE = //div[@id='cdk-drop-list-24']//p[contains(text(),'Splice Machine')]
+SOURCE_PGS = //div[@id='cdk-drop-list-22']//p[contains(text(),'PostgreSQL')]
+DATA_PLATFORM_PGS = //p[contains(text(),'PostgreSQL')]
+CANVAS = //div[@id='canvas']
+SOURCE_ONE_DATAPOINT = //a[contains(text(),'EMPLOYEE_DETAILS')]
+SOURCE_TWO_DATAPOINT = //a[contains(text(),'DEPT_DETAILS')]
+SOURCE_PGS = //a[contains(text(),'emp_3')]
+JOINER_TRANSFORM = //p[contains(text(),'Joiner')]
+FILTER_TRANSFORM = //p[contains(text(),'Filter')]
+SPLITTER_TRANSFORM = //p[contains(text(),'Splitter')]
+DERIVED_ATTRIBUTES = //a[contains(text(),'Derived Attributes')]
+EXPRESSION_NAME_TEXTBOX = //app-input-text-name//input[@id='input_1']
+SELECT_ATTRIBUTES = //button[2]//a[1]
+ATTRIBUTES_CHECKBOX = //input[@id='parent_checkbox_1']
+BUTTON_DA_OK = //app-add-carryforwardattributes-popup//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Ok')]
+CANVAS_NEXT = //body/app-root/div[@class='h-100 blackwhite']/div[@class='h-100']/div[@class='h-100 bc-3l']/app-fldrobject/div[@class='di-flex-row-100 fs-13']/div[@class='project-width']/div[@class='d-flex h-100 flex-column']/div[@class='p-0 flex-fill overflow-auto']/app-design-outlet/app-design-page/app-editname-popup/div[@class='popup-frame small-popup']/div[@class='popup-footer']/div[@class='float-right']/button[1]
+SECTION_TRANSFORM = //div[@id='headingThree']
+TRANSFORM_EXPRESSION = //p[contains(text(),'Expression')]
+CANVAS_SOURCE = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='transform_root_1']
+CANVAS_SOURCE_TWO = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='transform_root_2']
+ARROW_ICON = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='Layer_1-2']
+ARROW_ICON_TWO = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='Layer_2-2']
+ARROW_ICON_THREE = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='Layer_3-2']
+CANVAS_EXPRESSION = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='transform_root_name_3']
+CANVAS_FILTER_TRANSFORM = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='transform_root_4']
+CANVAS_SPLITTER_TRANSFORM = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='transform_root_5']
+BUTTON_FILTER_VALIDATE = //button[contains(text(),'Validate')]
+BUTTON_FILTER_OK = //app-expression-editor-popup//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Ok')]
+JOINER_PROPERTIES = //a[@class='nav-link'][contains(text(),'Properties')]
+JOINER_PROPERTIES_EXPRESSION_EDITOR = //button[@class='fa fa-external-link']
+SPLITTER_EXPR_EDITOR = //div[@class='tabulator-row tabulator-selectable tabulator-row-even tabulator-selected']//button[@class='fa fa-external-link']
+SPLITTER_EXPR3_EDITOR = //div[@class='tabulator-row tabulator-selectable tabulator-row-odd tabulator-selected']//button[@class='fa fa-external-link']
+JOINER_TRANSFORM_ONE = //a[@class='text-dark'][contains(text(),'SRC_EMPLOYEE_DETAILS')]
+JOINER_ATTRIBUTE_ONE = //a[@class='text-dark'][contains(text(),'DEPT_ID')]
+JOINER_ATTRIBUTE_TWO = //a[contains(text(),'SALARY')]
+JOINER_TRANSFORM_TWO = //a[@class='text-dark'][contains(text(),'SRC_DEPT_DETAILS')]
+TRANSFORM_CONDITION = //i[@class='input-group-text fa fa-angle-right bc-1']
+SPLITTER_CONDITION = //a[contains(text(),'Conditions')]
+SPLITTER_CLICK_HERE = //a[@class='c-2d']
+BUTTON_VALIDATE = //app-mjnr_inst_cnds-grid[@class='h-100']//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Validate')]
+BUTTON_OK = //app-mjnr_inst_cnds-grid[@class='h-100']//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Ok')]
+ATTRIBUTES_CHECKBOX_CHILD = //div[@class='tabulator-row tabulator-row-even']//input[@id='item_checkbox_2']
+EXPR_EDITOR_TEXT_AREA = //textarea[@id='expressionTextArea']
+LC_BUTTON_ADD = //small[contains(text(),'Add')]
+SPLITTER_BTN_OK = //div[@class='popup-frame large-popup ng-star-inserted']//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Ok')]
+BUTTON_ARRANGE = //button[@class='btn p-1 mx-1']//div[@class='breadcrumb-list'][contains(text(),'Arrange')]
+BUTTON_EQUALS = //body//div[@class='h-100']//div[@class='h-100']//button[11]
+CANVAS_THREE_DOTS = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@fill='white']
+CREATE_AS_TARGET = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[local-name()='g'][17]/*[local-name()='g'][2]/*[local-name()='text'][3]
+TARGET_DATA_PLATFORM = //p[@class='mb-0'][contains(text(),'Splice Machine')]
+TARGET_DATA_POINT = //div[@class='tabulator-row tabulator-selectable tabulator-row-even']//div[@class='tabulator-cell'][contains(text(),'A_DILAB_TGT')]
+TARGET_NEXT = //button[@class='btn btn-sm btn-tc3 mr-1 ng-star-inserted']
+TARGET_TRANSFORM_NAME = //input[@id='tgt_Inst_NmTxt']
+TARGET_DATA_OBJECT_NAME = //input[@id='doName']
+WINDOW_SPACE = //div[@class='row']//div[@id='step2']
+MENU_SAVE = //button[@class='btn p-1 mx-2']//div[@class='breadcrumb-list'][contains(text(),'Save')]
+
+#Dropdown
+MENU_DROPDOWN = //li[@id='dropdownMenuButton']
+MENU_LIST = //div[@class='module-dropdown dropdown-menu show']
+MENU_MONITOR = //span[contains(text(),'Monitor')]
+
+#Monitor
+MESSAGE_SUCCEEDED = //span[contains(text(),'Succeeded')]
+
+#ThoughtSpot
+BUTTON_CONNECTIONS = //div[contains(text(),'CONNECTIONS')]
+ROW_CONNECTION_NAME = //div[contains(text(),'Connection name')]
+BUTTON_ADD_CONNECTION = //span[contains(text(),'Add connection')]
+CONNECTION_INPUT = //input[@id='repconn-create-layover-name']
+DROPDOWN_CONNECTION_TYPE = //div[@id='selectHeadId']
+CONNECTION_TYPE_INPUT = //input[@placeholder='Search data source']
+LIST_CONNECTIONS = //bk-action-menu[@class='bk-select-options']
+DROP_DOWN_VALUE = //div[@class='bk-dropdown-text']
+TS_INPUT_HOST = //bk-input[@label='Host']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+TS_INPUT_PORT = //bk-input[@label='Port']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+ENTER_USERNAME =//bk-input[@label='User']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+ENTER_PASSWORD = //input[@type='password']
+ENTER_SERVICE_NAME = //bk-input[@label='Service name']//div[@class='bk-input-container-inner']//input
+CREATE_CONNECTION = //span[contains(text(),'Create Connection')]
+ADD_TABLE_SYNC = //div[@class='mt-4']//span[@class='rd-button-text'][contains(text(),'Add table sync')]
+TABLE_EXPAND = //li//li[1]//div[1]//div[1]//div[1]//div[1]//img[1]
+TABLE_SELECT = //a[contains(text(),'AccountInfo_SZ')]
+BUTTON_CLOSE = //span[contains(text(),'Close')]
+SET_UP_SYNC = //span[contains(text(),'Set up Sync')]
+SCHEDULE_REPEAT = //bk-select[@name='schTaskCalenderRepeatId']//div[@id='selectHeadId']
+DROPDOWN_REPEAT = //bk-select[@name='schTaskCalenderRepeatId']
+DOES_NOT_REPEAT = //div[contains(text(),'Does not repeat')]
+REPEAT_HOURLY = //div[contains(text(),'Hourly')]
+DROPDOWN_CARET = //span[contains(text(),'01')]
+REPEAT_HOUR =  //div[contains(text(),'03')]
+ALERT_DROPDOWN = //bk-select[@name='schTaskCalenderDFCDAlertNotificationId']//div[@class='bk-selected-value']
+DROPDOWN_NEVER = //div[contains(text(),'Never')]
+ADVANCED_SETUP = //div[@class='tbl-accordion']
+THOUGHTSPOT_TABLE = //input[@id='inputss_2aa']
+TOGGLE_PRIMARY_KEY = //div[@class='tabulator-table']//div[1]//div[8]//div[1]//div[1]//div[1]
+SAVE_AND_SYNC_NOW = //span[contains(text(),'Save and sync now')]
+MENU_TABLES = //div[contains(text(),'TABLES')]
+CONNECTION_NAME = //div[contains(text(),'AccountInfo_TDR_SZ')]
+ICON_VIEW_LOG = //div[@class='tabulator-cell']//span//a//img
+EXTRACT_TYPE = //pre[contains(text(),'[Extract Type :')]
+EXTRACTION_MODE = //pre[contains(text(),'[Extraction Mode :')]
+LOAD_TYPE = //pre[contains(text(),'[Load Type : TSLOAD]')]
+ROWS_TOTAL = //pre[contains(text(),'Rows total:')]
+ROWS_LOADED = //pre[contains(text(),'Rows successfully loaded:  ')]
+TOAST_MESSAGE = //div[@class='rd-text']
+FILEPATH=//html//body//app-root//div//div//app-fldrobject//div//div//app-repconn-list-page//di-repconn-overlay//div//div//div//div//div//div//div//app-repconn-flatfile-properties//div//div//bk-input//div//div//div//input
+FILES_ON_REMOTE_LOCATION_CHECKBOX=//label[@class='bk-checkbox-label']
+FILE_PROTOCOL=//bk-select[@name='repconn-create-layover-name-fileProtocol']//div[@id='selectHeadId']//span
+SFTP_PROTOCOL=//div[contains(text(),'SFTP')]
+SELECT_AUTHENTICATIONTYPE_KEY=//bk-select[@name='repconn-create-layover-name-sftpAuthMode']//div[@id='selectHeadId']
+AUTHENTICATIONTYPE_KEY=//div[@class='bk-dropdown-item-info']//div[contains(text(),'Key')]
+SFTP_KEY_FILE=//bk-input[@label='Key file ']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+SFTP_ADVANCED_CONFIGURATION_BUTTON=//div[@class='bk-accordion-item-header bk-accordion-collapsed'
+SFTP_PASSPHRASE_KEY=//div[@class='bk-accordion-item-content bk-accordion-expanded']//input[@class='bk-input-field ng-untouched ng-pristine ng-valid']
+FILE_HOST1=//div[@class='popup-frame fullscreen ngdialog-content']//div[2]//bk-input[1]//div[1]//div[1]//div[1]//input[1]
+FILE_HOST=//bk-input[@label='Host']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+FILE_SFTP_HOST = //input[@class='bk-input-field ng-pristine ng-invalid ng-touched']
+FILE_PORT= //bk-input[@label='Port']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+FILE_USERNAME=//bk-input[@label='User']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+FILE_PASSWORD= //bk-input[@label='Password']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HEADER_H2 = //h2[contains(text(),'Add table sync')]
+FILE_TABLE_SEARCH = table-sync-add-all-search-id
+FILE_TABLE_SELECT = //div[@class='d-flex flex-row treeTooltipDI']//div[@class='flex-fill ellipsis']
+CHECKBOX_HEADER_ROW = //input[@id='sync']
+SUCCESS_ICON = //div[@class='text-success fs-12']
+
+AZURE_ACCOUNT_AND_GCS_PROJECT_ID=//bk-input[@label='Account' or @label='Project id']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+
+AUTHENTICATION_TYPE_DROPDOWN=//bk-select[@name='repconn-create-layover-name-secAuth']//div[@class='bk-select-head']
+
+AZURE_ACCOUNT_KEY_GCS_ACCESS_TOKEN_OPTION=//div[contains(text(),'Azure account key') or contains(text(),'Access Token')]
+
+AZURE_KEY_GCS_SERVIVE_TOKEN=//bk-input[@label='Key' or @label='Service account key/Access token']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+
+AZURE_CONTAINER_GCS_BUCKET=//bk-input[@label='Container' or @label='Bucket']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input

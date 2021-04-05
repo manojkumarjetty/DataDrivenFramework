@@ -1,0 +1,53 @@
+package com.disuite.test.thoughtspot;
+
+import java.util.Hashtable;
+
+import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import com.disuite.base.BaseClass;
+import com.disuite.pages.thoughtspot.GCSConnection;
+import com.disuite.util.TestUtil;
+
+public class GCSDataFlowCreationTest {
+	@Test(dataProvider = "getData")
+	public void gcsDfCreationTest(Hashtable<String, String> data) throws InterruptedException {
+		
+		// check the run mode of test case
+				if (!TestUtil.isExecutable("GCSConnection",
+						BaseClass.xls1)) {
+					throw new SkipException("Runmode set to NO");
+				}
+
+		// check runmode for data set
+				if (!data.get("Runmode").equals("Y")) {
+					throw new SkipException("Test Case Data Set Runmode is no.");
+				}
+
+				
+				GCSConnection gcs = new GCSConnection();
+				  gcs.gcsConnection(data.get("ConnectionName"), data.get("SelectValue"), data.get("Host"), 
+							data.get("Port"), data.get("tdAuthenticationType"), data.get("Username"), data.get("Password"), data.get("Database"), data.get("Version"), data.get("jdbcoptions"),
+							data.get("Config_Version"),data.get("FilePath"),data.get("FileProtocol"), data.get("FileHost"),data.get("FilePort"),
+							data.get("FileUsername"),data.get("FilePassword"),data.get("KeyFile"),data.get("AuthenticationType"), data.get("EnterTable"),
+							data.get("TsTable"), data.get("Passphrasekey"), data.get("Account"),
+							data.get("AzureauthTypeInput"),data.get("azureKey"),data.get("Container"), data.get("prestoAuthenticationType"), 
+							data.get("User"), data.get("catalogName"), data.get("schemaName"), data.get("DBtype"), data.get("Dbname"),
+							data.get("AddTableSync"));
+				 
+				
+	}
+	
+	@DataProvider
+	public Object[][] getData() {
+		return TestUtil.getData("GCSConnection", BaseClass.xls1);
+	}
+	
+	
+	
+	  @AfterMethod 
+	  public void tearDown() throws Exception {
+	  BaseClass.closeBrowser(); 
+	  }
+}

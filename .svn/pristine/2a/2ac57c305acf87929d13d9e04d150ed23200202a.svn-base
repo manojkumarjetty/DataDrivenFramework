@@ -1,0 +1,141 @@
+package com.disuite.pages.thoughtspot;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class SQLServerDataFlowCreation extends BaseClass {
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	URLNavigations url = new URLNavigations();
+	DataFlowCreation dfc = new DataFlowCreation();
+	SyncProperties syncp = new SyncProperties();
+
+	public SQLServerDataFlowCreation sqlServerDataFlowCreation(String ConnectionName, String SelectValue, String Host,
+			String Port, String Username, String Password, String DBtype, String Dbname, String AddTableSync,
+			String TsTable, String syncProperty, String addCondition,
+			String syncMode, String synCompletionValue, String moveItPath, String waitForFile, String preSyncQuery,
+			String postSyncQuery, String extractionModeInput, String dataloadingModeInput, String syncColumnDelimiter,
+			String nullValue, String nullValuedrp, String escapeCharacter, String enclosingCharacterInput,
+			String escapeUnclosedField, String fieldOptionallyEnclosedBy, String bufferSize, String dateStyleValue,
+			String dateDelimiter, String timeStyleValue, String timeDelimiter, String timeDelimiterValue,
+			String booleanRepresentationValue, String skipTrailerRowsValue, String readerEncoderValue, String fetchSize,
+			String nullIfValue, String maxFileSize, String parallelValue, String stageLocation,
+			String allowLargeResultSet,String readTimeout, String tsLoadOptions, String ExtractType,
+			String ExtractionMode) throws InterruptedException {
+		url.openThoughtSpot();
+		dfc.headerVerification();
+		dfc.clickOnConnections();
+		dfc.addConnection();
+		enterConnectionDetails(ConnectionName, SelectValue, Host, Port, Username, Password);
+		dfc.addTableSync();
+		tableSetup(DBtype, Dbname, AddTableSync);
+		pause(4000);
+		dfc.setUpSync();
+		pause(2000);
+		dfc.scheduleDoesNotRepeat();
+		// repeatHourly();
+		dfc.advancedSetup();
+		if ((syncProperty != null) && (syncProperty.equals("Yes"))) {
+			syncp.tsSyncProperties(SelectValue, addCondition, syncMode, synCompletionValue, moveItPath, waitForFile,
+					preSyncQuery, postSyncQuery, extractionModeInput, dataloadingModeInput, syncColumnDelimiter,
+					nullValue, nullValuedrp, escapeCharacter, enclosingCharacterInput, escapeUnclosedField,
+					fieldOptionallyEnclosedBy, bufferSize, dateStyleValue, dateDelimiter, timeStyleValue, timeDelimiter,
+					timeDelimiterValue, booleanRepresentationValue, skipTrailerRowsValue, readerEncoderValue, fetchSize,
+					nullIfValue, maxFileSize, parallelValue, stageLocation, allowLargeResultSet, readTimeout,
+					tsLoadOptions);
+			driver.findElement(By.xpath(OR.getProperty("MAP_TABLES_COLUMNS_TAB"))).click();
+		}
+		dfc.mapTableAndColumns(TsTable);
+		pause(10000);
+		dfc.clickOnConnections();
+		pause(2000);
+		dfc.selectConnection(ConnectionName);
+		pause(2000);
+		dfc.clickOnTable();
+		Thread.sleep(3000);
+		dfc.selectTable(TsTable);
+		dfc.pageRefresh();
+		dfc.clickOnViewLogIcon();
+		dfc.verifyExtractType(ExtractType);
+		dfc.verifyExtractionMode(ExtractionMode);
+		dfc.loadType();
+		dfc.numberOfRows();
+		dfc.clickOnClose();
+		dfc.tsLogout();
+		pause(5000);
+
+		return new SQLServerDataFlowCreation();
+	}
+
+	public void enterConnectionDetails(String connectionName, String selectValue, String Host, String Port,
+			String Username, String Password) {
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_INPUT"))).sendKeys(connectionName);
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_CONNECTION_TYPE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_TYPE_INPUT"))).sendKeys(selectValue);
+		driver.findElement(By.xpath(OR.getProperty("DROP_DOWN_VALUE"))).click();
+		String Connectin_type = driver.findElement(By.id("selectHeadId")).getText();
+		logger.info("Displaying header: " + Connectin_type);
+		logger.info("---------------Executing " + selectValue + " dataflow---------------");
+		driver.findElement(By.xpath(OR.getProperty("TS_INPUT_HOST"))).sendKeys(Host);
+		driver.findElement(By.xpath(OR.getProperty("TS_INPUT_PORT"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("TS_INPUT_PORT"))).sendKeys(Port);
+		driver.findElement(By.xpath(OR.getProperty("ENTER_USERNAME"))).sendKeys(Username);
+		logger.info("Entered username in the username textbox");
+		driver.findElement(By.xpath(OR.getProperty("ENTER_PASSWORD"))).sendKeys(Password);
+		logger.info("Entered password in the password textbox");
+
+		WebElement createbutton = driver
+				.findElement(By.xpath("//div[@class='rd-button-wrapper']//span[text()='Create Connection']"));
+		if (createbutton.isEnabled()) {
+			// createbutton.click();
+			js.executeScript("arguments[0].click();", createbutton);
+			logger.info("Create Connection clicked");
+		} else {
+			logger.info("Enter all required fields to enable create connection button");
+		}
+	}
+
+	public void tableSetup(String DBtype, String Dbname, String AddTableSync) {
+
+		List<WebElement> dblist = driver.findElements(By.xpath("//div[@class='tree-menu-main']//a"));
+		for (int i = 0; i < dblist.size(); i++) {
+			String selectDb = dblist.get(i).getText();
+			// logger.info(selectDb);
+			if (selectDb.equals(DBtype)) {
+				logger.info("Selected DBtype: " + selectDb);
+				dblist.get(i).click();
+				// pause(2000);
+				break;
+			}
+		}
+
+		List<WebElement> tableList = driver
+				.findElements(By.xpath("//div[@class='sql-list-grid-child']//div[@class='tree-menu-main']//a"));
+		for (int i = 0; i < tableList.size(); i++) {
+			if (tableList.get(i).getText().equals(Dbname)) {
+				logger.info("Child list: " + tableList.get(i).getText());
+				tableList.get(i).click();
+				pause(2000);
+				break;
+
+			}
+		}
+
+		List<WebElement> subList = driver.findElements(By.xpath(
+				"//div[@class='sql-list-grid-child']//div[@class='sql-list-grid-child']//ul[@class='treeview m-0 p-0']//a"));
+		for (int i = 0; i < subList.size(); i++) {
+			if (subList.get(i).getText().equals(AddTableSync)) {
+				logger.info("Sub list: " + subList.get(i).getText());
+				subList.get(i).click();
+				pause(2000);
+				break;
+			}
+		}
+
+	}
+}

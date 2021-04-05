@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.disuite.test.thoughtspot.AmazonS3DfCreationTest">
+        <methods>
+          <include name="as3DfCreationTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.AmazonS3DfCreationTest -->
+      <class name="com.disuite.test.thoughtspot.SQLServerDataFlowCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="sqlServerConnectionTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.SQLServerDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.GCSDataFlowCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="gcsDfCreationTest" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.GCSDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.MongoDBDataFlowCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="mongoDbDfCreationTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.MongoDBDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.AzureBlobStorageDataFlowCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="azureBlobStorageCreationTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.AzureBlobStorageDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.JdbcDataFlowCreationTest">
+        <methods>
+          <include name="jdbcDfCreationTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.JdbcDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.CreateFileConnectionTest">
+        <methods>
+          <include name="tsDpCreationTest" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.CreateFileConnectionTest -->
+      <class name="com.disuite.test.thoughtspot.HiveDataFlowCreationTest">
+        <methods>
+          <include name="smDfCreationTest" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.HiveDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.SnowflakeDataFlowCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="sfDfCreationTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.SnowflakeDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.SpliceMachineDataFlowCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="smDfCreationTest" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.SpliceMachineDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.DB2DataFlowCreationTest">
+        <methods>
+          <include name="smDfCreationTest" invocation-numbers="0 2"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.DB2DataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.MariaDbDataFlowCreationTest">
+        <methods>
+          <include name="mariaDbDfCreationTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.MariaDbDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.TeraDataDataFlowCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tsDfCreationTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.TeraDataDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.DenodoFileCreationTest">
+        <methods>
+          <include name="denodoConnectionTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.DenodoFileCreationTest -->
+      <class name="com.disuite.test.thoughtspot.BigQueryDataFlowCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="smDfCreationTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.BigQueryDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.SalesforceDataFlowCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="salesForceDfCreationTest" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.SalesforceDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.PostGreSqlDfCreationTest">
+        <methods>
+          <include name="pgsDfCreationTest" invocation-numbers="0 1 2"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.PostGreSqlDfCreationTest -->
+      <class name="com.disuite.test.thoughtspot.SAPSQLAnywhereDataFlowCreationTest">
+        <methods>
+          <include name="smDfCreationTest" invocation-numbers="0 1 2"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.SAPSQLAnywhereDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.MySqlDataFlowCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="sfDfCreationTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.MySqlDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.NetezzaDataFlowCreationTest">
+        <methods>
+          <include name="netezzaDFCreation" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.NetezzaDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.OracleDataFlowCreationTest">
+        <methods>
+          <include name="oracleDFCreation" invocation-numbers="0 2"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.OracleDataFlowCreationTest -->
+      <class name="com.disuite.test.thoughtspot.DbdlDataFlowCreationTest">
+        <methods>
+          <include name="dbdlDfCreationTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.disuite.test.thoughtspot.DbdlDataFlowCreationTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

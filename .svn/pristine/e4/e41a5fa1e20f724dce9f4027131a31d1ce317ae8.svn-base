@@ -1,0 +1,85 @@
+package com.disuite.pages.thoughtspot;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class ViewLog extends BaseClass {
+
+	URLNavigations url = new URLNavigations();
+	DataFlowCreation tsd = new DataFlowCreation();
+
+	public ViewLog viewLog() {
+		url.openThoughtSpot();
+		tsd.headerVerification();
+		clickOnTable();
+		clickOnConnection();
+		clickOnViewLogIcon();
+		verifyExtractType();
+		verifyExtractionMode();
+		loadType();
+		numberOfRows();
+		
+		return new ViewLog();
+	}
+	
+	public void clickOnTable() {
+		WebElement table = driver.findElement(By.xpath(OR.getProperty("MENU_TABLES")));
+		String tableText = table.getText();
+		table.click();
+		logger.info("Clicked on: " + tableText);
+	}
+	
+	public void clickOnConnection() {
+		WebElement connection = driver.findElement(By.xpath(OR.getProperty("CONNECTION_NAME")));
+		String connectionText = connection.getText();
+		connection.click();
+		logger.info("Selected connection: " + connectionText);
+	}
+	
+	public void clickOnViewLogIcon() {
+		driver.findElement(By.xpath(OR.getProperty("ICON_VIEW_LOG"))).click();
+		
+	}
+	
+	public void verifyExtractType() {
+		WebElement extractType = driver.findElement(By.xpath(OR.getProperty("EXTRACT_TYPE")));
+		String extractTypeText = extractType.getText();
+		logger.info(extractTypeText);
+		Assert.assertEquals(extractTypeText, "[Extract Type : JDBC]", "extract type does not matched");
+	}
+	
+	public void verifyExtractionMode() {
+		WebElement extractionMode = driver.findElement(By.xpath(OR.getProperty("EXTRACTION_MODE")));
+		String extractionModeText = extractionMode.getText();
+		logger.info(extractionModeText);
+		Assert.assertEquals(extractionModeText, "[Extraction Mode : Pipe]", "extraction mode does not matched");
+	}
+	
+	public void loadType() {
+		WebElement loadType = driver.findElement(By.xpath(OR.getProperty("LOAD_TYPE")));
+		String loadTypeText = loadType.getText();
+		logger.info(loadTypeText);
+		Assert.assertEquals(loadTypeText, "[Load Type : TSLOAD]", "extraction mode does not matched");
+	}
+	
+	public void numberOfRows() {
+		//Verifying number of rows
+		String totalRows = driver.findElement(By.xpath(OR.getProperty("ROWS_TOTAL"))).getText();
+		String[] rowsSplit = totalRows.split(": ");
+		String afterSplit = rowsSplit[1];
+		String afterTrim = afterSplit.trim();
+		logger.info("Total rows: " + afterTrim);
+
+		//Verifying number of rows loaded
+		String rowsLoadedMessage = driver.findElement(By.xpath(OR.getProperty("ROWS_LOADED"))).getText();
+		String[] loadedRowsSplit = rowsLoadedMessage.split(": ");
+		String afterLoadSplit = loadedRowsSplit[1];
+		String afterLoadTrim = afterLoadSplit.trim();
+		logger.info("Number of rows loaded: " + afterLoadTrim);
+		Assert.assertEquals(afterTrim, afterLoadTrim, "Loaded rows not matched with total rows");
+	}
+}

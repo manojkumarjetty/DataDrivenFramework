@@ -1,0 +1,166 @@
+package com.disuite.pages.thoughtspot;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class DB2ConnectionMethods extends BaseClass {
+	DataFlowCreation dfc = new DataFlowCreation();
+	URLNavigations url = new URLNavigations();
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	SyncProperties syncp = new SyncProperties();
+
+	/*
+	 * Method for Creating DB2 Connection
+	 */
+	public void createDB2Connection(String ConnectionName, String SelectValue, String platformValueInput, String Host,
+			String Port, String Username, String Password, String Database, String jdbcoptions, String dbAlias,
+			String vesionInput, String codePageInput, String DBtype, String Dbname, String AddTableSync,
+			 String syncProperty, String addCondition,
+				String syncMode, String synCompletionValue, String moveItPath, String waitForFile, String preSyncQuery,
+				String postSyncQuery, String extractionModeInput, String dataloadingModeInput, String syncColumnDelimiter,
+				String nullValue, String nullValuedrp, String escapeCharacter, String enclosingCharacterInput,
+				String escapeUnclosedField, String fieldOptionallyEnclosedBy, String bufferSize, String dateStyleValue,
+				String dateDelimiter, String timeStyleValue, String timeDelimiter, String timeDelimiterValue,
+				String booleanRepresentationValue, String skipTrailerRowsValue, String readerEncoderValue, String fetchSize,
+				String nullIfValue, String maxFileSize, String parallelValue, String stageLocation,
+				String allowLargeResultSet,String readTimeout, String tsLoadOptions,String TsTable, String ExtractType,
+			String ExtractionMode) throws InterruptedException {
+		url.openThoughtSpot();
+		dfc.clickOnConnections();
+		dfc.addConnection();
+		db2ConnectionDetails(ConnectionName, SelectValue, platformValueInput, Host, Port, Username, Password, Database,
+				jdbcoptions, dbAlias, vesionInput, codePageInput);
+		pause(1000);
+		// verifyConnectionSuccess();
+		dfc.addTableSync();
+		dfc.tableSetup(DBtype, Dbname, AddTableSync);
+		dfc.setUpSync();
+		dfc.scheduleDoesNotRepeat();
+		// repeatHourly();
+		dfc.advancedSetup();
+
+		if ((syncProperty != null) && (syncProperty.equals("Yes"))) {
+			syncp.tsSyncProperties(SelectValue, addCondition, syncMode, synCompletionValue, moveItPath, waitForFile,
+					preSyncQuery, postSyncQuery, extractionModeInput, dataloadingModeInput, syncColumnDelimiter,
+					nullValue, nullValuedrp, escapeCharacter, enclosingCharacterInput, escapeUnclosedField,
+					fieldOptionallyEnclosedBy, bufferSize, dateStyleValue, dateDelimiter, timeStyleValue, timeDelimiter,
+					timeDelimiterValue, booleanRepresentationValue, skipTrailerRowsValue, readerEncoderValue, fetchSize,
+					nullIfValue, maxFileSize, parallelValue, stageLocation, allowLargeResultSet, readTimeout,
+					tsLoadOptions);
+			driver.findElement(By.xpath(OR.getProperty("MAP_TABLES_COLUMNS_TAB"))).click();
+		}
+		dfc.mapTableAndColumns(TsTable);
+		pause(10000);
+		dfc.clickOnConnections();
+		pause(2000);
+		dfc.selectConnection(ConnectionName);
+		pause(2000);
+		dfc.clickOnTable();
+		Thread.sleep(3000);
+		dfc.selectTable(TsTable);
+		dfc.pageRefresh();
+		dfc.clickOnViewLogIcon();
+		dfc.verifyExtractType(ExtractType);
+		dfc.verifyExtractionMode(ExtractionMode);
+		dfc.loadType();
+		dfc.numberOfRows();
+		dfc.clickOnClose();
+		dfc.tsLogout();
+		pause(5000);
+
+	}
+
+	public void db2ConnectionDetails(String connectionName, String SelectValue, String platformValueInput, String Host,
+			String Port, String Username, String Password, String Database, String jdbcoptions, String dbAlias,
+			String vesionInput, String codePageInput) {
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_INPUT"))).sendKeys(connectionName);
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_CONNECTION_TYPE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_TYPE_INPUT"))).sendKeys(SelectValue);
+		driver.findElement(By.xpath(OR.getProperty("DROP_DOWN_VALUE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("PLATFORM_DROPDOWN"))).click();
+		/*
+		 * Loop for selecting Platform
+		 */
+		List<WebElement> platformOptions = driver.findElements(By.xpath(OR.getProperty("HIVE_DROPDOWN")));
+		for (int i = 0; i < platformOptions.size(); i++) {
+			String selectedPlatformValue = platformOptions.get(i).getText();
+			if (selectedPlatformValue.equalsIgnoreCase(platformValueInput)) {
+				platformOptions.get(i).click();
+			}
+			break;
+
+		}
+		driver.findElement(By.xpath(OR.getProperty("TS_INPUT_HOST"))).sendKeys(Host);
+		driver.findElement(By.xpath(OR.getProperty("TS_INPUT_PORT"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("TS_INPUT_PORT"))).sendKeys(Port);
+		driver.findElement(By.xpath(OR.getProperty("ENTER_USERNAME"))).sendKeys(Username);
+		logger.info("Entered username in the username textbox");
+		driver.findElement(By.xpath(OR.getProperty("ENTER_PASSWORD"))).sendKeys(Password);
+		logger.info("Entered password in the password textbox");
+		driver.findElement(By.xpath(OR.getProperty("DB2_DATABASE"))).sendKeys(Database);
+		advancedConfiguration(jdbcoptions, dbAlias, vesionInput, codePageInput);
+		WebElement createbutton = driver
+				.findElement(By.xpath("//div[@class='rd-button-wrapper']//span[text()='Create Connection']"));
+		if (createbutton.isEnabled()) {
+			// createbutton.click();
+			js.executeScript("arguments[0].click();", createbutton);
+			logger.info("Create Connection clicked");
+		} else {
+			logger.info("Enter all required fields to enable create connection button");
+		}
+
+	}
+
+	/*
+	 * DB2 Advanced Configuration
+	 */
+
+	public static void advancedConfiguration(String jdbcoptions, String dbAlias, String vesionInput,
+			String codePageInput) {
+		driver.findElement(By.xpath(OR.getProperty("ADVANCED_CONFIGURATION_BUTTON"))).click();
+		if (jdbcoptions != null)
+			driver.findElement(By.xpath(OR.getProperty("JDBC_OPTIONS"))).sendKeys(jdbcoptions);
+		driver.findElement(By.xpath(OR.getProperty("DB2_DATABASE_ALIAS"))).sendKeys(dbAlias);
+		/*
+		 * Loop for selecting Version
+		 */
+		driver.findElement(By.xpath(OR.getProperty("DB2_VERSION_DROPDOWN"))).click();
+		List<WebElement> versionOptions = driver
+				.findElements(By.xpath(OR.getProperty("HADOOP_RPC_PROTECTION_OPTIONS")));
+		for (int i = 0; i < versionOptions.size(); i++) {
+			String selectedVersionOption = versionOptions.get(i).getText();
+			if (selectedVersionOption.equalsIgnoreCase(vesionInput)) {
+				JavascriptExecutor jse = (JavascriptExecutor) driver;
+				jse.executeScript("arguments[0].click()", versionOptions.get(i));
+				// versionOptions.get(i).click();
+				logger.info("Selected Version" + selectedVersionOption);
+				break;
+			}
+
+		}
+
+		/*
+		 * Loop for selecting CODE PAGE
+		 */
+		driver.findElement(By.xpath(OR.getProperty("DB2_CODEPAGE_DROPDOWN"))).click();
+		List<WebElement> codePageOptions = driver
+				.findElements(By.xpath(OR.getProperty("HADOOP_RPC_PROTECTION_OPTIONS")));
+		for (int i = 0; i < codePageOptions.size(); i++) {
+			String selectedCodePageOption = codePageOptions.get(i).getText();
+			if (selectedCodePageOption.equalsIgnoreCase(codePageInput)) {
+				JavascriptExecutor jse = (JavascriptExecutor) driver;
+				jse.executeScript("arguments[0].click()", codePageOptions.get(i));
+				logger.info("Selected Code Page" + selectedCodePageOption);
+				break;
+			}
+
+		}
+	}
+
+}

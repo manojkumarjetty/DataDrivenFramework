@@ -1,0 +1,40 @@
+package com.disuite.test.thoughtspot;
+
+import java.util.Hashtable;
+import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import com.disuite.base.BaseClass;
+import com.disuite.pages.thoughtspot.ViewLog;
+import com.disuite.util.TestUtil;
+
+public class ViewLogTest {
+	@Test(dataProvider = "getData")
+	public void viewLogTest(Hashtable<String, String> data) throws InterruptedException {
+		
+		// check the run mode of test case
+				if (!TestUtil.isExecutable("ViewLog",
+						BaseClass.xls1)) {
+					throw new SkipException("Runmode set to NO");
+				}
+
+		// check runmode for data set
+				if (!data.get("Runmode").equals("Y")) {
+					throw new SkipException("Test Case Data Set Runmode is no.");
+				}
+
+				ViewLog vl = new ViewLog();
+				vl.viewLog();
+	}
+	
+	@DataProvider
+	public Object[][] getData() {
+		return TestUtil.getData("ViewLog", BaseClass.xls1);
+	}
+
+	@AfterMethod 
+	  public void tearDown() throws Exception {
+	  BaseClass.closeBrowser(); 
+	  }
+}

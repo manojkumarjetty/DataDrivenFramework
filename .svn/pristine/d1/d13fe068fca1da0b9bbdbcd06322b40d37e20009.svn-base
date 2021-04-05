@@ -1,0 +1,73 @@
+package com.disuite.pages.thoughtspot;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class VerifyConnection extends BaseClass{
+	URLNavigations url = new URLNavigations();
+	
+	public VerifyConnection verifyConnection() {
+		url.openThoughtSpot();
+		headerVerification();
+		clickOnConnections();
+		verifyConnectionName();
+		
+		return new VerifyConnection();
+	}
+	
+	public void headerVerification() {
+		String expectedHeader = "DataFlow Home";
+		String headerH2 = driver.findElement(By.xpath(OR.getProperty("TS_HEADER"))).getText();
+		logger.info("TS Header: " + headerH2);
+		Assert.assertEquals(headerH2, expectedHeader, "Header not matched");
+	}
+
+	public void verifyConnectionName() {
+		WebElement connectionName = driver.findElement(By.xpath(OR.getProperty("ROW_CONNECTION_NAME")));
+		String nameText = connectionName.getText();
+		if(connectionName.isDisplayed()) {
+			logger.info(nameText + " is displayed");
+		} else {
+			logger.info(nameText + " is not displayed");
+		}
+	}
+	
+	public void clickOnConnections() {
+		WebElement connection = driver.findElement(By.xpath(OR.getProperty("BUTTON_CONNECTIONS")));
+		String connectionText = connection.getText();
+		connection.click();
+		logger.info("Clicked on " + connectionText);
+	}
+
+	public void addConnection() {
+		WebElement addConnection = driver.findElement(By.xpath(OR.getProperty("BUTTON_ADD_CONNECTION")));
+		String connectionText = addConnection.getText();
+		addConnection.click();
+		logger.info("Clicked on " + connectionText);
+	}
+
+	public void selectConnectionType(String connectionName, String selectValue) {
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_INPUT"))).sendKeys(connectionName);
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_CONNECTION_TYPE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_TYPE_INPUT"))).sendKeys(selectValue);
+		driver.findElement(By.xpath(OR.getProperty("DROP_DOWN_VALUE"))).click();
+
+	}
+
+	public void enterDetails(String hostId, String userName, String password) {
+		driver.findElement(By.xpath(OR.getProperty("INPUT_HOST"))).sendKeys(hostId);
+		driver.findElement(By.xpath(OR.getProperty("ENTER_USERNAME"))).sendKeys(userName);
+		logger.info("Entered username in the username textbox");
+
+		driver.findElement(By.xpath(OR.getProperty("ENTER_PASSWORD"))).sendKeys(password);
+		logger.info("Entered password in the password textbox");
+		pause(500);
+		driver.findElement(By.xpath(OR.getProperty("CREATE_CONNECTION"))).click();
+
+	}
+
+}

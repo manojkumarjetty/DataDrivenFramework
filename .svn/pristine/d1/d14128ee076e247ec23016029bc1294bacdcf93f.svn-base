@@ -1,0 +1,116 @@
+package com.disuite.pages.thoughtspot;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class DbdlConnectionMethods extends BaseClass{
+	DataFlowCreation dfc = new DataFlowCreation();
+	URLNavigations url = new URLNavigations();
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+
+	/*
+	 * Method for Creating Hive Connection
+	 */
+	public void createDbdlConnection(String connectionName, String SelectValue, String Serverhostname,
+			String Port, String HTTPpath, String Protocol, String ClusterId, String accessToken,
+			String DBFSStageLocation, String Dbname, String AddTableSync, String TsTable, String ExtractType, 
+			String ExtractionMode) throws InterruptedException{
+		url.openThoughtSpot();
+		dfc.clickOnConnections();
+		dfc.addConnection();
+		dbdlConnectionDetails(connectionName, SelectValue, Serverhostname, Port, HTTPpath, 
+				Protocol, ClusterId, accessToken, DBFSStageLocation);
+		// verifyConnectionSuccess();
+		dfc.addTableSync();
+		pause(1000);
+		tableSetup(Dbname, AddTableSync);
+		dfc.setUpSync();
+		dfc.scheduleDoesNotRepeat();
+		// repeatHourly();
+		dfc.advancedSetup();
+		dfc.mapTableAndColumns(TsTable);
+		pause(10000);
+		// verifyToastMessage();
+		// clickOnConnections();
+		dfc.clickOnTable();
+		dfc.selectConnection(TsTable);
+		dfc.pageRefresh();
+		dfc.clickOnViewLogIcon();
+		dfc.verifyExtractType(ExtractType);
+		dfc.verifyExtractionMode(ExtractionMode);
+		dfc.loadType();
+		dfc.numberOfRows();
+		dfc.clickOnClose();
+		dfc.tsLogout();
+	}
+
+	public void dbdlConnectionDetails(String connectionName, String SelectValue, String Serverhostname,
+			String Port, String HTTPpath, String Protocol, String ClusterId, String accessToken,
+			String DBFSStageLocation) {
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_INPUT"))).sendKeys(connectionName);
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_CONNECTION_TYPE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_TYPE_INPUT"))).sendKeys(SelectValue);
+		driver.findElement(By.xpath(OR.getProperty("DROP_DOWN_VALUE"))).click();
+		
+		driver.findElement(By.xpath(OR.getProperty("SERVER_HOST_NAME"))).sendKeys(Serverhostname);
+		driver.findElement(By.xpath(OR.getProperty("PORT"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("PORT"))).sendKeys(Port);
+		driver.findElement(By.xpath(OR.getProperty("HTTP_PATH"))).sendKeys(HTTPpath);
+		driver.findElement(By.xpath(OR.getProperty("PROTOCOL"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("PROTOCOL"))).sendKeys(Protocol);
+		driver.findElement(By.xpath(OR.getProperty("CLUSTER_ID"))).sendKeys(ClusterId);
+		driver.findElement(By.xpath(OR.getProperty("ACCESS_TOKEN"))).sendKeys(accessToken);
+		driver.findElement(By.xpath(OR.getProperty("DBFS_STAGE_LOCATION"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("DBFS_STAGE_LOCATION"))).sendKeys(DBFSStageLocation);
+		
+		pause(5000);
+				
+
+		WebElement createbutton = driver.findElement(By.xpath("//div[@class='rd-button-wrapper']//span[text()='Create Connection']"));
+		if (createbutton.isEnabled()) {
+			// createbutton.click();
+			js.executeScript("arguments[0].click();", createbutton);
+			logger.info("Create Connection clicked");
+		} else {
+			logger.info("Enter all required fields to enable create connection button");
+		}
+		pause(10000);
+		/*
+		 * driver.findElement(By.xpath("//a[contains(text(),' diappdb_stg ')]")).click()
+		 * ; pause(10000);
+		 * driver.findElement(By.xpath("//a[contains(text(),' dbo ')]")).click();
+		 * pause(10000);
+		 * driver.findElement(By.xpath("//a[contains(text(),'sel_medium')]")).click();
+		 */
+		 
+	}
+	public void tableSetup(String Dbname, String AddTableSync) {
+		
+		List<WebElement> dblist = driver.findElements(By.xpath("//div[@class='tree-menu-main']//a"));
+		for (int i = 0; i < dblist.size(); i++) {
+			String selectDb = dblist.get(i).getText();
+			logger.info(selectDb);
+			if (selectDb.equalsIgnoreCase(Dbname)) {
+				dblist.get(i).click();
+				pause(2000);
+				break;
+			}
+		}
+
+		  List<WebElement> tablelist = driver .findElements(By.xpath("//div[@class='sql-list-grid-child']//div[@class='tree-menu-main']//a")); 
+		  for (int i = 0; i < tablelist.size(); i++) { 
+			  if (tablelist.get(i).getText().equalsIgnoreCase(AddTableSync)) {
+				  logger.info("Child list: " + tablelist.get(i).getText());
+				  tablelist.get(i).click(); 
+				  pause(2000);
+				  break;
+				  }
+			  }
+	}
+}

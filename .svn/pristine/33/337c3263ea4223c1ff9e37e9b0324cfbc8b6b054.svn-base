@@ -1,0 +1,77 @@
+package com.disuite.pages.thoughtspot;
+
+import org.openqa.selenium.By;
+
+import com.disuite.base.URLNavigations;
+
+public class RedshiftDataFlowCreation extends DataFlowCreation {
+	URLNavigations url = new URLNavigations();
+	SyncProperties syncp = new SyncProperties();
+
+	public void createRedshiftConnection(String ConnectionName, String SelectValue, String Host, String Port,
+			String tdAuthenticationType, String prestoAuthenticationType, String Username, String User, String Password,
+			String Database, String Version, String catalogName, String schemaName, String jdbcoptions,
+			String Config_Version, String FilePath, String FileProtocol, String FileHost, String FilePort,
+			String FileUsername, String FilePassword, String Keyfile, String AuthenticationType, String TsTable,
+			String Passphrasekey, String DBtype, String Dbname, String AddTableSync, String Account,
+			String AzureauthTypeInput, String azureKey, String Container, String syncProperty, String addCondition,
+			String syncMode, String synCompletionValue, String moveItPath, String waitForFile, String preSyncQuery,
+			String postSyncQuery, String extractionModeInput, String dataloadingModeInput, String syncColumnDelimiter,
+			String nullValue, String nullValuedrp, String escapeCharacter, String enclosingCharacterInput,
+			String escapeUnclosedField, String fieldOptionallyEnclosedBy, String bufferSize, String dateStyleValue,
+			String dateDelimiter, String timeStyleValue, String timeDelimiter, String timeDelimiterValue,
+			String booleanRepresentationValue, String skipTrailerRowsValue, String readerEncoderValue, String fetchSize,
+			String nullIfValue, String maxFileSize, String parallelValue, String stageLocation,
+			String allowLargeResultSet, String readTimeout, String tsLoadOptions, String ExtractType,
+			String ExtractionMode)
+			throws InterruptedException {
+		url.openThoughtSpot();
+		headerVerification();
+		clickOnConnections();
+		addConnection();
+		enterConnectionDetails(ConnectionName, SelectValue, Host, Port, tdAuthenticationType, prestoAuthenticationType,
+				Username, User, Password, Database, Version, catalogName, schemaName, jdbcoptions, Config_Version,
+				FilePath, FileProtocol, FileHost, FilePort, FileUsername, FilePassword, Keyfile, AuthenticationType,
+				Passphrasekey, Account, AzureauthTypeInput, azureKey, Container);
+		pause(2000);
+		addTableSync();
+		tableSetup(DBtype, Dbname, AddTableSync);
+		setUpSync();
+		pause(3000);
+		scheduleDoesNotRepeat();
+		advancedSetup();
+
+		if ((syncProperty != null) && (syncProperty.equals("Yes"))) {
+			syncp.tsSyncProperties(SelectValue, addCondition, syncMode, synCompletionValue, moveItPath, waitForFile,
+					preSyncQuery, postSyncQuery, extractionModeInput, dataloadingModeInput, syncColumnDelimiter,
+					nullValue, nullValuedrp, escapeCharacter, enclosingCharacterInput, escapeUnclosedField,
+					fieldOptionallyEnclosedBy, bufferSize, dateStyleValue, dateDelimiter, timeStyleValue, timeDelimiter,
+					timeDelimiterValue, booleanRepresentationValue, skipTrailerRowsValue, readerEncoderValue, fetchSize,
+					nullIfValue, maxFileSize, parallelValue, stageLocation, allowLargeResultSet, readTimeout,
+					tsLoadOptions);
+			driver.findElement(By.xpath(OR.getProperty("MAP_TABLES_COLUMNS_TAB"))).click();
+		}
+
+
+		mapTableAndColumns(TsTable);
+		pause(10000);
+		clickOnConnections();
+		pause(2000);
+		selectConnection(ConnectionName);
+		pause(2000);
+		clickOnTable();
+		Thread.sleep(3000);
+		selectTable(TsTable);
+		pageRefresh();
+		clickOnViewLogIcon();
+		verifyExtractType(ExtractType);
+		verifyExtractionMode(ExtractionMode);
+		loadType();
+		numberOfRows();
+		clickOnClose();
+		tsLogout();
+		pause(5000);
+
+	}
+
+}

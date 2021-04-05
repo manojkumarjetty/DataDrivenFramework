@@ -1,0 +1,293 @@
+package com.disuite.pages.thoughtspot;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class HiveConnectionMethods extends BaseClass {
+	DataFlowCreation dfc = new DataFlowCreation();
+	URLNavigations url = new URLNavigations();
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	SyncProperties syncp = new SyncProperties();
+	/*
+	 * Method for Creating Hive Connection
+	 */
+	public void createHiveConnection(String connectionName, String SelectValue, String hiveConfigChecked,
+			String hiveHost, String hivePort, String hiveZookeeperNamespace, String zooperQuorumHost,
+			String hiveSecurityAuthentication, String user, String trustStorePath, String password,
+			String hiveTransportMode, String httpPath, String hadoopDistribution, String distributionVersion,
+			String hivePrincipal, String userPrincipal, String userKeytab, String kDCHost, String defaultRealm,
+			String hdpConfigPath, String dfsConfigChecked, String dfsNameService, String dfsNameNode,
+			String RpcAddressNode1, String RpcAddressNode2, String dfsHost, String dfsPort, String dfsLocation,
+			String tempLocation, String dfssecAuth, String rpcProtectionInput, String nameNodePrinicipal,
+			String zookeeperClientPort, String queueName, String yarnTimelineWebappHost, String yarnTimelineWebappPort,
+			String hiveJdbcOptions, String DBtype, String Dbname, String AddTableSync, String syncProperty, String addCondition,
+			String syncMode, String synCompletionValue, String moveItPath, String waitForFile, String preSyncQuery,
+			String postSyncQuery, String extractionModeInput, String dataloadingModeInput, String syncColumnDelimiter,
+			String nullValue, String nullValuedrp, String escapeCharacter, String enclosingCharacterInput,
+			String escapeUnclosedField, String fieldOptionallyEnclosedBy, String bufferSize, String dateStyleValue,
+			String dateDelimiter, String timeStyleValue, String timeDelimiter, String timeDelimiterValue,
+			String booleanRepresentationValue, String skipTrailerRowsValue, String readerEncoderValue, String fetchSize,
+			String nullIfValue, String maxFileSize, String parallelValue, String stageLocation,
+			String allowLargeResultSet,String readTimeout, String tsLoadOptions,String TsTable, 
+			String ExtractType, String ExtractionMode) throws InterruptedException{
+		url.openThoughtSpot();
+		dfc.clickOnConnections();
+		dfc.addConnection();
+		hiveConnectionDetails(connectionName,SelectValue,hiveConfigChecked, hiveHost, hivePort, hiveZookeeperNamespace, zooperQuorumHost,
+				hiveSecurityAuthentication, user, trustStorePath, password, hiveTransportMode, httpPath,
+				hadoopDistribution, distributionVersion, hivePrincipal, userPrincipal, userKeytab, kDCHost,
+				defaultRealm, hdpConfigPath, dfsConfigChecked, dfsNameService, dfsNameNode, RpcAddressNode1,
+				RpcAddressNode2, dfsHost, dfsPort, dfsLocation, tempLocation, dfssecAuth, rpcProtectionInput,
+				nameNodePrinicipal, zookeeperClientPort, queueName, yarnTimelineWebappHost, yarnTimelineWebappPort,
+				hiveJdbcOptions);
+		pause(2000);
+		// verifyConnectionSuccess();
+		dfc.addTableSync();
+		dfc.tableSetup(DBtype, Dbname, AddTableSync);
+		dfc.setUpSync();
+		dfc.scheduleDoesNotRepeat();
+		// repeatHourly();
+		dfc.advancedSetup();
+		if ((syncProperty != null) && (syncProperty.equals("Yes"))) {
+			syncp.tsSyncProperties(SelectValue, addCondition, syncMode, synCompletionValue, moveItPath, waitForFile,
+					preSyncQuery, postSyncQuery, extractionModeInput, dataloadingModeInput, syncColumnDelimiter,
+					nullValue, nullValuedrp, escapeCharacter, enclosingCharacterInput, escapeUnclosedField,
+					fieldOptionallyEnclosedBy, bufferSize, dateStyleValue, dateDelimiter, timeStyleValue, timeDelimiter,
+					timeDelimiterValue, booleanRepresentationValue, skipTrailerRowsValue, readerEncoderValue, fetchSize,
+					nullIfValue, maxFileSize, parallelValue, stageLocation, allowLargeResultSet, readTimeout,
+					tsLoadOptions);
+			driver.findElement(By.xpath(OR.getProperty("MAP_TABLES_COLUMNS_TAB"))).click();
+		}
+		dfc.mapTableAndColumns(TsTable);
+		pause(10000);
+		dfc.clickOnConnections();
+		pause(2000);
+		dfc.selectConnection(connectionName);
+		pause(2000);
+		dfc.clickOnTable();
+		Thread.sleep(3000);
+		dfc.selectTable(TsTable);
+		dfc.pageRefresh();
+		dfc.clickOnViewLogIcon();
+		dfc.verifyExtractType(ExtractType);
+		dfc.verifyExtractionMode(ExtractionMode);
+		dfc.loadType();
+		dfc.numberOfRows();
+		dfc.clickOnClose();
+		dfc.tsLogout();
+		pause(5000);
+	}
+
+	public void hiveConnectionDetails(String connectionName, String SelectValue,String hiveConfigChecked,String hiveHost, String hivePort,
+			String hiveZookeeperNamespace, String zooperQuorumHost, String hiveSecurityAuthentication, String user,
+			String trustStorePath, String password, String hiveTransportMode, String httpPath,
+			String hadoopDistribution, String distributionVersion, String hivePrincipal, String userPrincipal,
+			String userKeytab, String kDCHost, String defaultRealm, String hdpConfigPath, String dfsConfigChecked,
+			String dfsNameService, String dfsNameNode, String RpcAddressNode1, String RpcAddressNode2, String dfsHost,
+			String dfsPort, String dfsLocation, String tempLocation, String dfssecAuth, String rpcProtectionInput,
+			String nameNodePrinicipal, String zookeeperClientPort, String queueName, String yarnTimelineWebappHost,
+			String yarnTimelineWebappPort, String hiveJdbcOptions) {
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_INPUT"))).sendKeys(connectionName);
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_CONNECTION_TYPE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_TYPE_INPUT"))).sendKeys(SelectValue);
+		driver.findElement(By.xpath(OR.getProperty("DROP_DOWN_VALUE"))).click();
+		if (hiveConfigChecked.equalsIgnoreCase("No")) {
+			driver.findElement(By.xpath(OR.getProperty("TS_INPUT_HOST"))).sendKeys(hiveHost);
+			driver.findElement(By.xpath(OR.getProperty("TS_INPUT_PORT"))).clear();
+			driver.findElement(By.xpath(OR.getProperty("TS_INPUT_PORT"))).sendKeys(hivePort);
+		} else {
+			driver.findElement(By.xpath(OR.getProperty("HIVE_CONFIG_CHECKBOX"))).click();
+			driver.findElement(By.xpath(OR.getProperty("HIVESERVER2_ZOOKEEPER_NAMESPACE"))).sendKeys(hiveZookeeperNamespace);
+			driver.findElement(By.xpath(OR.getProperty("ZOOKEEPER_QUORUM_HOST"))).sendKeys(zooperQuorumHost);
+
+		}
+		driver.findElement(By.xpath(OR.getProperty("HIVE_SECUTITY_AUTHENTICATION"))).click();
+		/*
+		 * Loop for selecting HIVE SECUTITY AUTHENTICATION option
+		 * 
+		 */
+		List<WebElement> hiveAuth = driver.findElements(By.xpath(OR.getProperty("HIVE_DROPDOWN")));
+		for (int i = 0; i < hiveAuth.size(); i++) {
+			String secutext = hiveAuth.get(i).getText();
+			if (secutext.equalsIgnoreCase(hiveSecurityAuthentication)) {
+				WebElement secbuttn = hiveAuth.get(i);
+				secbuttn.click();
+				logger.info("Selected HIVE_SECUTITY_AUTHENTICATION" + secutext);
+				break;
+			}
+		}
+		switch (hiveSecurityAuthentication) {
+		case "Simple":
+			driver.findElement(By.xpath(OR.getProperty("ENTER_USERNAME"))).sendKeys(user);
+			break;
+		case "Kerberos":
+			driver.findElement(By.xpath(OR.getProperty("HIVE_PRINICIPAL"))).sendKeys(hivePrincipal);
+			driver.findElement(By.xpath(OR.getProperty("HIVE_USER_PRINCIPAL"))).sendKeys(userPrincipal);
+			driver.findElement(By.xpath(OR.getProperty("HIVE_USER_KEYTAB"))).sendKeys(userKeytab);
+			driver.findElement(By.xpath(OR.getProperty("HIVE_KDC_HOST"))).sendKeys(kDCHost);
+			driver.findElement(By.xpath(OR.getProperty("HIVE_DEFAULT_REALM"))).sendKeys(defaultRealm);
+			break;
+		case "LDAP":
+		case "LDAP & SSL":
+			driver.findElement(By.xpath(OR.getProperty("ENTER_USERNAME"))).sendKeys(user);
+			driver.findElement(By.xpath(OR.getProperty("ENTER_PASSWORD"))).sendKeys(password);
+			break;
+		case "SSL":
+		case "Kerberos & SSL":
+			driver.findElement(By.xpath(OR.getProperty("HIVE_TRUST_STORE_PATH"))).sendKeys(trustStorePath);
+			driver.findElement(By.xpath(OR.getProperty("ENTER_PASSWORD"))).sendKeys(password);
+			break;
+		default:
+			logger.info("Invalid switch case");
+			break;
+
+		}
+		/*
+		 * Loop for selecting Hive TRANSPORTMODE option
+		 * 
+		 */
+		driver.findElement(By.xpath(OR.getProperty("HIVE_TRANSPORTMODE"))).click();
+		List<WebElement> hiveTrans = driver.findElements(By.xpath(OR.getProperty("HIVE_DROPDOWN")));
+		for (int i = 0; i < hiveTrans.size(); i++) {
+			String hiveTranstext = hiveTrans.get(i).getText();
+			logger.info("Clicked on" + hiveTranstext);
+			if (hiveTranstext.equalsIgnoreCase(hiveTransportMode)) {
+				hiveTrans.get(i).click();
+				logger.info("Selected Hive_TRANSPORTMODE " + hiveTranstext);
+				if (hiveTranstext.equalsIgnoreCase("http")) {
+					driver.findElement(By.xpath(OR.getProperty("HIVE_HTTP_PATH"))).clear();
+					driver.findElement(By.xpath(OR.getProperty("HIVE_HTTP_PATH"))).sendKeys(httpPath);
+				}
+				break;
+			}
+
+		}
+		/*
+		 * Loop for selecting Hive DISTRIBUTION option
+		 * 
+		 */
+
+		driver.findElement(By.xpath(OR.getProperty("HIVE_DISTRIBUTION"))).click();
+		List<WebElement> hiveDist = driver.findElements(By.xpath(OR.getProperty("HIVE_DROPDOWN")));
+		for (int i = 0; i < hiveDist.size(); i++) {
+			String hiveDisttext = hiveDist.get(i).getText();
+			if (hiveDisttext.equalsIgnoreCase(hadoopDistribution)) {
+				hiveDist.get(i).click();
+				logger.info("Selected Hive_DISTRIBUTION " + hiveDisttext);
+				break;
+			}
+
+		}
+		/*
+		 * Loop for selecting Hive DISTRIBUTION VERSION option
+		 * 
+		 */
+		driver.findElement(By.xpath(OR.getProperty("HIVE_DISTRIBUTION_VERSION"))).click();
+		List<WebElement> hiveDistVersion = driver.findElements(By.xpath(OR.getProperty("HIVE_DROPDOWN")));
+		for (int i = 0; i < hiveDistVersion.size(); i++) {
+			String hiveDistVersiontext = hiveDistVersion.get(i).getText();
+			if (hiveDistVersiontext.equalsIgnoreCase(distributionVersion)) {
+				hiveDistVersion.get(i).click();
+				logger.info("Selected Hive_DISTRIBUTION_VERSION" + hiveDistVersiontext);
+				break;
+			}
+
+		}
+		advancedConfiguration(hiveSecurityAuthentication, hdpConfigPath, dfsConfigChecked, dfsNameService, dfsNameNode,
+				RpcAddressNode1, RpcAddressNode2, dfsHost, dfsPort, dfsLocation, tempLocation, dfssecAuth,
+				rpcProtectionInput, nameNodePrinicipal, zookeeperClientPort, queueName, yarnTimelineWebappHost,
+				yarnTimelineWebappPort, hiveJdbcOptions);
+		WebElement createbutton = driver
+				.findElement(By.xpath("//div[@class='rd-button-wrapper']//span[text()='Create Connection']"));
+		if (createbutton.isEnabled()) {
+			// createbutton.click();
+			js.executeScript("arguments[0].click();", createbutton);
+			logger.info("Create Connection clicked");
+		} else {
+			logger.info("Enter all required fields to enable create connection button");
+		}
+
+	}
+
+	/*
+	 * ADVANCED CONFIGURATIONS
+	 * 
+	 */
+	public void advancedConfiguration(String hiveSecurityAuthentication, String hdpConfigPath, String dfsConfigChecked,
+			String dfsNameService, String dfsNameNode, String RpcAddressNode1, String RpcAddressNode2, String dfsHost,
+			String dfsPort, String dfsLocation, String tempLocation, String dfssecAuth, String rpcProtectionInput,
+			String nameNodePrinicipal, String zookeeperClientPort, String queueName, String yarnTimelineWebappHost,
+			String yarnTimelineWebappPort, String hiveJdbcOptions) {
+
+		driver.findElement(By.xpath(OR.getProperty("ADVANCED_CONFIGURATION_BUTTON"))).click();
+		if (hdpConfigPath != null)
+			driver.findElement(By.xpath(OR.getProperty("HADOOP_CONF_PATH"))).sendKeys(hdpConfigPath);
+
+		if (dfsConfigChecked.equalsIgnoreCase("Yes")) {
+			driver.findElement(By.xpath(OR.getProperty("DFS_CONFIG_CHECKBOX"))).click();
+			driver.findElement(By.xpath(OR.getProperty("DFS_NAME_SERVICE"))).sendKeys(dfsNameService);
+			driver.findElement(By.xpath(OR.getProperty("DFS_NAME_NODE"))).sendKeys(dfsNameNode);
+			driver.findElement(By.xpath(OR.getProperty("RPC_ADDRESS_NAMENODE1"))).sendKeys(RpcAddressNode1);
+			driver.findElement(By.xpath(OR.getProperty("RPC_ADDRESS_NAMENODE2"))).sendKeys(RpcAddressNode2);
+
+		} else {
+			driver.findElement(By.xpath(OR.getProperty("HIVE_DFS_HOST"))).sendKeys(dfsHost);
+			driver.findElement(By.xpath(OR.getProperty("HIVE_DFS_PORT"))).sendKeys(dfsPort);
+		}
+		driver.findElement(By.xpath(OR.getProperty("HIVE_DEFAULT_DFS_LOCATION"))).sendKeys(dfsLocation);
+		driver.findElement(By.xpath(OR.getProperty("HIVE_TEMP_DFS_LOCATION"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("HIVE_TEMP_DFS_LOCATION"))).sendKeys(tempLocation);
+		/*
+		 * Looper for selecting DFS SECURITY AUTHENTICATION
+		 * 
+		 */
+		driver.findElement(By.xpath(OR.getProperty("DFS_SECURITY_AUTHENTICATION_DROPDOWN"))).click();
+		List<WebElement> dfsSecurityAuthentication = driver
+				.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+		for (int i = 0; i < dfsSecurityAuthentication.size(); i++) {
+
+			String dfssectext = dfsSecurityAuthentication.get(i).getText();
+
+			if (dfssectext.equalsIgnoreCase(dfssecAuth)) {
+				dfsSecurityAuthentication.get(i).click();
+				logger.info("Selected DFS_SECURITY_AUTHENTICATION " + dfssectext);
+				if (dfssecAuth.equalsIgnoreCase("Kerberos")) {
+					/*
+					 * Loop for selecting Hadoop RPC Protection
+					 * 
+					 */
+					driver.findElement(By.xpath(OR.getProperty("HADOOP_RPC_PROTECTION_DROPDOWN"))).click();
+					List<WebElement> hiveRpcProtection = driver
+							.findElements(By.xpath(OR.getProperty("HADOOP_RPC_PROTECTION_OPTIONS")));
+					for (int j = 0; j < hiveRpcProtection.size(); j++) {
+						String selectedRpcPrtection = hiveRpcProtection.get(j).getText();
+						if (selectedRpcPrtection.equalsIgnoreCase(rpcProtectionInput)) {
+							hiveRpcProtection.get(j).click();
+							logger.info("Selected Hadoop_RPC_Protection " + selectedRpcPrtection);
+						}
+						break;
+					}
+				}
+				break;
+			}
+		}
+		if (hiveSecurityAuthentication.equals("Simple") || hiveSecurityAuthentication.equals("Kerberos")) {
+			driver.findElement(By.xpath(OR.getProperty("NAMENODE_PRINICIPAL"))).sendKeys(nameNodePrinicipal);
+			driver.findElement(By.xpath(OR.getProperty("ZOOKEEPER_CLIENT_PORT"))).sendKeys(zookeeperClientPort);
+			driver.findElement(By.xpath(OR.getProperty("QUEUE_NAME"))).sendKeys(queueName);
+			driver.findElement(By.xpath(OR.getProperty("YARN_TIMELINE_WEBAPP_HOST"))).sendKeys(yarnTimelineWebappHost);
+			driver.findElement(By.xpath(OR.getProperty("YARN_TIMELINE_WEBAPP_PORT"))).sendKeys(yarnTimelineWebappPort);
+
+		}
+		if (hiveJdbcOptions != null)
+			driver.findElement(By.xpath(OR.getProperty("JDBC_OPTIONS"))).sendKeys(hiveJdbcOptions);
+
+	}
+
+}

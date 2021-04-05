@@ -1,0 +1,108 @@
+package com.disuite.pages.thoughtspot;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class AmazonS3DfCreation extends BaseClass {
+	URLNavigations url = new URLNavigations();
+	DataFlowCreation tsdf = new DataFlowCreation();
+	ViewLog vl = new ViewLog();
+	CreateFileConnection fc = new CreateFileConnection();
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	
+	public AmazonS3DfCreation s3DfCreation(String ConnectionName, String SelectValue, String AmazonS3URL, 
+								String Bucket, String AccessKey, String SecretKey, String DBtype, String Dbname, 
+								String AddTableSync, String columnDelimiter, 
+								String otherDelimiter, String TsTable, String ExtractType, String ExtractionMode) throws InterruptedException {
+		url.openThoughtSpot();
+		tsdf.headerVerification();
+		tsdf.clickOnConnections();
+		tsdf.addConnection();
+		createConnection(ConnectionName, SelectValue, AmazonS3URL, Bucket, AccessKey, SecretKey);
+		tsdf.addTableSync();
+		pause(3000);
+		tsdf.tableSetup(DBtype, Dbname, AddTableSync);
+		createTableSync(columnDelimiter, otherDelimiter);
+		fc.checkHeaderRow();
+		tsdf.setUpSync();
+		tsdf.scheduleDoesNotRepeat();
+		tsdf.advancedSetup();
+		tsdf.mapTableAndColumns(TsTable);
+		pause(10000);
+		tsdf.clickOnConnections();
+		tsdf.selectConnection(ConnectionName);
+		pause(2000);
+		tsdf.selectTable(TsTable);
+		Thread.sleep(3000);
+		tsdf.pageRefresh();
+		tsdf.clickOnViewLogIcon();
+		tsdf.verifyExtractType(ExtractType);
+		//tsdf.verifyExtractionMode(ExtractionMode);
+		tsdf.loadType();
+		tsdf.numberOfRows();
+		tsdf.clickOnClose();
+		tsdf.tsLogout();
+		
+		
+		return new AmazonS3DfCreation();
+	}
+	
+	public void createConnection(String connectionName, String selectValue, String amazonS3URL, 
+							String bucket, String accessKey, String secretKey) {
+		logger.info("---------------Executing " + selectValue + " dataflow---------------");
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_INPUT"))).sendKeys(connectionName);
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_CONNECTION_TYPE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_TYPE_INPUT"))).sendKeys(selectValue);
+		driver.findElement(By.xpath(OR.getProperty("DROP_DOWN_VALUE"))).click();
+		String Connectin_type = driver.findElement(By.id("selectHeadId")).getText();
+		logger.info("Displaying header: " + Connectin_type);
+		driver.findElement(By.xpath(OR.getProperty("AMAZON_S3_URL"))).sendKeys(amazonS3URL);
+		driver.findElement(By.xpath(OR.getProperty("AMAZON_S3_BUCKET"))).sendKeys(bucket);
+		driver.findElement(By.xpath(OR.getProperty("AMAZON_ACCESS_KEY"))).sendKeys(accessKey);
+		driver.findElement(By.xpath(OR.getProperty("AMAZON_SECRET_KEY"))).sendKeys(secretKey);
+		WebElement createbutton = driver
+				.findElement(By.xpath("//div[@class='rd-button-wrapper']//span[text()='Create Connection']"));
+		if (createbutton.isEnabled()) {
+			// createbutton.click();
+			js.executeScript("arguments[0].click();", createbutton);
+			logger.info("Entered all required fields and clicked on create Connection button");
+		} else {
+			logger.info("Enter all required fields to enable create connection button");
+		}
+	}
+	
+	public void createTableSync(String columnDelimiter, String otherDelimiter) {
+		
+		List<WebElement> columnDelimiterList = driver.findElements(By.xpath(OR.getProperty("FILE_COLUMN_DELIMITER")));
+		for (int i = 0; i < columnDelimiterList.size(); i++) {
+			String selectedColumnDelimiter = columnDelimiterList.get(i).getText();
+
+			if (selectedColumnDelimiter.equalsIgnoreCase(columnDelimiter)) {
+				logger.info("Selected Column Delimiter"      +           selectedColumnDelimiter);
+				Actions action =new Actions(driver);
+				action.moveToElement(columnDelimiterList.get(i)).perform();
+				js.executeScript("arguments[0].click();",columnDelimiterList.get(i));
+				//columnDelimiterList.get(i).click();
+				pause(1000);
+				logger.info("Clicked on"             +   selectedColumnDelimiter);
+
+				if (selectedColumnDelimiter.equals("Other")) {
+					driver.findElement(By.xpath("//input[@id='Wildcard']")).sendKeys(otherDelimiter);
+					driver.findElement(By.xpath("//div[@class='form-inline']")).click();
+				}
+				pause(2000);
+				break;
+			}
+
+		}
+
+	}
+
+}

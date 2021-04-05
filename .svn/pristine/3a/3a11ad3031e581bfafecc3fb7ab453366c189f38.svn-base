@@ -1,0 +1,223 @@
+package com.disuite.pages.thoughtspot;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class CreateFileConnection extends BaseClass {
+	URLNavigations url = new URLNavigations();
+	DataFlowCreation tsdf = new DataFlowCreation();
+	ViewLog vl = new ViewLog();
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	SyncProperties syncp = new SyncProperties();
+
+	public CreateFileConnection createFileConnection(String ConnectionName, String SelectValue, String Host,
+			String Port, String Username, String Password, String Database, String Version, String jdbcoptions,
+			String Config_Version, String FilePath, String FileProtocol, String FileHost, String FilePort,
+			String FileUsername, String FilePassword, String Keyfile, String AuthenticationType, String EnterTable,
+			String columnDelimiter, String otherDelimiter, String syncProperty, String addCondition, String syncMode,
+			String synCompletionValue, String moveItPath, String waitForFile, String preSyncQuery, String postSyncQuery,
+			String extractionModeInput, String dataloadingModeInput, String syncColumnDelimiter, String nullValue,
+			String nullValuedrp, String escapeCharacter, String enclosingCharacterInput, String escapeUnclosedField,
+			String fieldOptionallyEnclosedBy, String bufferSize, String dateStyleValue, String dateDelimiter,
+			String timeStyleValue, String timeDelimiter, String timeDelimiterValue, String booleanRepresentationValue,
+			String skipTrailerRowsValue, String readerEncoderValue, String fetchSize, String nullIfValue,
+			String maxFileSize, String parallelValue, String stageLocation, String allowLargeResultSet,
+			String readTimeout, String tsLoadOptions, String TsTable, String Passphrasekey, String ExtractType,
+			String ExtractionMode) throws InterruptedException {
+		url.openThoughtSpot();
+		tsdf.headerVerification();
+		tsdf.clickOnConnections();
+		tsdf.addConnection();
+		fileConnectionDetails(ConnectionName, SelectValue, FilePath, FileProtocol, FileHost, FilePort, FileUsername,
+				FilePassword, Keyfile, AuthenticationType, Passphrasekey);
+		pause(1000);
+		// tsdf.verifyConnectionSuccess();
+		tsdf.addTableSync();
+		pause(3000);
+		createTableSync(EnterTable, columnDelimiter, otherDelimiter);
+		checkHeaderRow();
+		tsdf.setUpSync();
+		tsdf.scheduleDoesNotRepeat();
+		tsdf.advancedSetup();
+		if ((syncProperty != null) && (syncProperty.equals("Yes"))) {
+			syncp.tsSyncProperties(SelectValue, addCondition, syncMode, synCompletionValue, moveItPath, waitForFile,
+					preSyncQuery, postSyncQuery, extractionModeInput, dataloadingModeInput, syncColumnDelimiter,
+					nullValue, nullValuedrp, escapeCharacter, enclosingCharacterInput, escapeUnclosedField,
+					fieldOptionallyEnclosedBy, bufferSize, dateStyleValue, dateDelimiter, timeStyleValue, timeDelimiter,
+					timeDelimiterValue, booleanRepresentationValue, skipTrailerRowsValue, readerEncoderValue, fetchSize,
+					nullIfValue, maxFileSize, parallelValue, stageLocation, allowLargeResultSet, readTimeout,
+					tsLoadOptions);
+			driver.findElement(By.xpath(OR.getProperty("MAP_TABLES_COLUMNS_TAB"))).click();
+		}
+		tsdf.mapTableAndColumns(TsTable);
+		tsdf.clickOnConnections();
+		pause(2000);
+		selectConnection(ConnectionName);
+		pause(2000);
+		tsdf.clickOnTable();
+		selectConnection(TsTable);
+		Thread.sleep(3000);
+		tsdf.selectTable(TsTable);
+		pageRefresh();
+		tsdf.clickOnViewLogIcon();
+		tsdf.verifyExtractType(ExtractType);
+		tsdf.verifyExtractionMode(ExtractionMode);
+		tsdf.loadType();
+		tsdf.numberOfRows();
+		tsdf.clickOnClose();
+		tsdf.tsLogout();
+		pause(5000);
+		return new CreateFileConnection();
+	}
+
+	// Method for Create File Connection
+	public void fileConnectionDetails(String ConnectionName, String SelectValue, String FilePath, String FileProtocol,
+			String FileHost, String FilePort, String FileUsername, String FilePassword, String Keyfile,
+			String AuthenticationType, String Passphrasekey) {
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_INPUT"))).sendKeys(ConnectionName);
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_CONNECTION_TYPE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_TYPE_INPUT"))).sendKeys(SelectValue);
+		driver.findElement(By.xpath(OR.getProperty("DROP_DOWN_VALUE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("FILEPATH"))).clear();
+		pause(1000);
+		driver.findElement(By.xpath(OR.getProperty("FILEPATH"))).sendKeys(FilePath);
+		logger.info("Entered File Protocol" + FileProtocol);
+		if (FileProtocol != null) {
+			logger.info("inside if file protcl");
+			driver.findElement(By.xpath(OR.getProperty("FILES_ON_REMOTE_LOCATION_CHECKBOX"))).click();
+			switch (FileProtocol) {
+			case "FTP":
+				ftpConnection(FileHost, FilePort, FileUsername, FilePassword);
+				break;
+
+			case "SFTP":
+				sftpConnection(AuthenticationType, FileHost, FilePort, FileUsername, FilePassword, Keyfile,
+						Passphrasekey);
+				break;
+			}
+		}
+		WebElement createbutton = driver
+				.findElement(By.xpath("//div[@class='rd-button-wrapper']//span[text()='Create Connection']"));
+		if (createbutton.isEnabled()) {
+			// createbutton.click();
+			js.executeScript("arguments[0].click();", createbutton);
+			logger.info("Create Connection clicked");
+		} else {
+			logger.info("Enter all required fields to enable create connection button");
+		}
+	}
+
+	public void ftpConnection(String FileHost, String FilePort, String FileUsername, String FilePassword) {
+
+		driver.findElement(By.xpath(OR.getProperty("FILE_HOST"))).sendKeys(FileHost);
+		driver.findElement(By.xpath(OR.getProperty("FILE_PORT"))).sendKeys(FilePort);
+		driver.findElement(By.xpath(OR.getProperty("FILE_USERNAME"))).sendKeys(FileUsername);
+		driver.findElement(By.xpath(OR.getProperty("FILE_PASSWORD"))).sendKeys(FilePassword);
+	}
+
+	public void sftpConnection(String AuthenticationType, String FileHost, String FilePort, String FileUsername,
+			String FilePassword, String Keyfile, String Passphrasekey) {
+		// logger.info("SFTP Protocol is selected");
+		driver.findElement(By.xpath(OR.getProperty("FILE_PROTOCOL"))).click();
+		driver.findElement(By.xpath(OR.getProperty("SFTP_PROTOCOL"))).click();
+		if (AuthenticationType.equals("Password")) {
+			logger.info("AuthenticationType :Password is selected");
+			ftpConnection(FileHost, FilePort, FileUsername, FilePassword);
+		} else if (AuthenticationType.equals("Key")) {
+			driver.findElement(By.xpath(OR.getProperty("SELECT_AUTHENTICATIONTYPE_KEY"))).click();
+			driver.findElement(By.xpath(OR.getProperty("AUTHENTICATIONTYPE_KEY"))).click();
+			logger.info("AuthenticationType :Key is selected");
+			driver.findElement(By.xpath(OR.getProperty("FILE_HOST"))).sendKeys(FileHost);
+			driver.findElement(By.xpath(OR.getProperty("FILE_PORT"))).sendKeys(FilePort);
+			driver.findElement(By.xpath(OR.getProperty("FILE_USERNAME"))).sendKeys(FileUsername);
+			driver.findElement(By.xpath(OR.getProperty("SFTP_KEY_FILE"))).sendKeys(Keyfile);
+			// ******************************** Adavnced Configurations *******************
+			if (Passphrasekey != null) {
+				driver.findElement(By.xpath(OR.getProperty("SFTP_ADVANCED_CONFIGURATION_BUTTON"))).click();
+				driver.findElement(By.xpath(OR.getProperty("SFTP_PASSPHRASE_KEY"))).sendKeys(Passphrasekey);
+			}
+		}
+	}
+
+	public void createTableSync(String EnterTable, String columnDelimiter, String otherDelimiter) {
+		// WebElement tableTree =
+		// driver.findElement(By.xpath("//div[@class='tree-menu-main']"));
+		/*
+		 * List<WebElement> treeList =
+		 * driver.findElements(By.xpath("//div[@class='tree-menu-main']")); for (int i =
+		 * 0; i < treeList.size(); i++) { String selectedName =
+		 * treeList.get(i).getText(); logger.info(selectedName);
+		 * if(selectedName.equals("Pipe.dat ")) { logger.info("Clicking on table");
+		 * logger.info(treeList.get(i).getText()); treeList.get(i).click();
+		 * logger.info("Selected table: " + treeList.get(i).getText()); break;
+		 * 
+		 * } else { logger.info("Table doesnot exist"); } }
+		 */
+		driver.findElement(By.id(OR.getProperty("FILE_TABLE_SEARCH"))).sendKeys(EnterTable);
+		// pause(2000);
+		driver.findElement(By.xpath(OR.getProperty("FILE_TABLE_SELECT"))).click();
+		List<WebElement> columnDelimiterList = driver.findElements(By.xpath(OR.getProperty("FILE_COLUMN_DELIMITER")));
+		for (int i = 0; i < columnDelimiterList.size(); i++) {
+			String selectedColumnDelimiter = columnDelimiterList.get(i).getText();
+
+			if (selectedColumnDelimiter.equalsIgnoreCase(columnDelimiter)) {
+				logger.info("Selected Column Delimiter" + selectedColumnDelimiter);
+				Actions action = new Actions(driver);
+				action.moveToElement(columnDelimiterList.get(i)).perform();
+				js.executeScript("arguments[0].click();", columnDelimiterList.get(i));
+				pause(1000);
+				logger.info("Clicked on" + selectedColumnDelimiter);
+
+				if (selectedColumnDelimiter.equals("Other")) {
+					driver.findElement(By.xpath("//input[@id='Wildcard']")).sendKeys(otherDelimiter);
+					driver.findElement(By.xpath("//div[@class='form-inline']")).click();
+				}
+				pause(2000);
+				break;
+			}
+
+		}
+
+	}
+
+	public void checkHeaderRow() {
+		if (driver.findElement(By.xpath(OR.getProperty("CHECKBOX_HEADER_ROW"))).isSelected()) {
+			logger.info("Header Row checkbox is checked");
+		} else {
+			js.executeScript("arguments[0].click();",
+					driver.findElement(By.xpath(OR.getProperty("CHECKBOX_HEADER_ROW"))));
+			// driver.findElement(By.xpath(OR.getProperty("CHECKBOX_HEADER_ROW"))).click();
+
+		}
+	}
+
+	public void selectConnection(String TsTable) {
+		List<WebElement> SelectedConnName = driver
+				.findElements(By.xpath("//div[@class='tabulator-cell' and @tabulator-field='nm']"));
+		for (int i = 0; i < SelectedConnName.size(); i++) {
+			String SelectedName = SelectedConnName.get(i).getText();
+
+			if (SelectedName.equals(TsTable)) {
+
+				SelectedConnName.get(i).click();
+				logger.info("Selected Target Table" + SelectedName);
+				/*
+				 * String ConnHeaderName = driver .findElement( By.xpath(
+				 * "//div[@class='bk-list-bulk-actions']//div[@class='bk-action-container']"))
+				 * .getText(); Assert.assertEquals(SelectedName, ConnHeaderName,
+				 * "Header not matched");
+				 */
+				// addTableSync();
+				break;
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+2021-02-24 11:57:42 INFO   :- ****************************************************************************************************************
+2021-02-24 11:57:42 INFO   :- ****************************************************************************************************************
+2021-02-24 11:57:42 INFO   :- *****************************       APSRTC TESTING      *******************************************
+2021-02-24 11:57:42 INFO   :- ****************************************************************************************************************
+2021-02-24 11:57:42 INFO   :- ****************************************************************************************************************
+2021-02-24 11:57:47 INFO   :- Google Chrome Browser is Launching
+2021-02-24 11:57:47 INFO   :- Configuration Details :- Platform - WINDOWS , Browser Name - chrome , Browser Version - 88.0.4324.182
+2021-02-24 11:57:50 INFO   :- Home Page Title - APSRTC Official Website for Online Bus Ticket Booking - APSRTConline.in
+2021-02-24 11:57:50 INFO   :- Home Page Loaded Successfully.
+2021-02-24 11:57:50 INFO   :- Entered username 
+2021-02-24 11:57:50 INFO   :- Entered Password
+2021-02-24 11:57:51 INFO   :- Clicked on Login button 
+2021-02-24 11:57:51 INFO   :- Printing APSRTC From Route NELLORE
+2021-02-24 11:57:51 INFO   :- Printing APSRTC To Route HYDERABAD
+2021-02-24 11:57:54 INFO   :- Clicked on Logout button 
+2021-02-24 11:58:01 INFO   :- ****************************************************************************************************************
+2021-02-24 11:58:01 INFO   :- ****************************************************************************************************************
+2021-02-24 11:58:01 INFO   :- *****************************       APSRTC TESTING      *******************************************
+2021-02-24 11:58:01 INFO   :- ****************************************************************************************************************
+2021-02-24 11:58:01 INFO   :- ****************************************************************************************************************
+2021-02-24 11:58:06 INFO   :- Google Chrome Browser is Launching
+2021-02-24 11:58:06 INFO   :- Configuration Details :- Platform - WINDOWS , Browser Name - chrome , Browser Version - 88.0.4324.182
+2021-02-24 11:58:09 INFO   :- Home Page Title - APSRTC Official Website for Online Bus Ticket Booking - APSRTConline.in
+2021-02-24 11:58:09 INFO   :- Home Page Loaded Successfully.
+2021-02-24 11:58:09 INFO   :- Entered username 
+2021-02-24 11:58:10 INFO   :- Entered Password
+2021-02-24 11:58:10 INFO   :- Clicked on Login button 
+2021-02-24 11:58:10 INFO   :- Printing APSRTC From Route NELLORE
+2021-02-24 11:58:10 INFO   :- Printing APSRTC To Route BANGALORE
+2021-02-24 11:58:12 INFO   :- Clicked on Logout button 
+2021-02-24 11:58:19 INFO   :- ****************************************************************************************************************
+2021-02-24 11:58:19 INFO   :- ****************************************************************************************************************
+2021-02-24 11:58:19 INFO   :- *****************************       APSRTC TESTING      *******************************************
+2021-02-24 11:58:19 INFO   :- ****************************************************************************************************************
+2021-02-24 11:58:19 INFO   :- ****************************************************************************************************************
+2021-02-24 11:58:27 INFO   :- Google Chrome Browser is Launching
+2021-02-24 11:58:27 INFO   :- Configuration Details :- Platform - WINDOWS , Browser Name - chrome , Browser Version - 88.0.4324.182
+2021-02-24 11:58:31 INFO   :- Home Page Title - APSRTC Official Website for Online Bus Ticket Booking - APSRTConline.in
+2021-02-24 11:58:31 INFO   :- Home Page Loaded Successfully.
+2021-02-24 11:58:31 INFO   :- Entered username 
+2021-02-24 11:58:31 INFO   :- Entered Password
+2021-02-24 11:58:31 INFO   :- Clicked on Login button 
+2021-02-24 11:58:31 INFO   :- Printing APSRTC From Route NELLORE
+2021-02-24 11:58:31 INFO   :- Printing APSRTC To Route CHENNAI
+2021-02-24 11:58:33 INFO   :- Clicked on Logout button 

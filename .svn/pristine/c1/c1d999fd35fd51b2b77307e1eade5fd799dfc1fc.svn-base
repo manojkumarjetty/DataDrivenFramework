@@ -1,0 +1,142 @@
+package com.disuite.pages.thoughtspot;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import org.testng.Assert;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class AddTableSync extends BaseClass {
+	//String ConnHeaderName=null;
+	String DisplayedTableName=null;	
+	URLNavigations url = new URLNavigations();
+	DataFlowCreation dfc=new DataFlowCreation();
+	public AddTableSync(String EnteredConnectionName,String Dbname,String DBtype,String AddTableSync,String ColumnName)
+	{
+	  url.openThoughtSpot();
+      dfc.headerVerification();
+	  dfc.clickOnConnections();	  
+	  addTable(EnteredConnectionName,Dbname,DBtype,AddTableSync,ColumnName);
+      
+	}
+	
+	
+	
+	////****************************************************Add table Methods ****************************************************************//
+	
+	//Method for adding table to connection
+	public void addTable(String EnteredConnectionName,String Dbname,String DBtype,String AddTableSync,String ColumnName)
+	{	
+         selectConnection(EnteredConnectionName,Dbname,DBtype,AddTableSync,ColumnName);         
+	     selectDatabaseAndTable(Dbname,DBtype,AddTableSync,ColumnName); 		 
+	     		 
+     }
+	
+	//Method for selecting Connection
+	public void selectConnection(String EnteredConnectionName,String Dbname,String DBtype,String AddTableSync,String ColumnName)
+	{
+		
+		List <WebElement> SelectedConnName=driver.findElements(By.xpath("//div[@class='tabulator-cell' and @tabulator-field='nm']//span"));	 
+	      for(int i=0;i<SelectedConnName.size();i++)
+	      {
+	    	  String SelectedName=SelectedConnName.get(i).getText();
+	    	  //logger.info(SelectedName);
+	    	  if(SelectedName.equals(EnteredConnectionName))
+	    	  {
+	    		 SelectedConnName.get(i).click(); 
+	             String ConnHeaderName=driver.findElement(By.xpath("//div[@class='bk-list-bulk-actions']//div[@class='bk-action-container']")).getText();
+	             Assert.assertEquals(SelectedName, ConnHeaderName, "Header not matched");
+	            dfc.addTableSync();
+	            break;
+	    	  }
+	      }
+			/*
+			 * switch(DBtype) { case "Teradata":List <WebElement>
+			 * dblist=driver.findElements(By.
+			 * xpath("di-flex-row grid-link tree-view-database")); for(int
+			 * i=0;i<=dblist.size();i++) {
+			 * if(dblist.get(i).getText().equalsIgnoreCase(Dbname)) { dblist.get(i).click();
+			 * } } List <WebElement> tablelist=driver.findElements(By.
+			 * xpath("//div[@class='di-flex-row grid-link tree-view-table']")); for(int
+			 * i=0;i<=tablelist.size();i++) {
+			 * if(tablelist.get(i).getText().equalsIgnoreCase(AddTableSync)) {
+			 * tablelist.get(i).click(); DisplayedTableName=driver.findElement(By.xpath(
+			 * "//div[@class='tablesync-container-header']")).getText();
+			 * Assert.assertEquals(tablelist.get(i).getText(), DisplayedTableName,
+			 * "Table not matched"); searchColumn(ColumnName); } } break;
+			 * 
+			 * }
+			 */
+	}
+	
+	//Method for selecting database and table
+	public void selectDatabaseAndTable(String Dbname,String DBtype,String AddTableSync,String ColumnName)
+	{
+		switch(DBtype)
+		{
+		case "Teradata":List <WebElement> dblist=driver.findElements(By.xpath("di-flex-row grid-link tree-view-database"));
+		                 for(int i=0;i<=dblist.size();i++)
+		                 {  
+		                	 if(dblist.get(i).getText().equalsIgnoreCase(Dbname))
+				              {     
+		                		 dblist.get(i).click();              		 
+				              }
+		                 } 
+		                 List <WebElement> tablelist=driver.findElements(By.xpath("//div[@class='di-flex-row grid-link tree-view-table']"));
+		                 for(int i=0;i<=tablelist.size();i++)
+		                 {  
+		                	 if(tablelist.get(i).getText().equalsIgnoreCase(AddTableSync))
+				              {     
+		                		 tablelist.get(i).click();  
+		                		  DisplayedTableName=driver.findElement(By.xpath("//div[@class='tablesync-container-header']")).getText();
+		                		 Assert.assertEquals(tablelist.get(i).getText(), DisplayedTableName, "Table not matched");
+		                		 searchColumn(ColumnName);
+				              }
+		                 } 
+		                 break;
+		   
+		}
+	}
+	
+	public void verifyAll()
+	{
+		List <WebElement> dblist=driver.findElements(By.xpath("di-flex-row grid-link tree-view-database"));
+		logger.info("Databases count under All : " + dblist.size());
+	}
+	
+	
+	public void verifySynced()
+	{
+		driver.findElement(By.xpath("//span[contains(text(),'Synced')]")).click();
+		List <WebElement> dblist=driver.findElements(By.xpath("di-flex-row grid-link tree-view-database"));
+		logger.info("Databases count under Synced : " + dblist.size());
+	}
+	
+	//Method for searchColumn function
+	public void searchColumn(String ColumnName)
+	{
+		driver.findElement(By.xpath("//bk-input[@placeholder='Search columns']//div[@class='bk-input-container-inner']")).sendKeys(ColumnName);		
+		List <WebElement>  Columnlist=driver.findElements(By.xpath("//div[@tabulator-field='attrNm']"));
+		for(int i=0;i<=Columnlist.size();i++)
+		{
+			if(Columnlist.get(i).getText().equalsIgnoreCase(ColumnName))
+			{
+				logger.info("Found search column : "+Columnlist.get(i).getText() );
+				}
+			else
+			{
+				logger.info("Search Column does not exist");
+			}
+			
+		}
+		
+	}
+	
+	
+	
+
+}

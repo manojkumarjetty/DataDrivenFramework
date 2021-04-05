@@ -1,0 +1,99 @@
+package com.disuite.pages.dataobject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.LeftPaneActions;
+
+public class PgsImportSchema extends BaseClass {
+	LeftPaneActions lpa = new LeftPaneActions();
+	
+	
+	public PgsImportSchema pgsImportSchema() throws InterruptedException {
+		lpa.clickOnStudio();
+		pause(5000);
+		lpa.clickOnImportSchema();
+		selectDataPlatform(driver.findElement(By.xpath(OR.getProperty("DATA_PLATFORM_PGS"))));
+		selectDataPoint(driver.findElement(By.xpath(OR.getProperty("DO_DP_RNITEST"))));
+		clickOnNext();
+		pause(2000);
+		clickOnNext();
+		pause(2000);
+		selectDataObjects(driver.findElement(By.xpath(OR.getProperty("DO_IMPORT_SELECTION"))));
+		pause(2000);
+		clickOnImport();
+		pause(5000);
+		lpa.clickOnSave();
+		//importDataObject(driver.findElement(By.xpath(OR.getProperty("DO_DP_RNITEST"))), driver.findElement(By.xpath(OR.getProperty("DO_TECH_IMPORT"))));
+		
+		return new PgsImportSchema();
+	}
+	
+	public static void selectDataPoint(WebElement element) {
+		try {
+			String dataPointText = element.getText();
+			element.click();
+			logger.info("Selected data point: " + dataPointText);
+		} catch (NoSuchElementException e) {
+			logger.error("Data Point not Found");
+		}
+	}
+	
+	public static void selectDataObjects(WebElement element) {
+		try {
+			String dataObjectsText = element.getText();
+			element.click();
+			logger.info("Selected data objects: " + dataObjectsText);
+		} catch (NoSuchElementException e) {
+			logger.error("Data Objects not Found");
+		}
+	}
+	
+	public static void clickOnNext() {
+	WebElement doNext = driver.findElement(By.xpath(OR.getProperty("DO_NEXT"))); 
+	String nextText = doNext.getText();
+	doNext.click(); 
+	logger.info("Clicked on: " + nextText);
+	}
+	
+	public static void clickOnImport() {
+		WebElement importButton = driver.findElement(By.xpath(OR.getProperty("BUTTON_IMPORT")));
+		String importText = importButton.getText(); 
+		importButton.click();
+		logger.info("Clicked on: " + importText); 
+		pause(2000);
+	}
+}
+
+	/*
+	 * public void importDataObject(WebElement element, WebElement element1) { try {
+	 * //Select Data point String dpText = element.getText();
+	 * logger.info("Selected Data Point: " + dpText); element.click(); //Click on
+	 * Next button WebElement doNext =
+	 * driver.findElement(By.xpath(OR.getProperty("DO_NEXT"))); String nextText =
+	 * doNext.getText(); doNext.click(); logger.info("Clicked on: " + nextText);
+	 * pause(2000); doNext.click(); logger.info("Clicked on: " + nextText); //Select
+	 * table WebElement doTable = element1; String doTableText = doTable.getText();
+	 * doTable.click(); logger.info("Selected table: " + doTableText); WebElement
+	 * importButton = driver.findElement(By.xpath(OR.getProperty("BUTTON_IMPORT")));
+	 * String importText = importButton.getText(); importButton.click();
+	 * logger.info("Clicked on: " + importText); pause(2000); lpa.clickOnSave(); }
+	 * catch (NoSuchElementException e) { logger.error("Elements not Found"); } } }
+	 */
+	/*
+	 * public void importDataObject() {
+	 * driver.findElement(By.xpath(OR.getProperty("DO_DP_RNITEST"))).click();
+	 * WebElement doNext = driver.findElement(By.xpath(OR.getProperty("DO_NEXT")));
+	 * String nextText = doNext.getText(); doNext.click();
+	 * logger.info("Clicked on: " + nextText); pause(2000); doNext.click();
+	 * logger.info("Clicked on: " + nextText); WebElement doTable =
+	 * driver.findElement(By.xpath(OR.getProperty("DO_IMPORT_SELECTION"))); String
+	 * doTableText = doTable.getText(); doTable.click();
+	 * logger.info("Selected table: " + doTableText); WebElement importButton =
+	 * driver.findElement(By.xpath(OR.getProperty("BUTTON_IMPORT"))); String
+	 * importText = importButton.getText(); importButton.click();
+	 * logger.info("Clicked on: " + importText); pause(2000); lpa.clickOnSave(); }
+	 */
+

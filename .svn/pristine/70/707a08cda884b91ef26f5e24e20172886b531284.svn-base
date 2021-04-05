@@ -1,0 +1,289 @@
+package com.disuite.pages.cloudsync;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class CreateConnection extends BaseClass {
+	URLNavigations url = new URLNavigations();
+	
+	public CreateConnection createConnection(String Source, String ConnectionName,
+						String Host, String Port, String User, String Password,
+						String DBtype, String Dbname, String AddTableSync, String SnowFlakeTable, String ExtractType,
+						String ExtractionMode, String ExpectedLoadType) {
+		url.openCloudSync();
+		headerVerification();
+		clickOnConnections();
+		clickOnAddConnections();
+		validateHeader();
+		selectDatabase(Source, ConnectionName);
+		enterConnectionDetails(Source, Host, Port, User, Password);
+		testConnection();
+		connectionSuccessMessage();
+		pause(2000);
+		createConnection();
+		pause(1000);
+		//createConnectionSuccessMessage();
+		addTableSync();
+		tableSetup(DBtype, Dbname, AddTableSync);
+		clickOnSetUpSync(AddTableSync);
+		alertNotificationDropDown();
+		mapTableAndColumns();
+		createNewTable(SnowFlakeTable);
+		clickOnSaveAndSync();
+		syncMonitor();
+		selectSnowFlakeTable(SnowFlakeTable);
+		pause(2000);
+		clickOnViewLogIcon();
+		verifyExtractType(ExtractType);
+		verifyExtractionMode(ExtractionMode);
+		loadType(ExpectedLoadType);
+		clickOnClose();
+		csLogout();
+		
+		return new CreateConnection();
+	}
+	
+	public void clickOnConnections() {
+		WebElement linkConnection = driver.findElement(By.xpath(OR.getProperty("CS_LINK_CONNECTIONS")));
+		String linkText = linkConnection.getText();
+		linkConnection.click();
+		logger.info("Clicked on " + linkText);
+	}
+	
+	public void headerVerification() {
+		String expectedHeader = "CloudSync";
+		String headerH2 = driver.findElement(By.xpath(OR.getProperty("CS_HEADER"))).getText();
+		logger.info("CS Header: " + headerH2);
+		Assert.assertEquals(headerH2, expectedHeader, "Header not matched");
+	}
+	
+	public void clickOnAddConnections() {
+		WebElement addConnection = driver.findElement(By.xpath(OR.getProperty("CS_ADD_CONNECTION")));
+		String buttonText = addConnection.getText();
+		addConnection.click();
+		logger.info("Clicked on " + buttonText);
+	}
+	
+	public void validateHeader() {
+		WebElement header = driver.findElement(By.xpath(OR.getProperty("CS_CONNECTION_HEADER")));
+		String headerText = header.getText();
+		if(header.isDisplayed()) {
+			logger.info(headerText + " is displayed");
+		} else {
+			logger.info(headerText + " is not displayed");
+		}
+	}
+	
+	public void selectDatabase(String selectSource, String connectionName) {
+		driver.findElement(By.id(OR.getProperty("CS_SEARCH_DATABASE"))).click();
+		pause(1000);
+		driver.findElement(By.id(OR.getProperty("CS_SEARCH_DATABASE"))).sendKeys(selectSource);
+		pause(1000);
+		driver.findElement(By.className(OR.getProperty("CS_DATABASE_SELECT"))).click();
+		driver.findElement(By.id(OR.getProperty("CS_INPUT_CONNECTION_NAME"))).sendKeys(connectionName);
+	}
+	
+	public void enterConnectionDetails(String selectSource, String host, String port, String user, String password) {
+		String header4 = driver.findElement(By.xpath(OR.getProperty("CS_SQLSERVER_CONNECTION_HEADER"))).getText();
+		logger.info("Selected source header: " +header4);
+		Assert.assertEquals(header4, selectSource, "Header not matched");
+		driver.findElement(By.id(OR.getProperty("CS_MSSQL_HOST_INPUT"))).sendKeys(host);
+		driver.findElement(By.id(OR.getProperty("CS_MSSQL_PORT_INPUT"))).clear();
+		driver.findElement(By.id(OR.getProperty("CS_MSSQL_PORT_INPUT"))).sendKeys(port);
+		driver.findElement(By.id(OR.getProperty("CS_MSSQL_USERNAME_INPUT"))).sendKeys(user);
+		driver.findElement(By.id(OR.getProperty("CS_MSSQL_PASSWORD_INPUT"))).sendKeys(password);
+	}
+	
+	public void testConnection() {
+		WebElement testConnection = driver.findElement(By.xpath(OR.getProperty("BUTTON_TEST_CONNECCTION")));
+		String testConnectionText = testConnection.getText();
+		testConnection.click();
+		logger.info("Clicked on " + testConnectionText);
+	}
+
+	public void connectionSuccessMessage() {
+		WebElement successMessage = driver.findElement(By.xpath(OR.getProperty("TOAST_CONNECTION_SUCCESS_MESSAGE")));
+		String successText = successMessage.getText();
+		logger.info(successText);
+	}
+	
+	public void createConnection() {
+		WebElement createConnection = driver.findElement(By.xpath(OR.getProperty("BUTTON_CREATE_CONNECCTION")));
+		String createConnectionText = createConnection.getText();
+		createConnection.click();
+		logger.info("Clicked on " + createConnectionText);
+	}
+	
+	public void createConnectionSuccessMessage() {
+		WebElement successMessage = driver.findElement(By.xpath(OR.getProperty("TOAST_CREATE_SUCCESS_MESSAGE")));
+		String successText = successMessage.getText();
+		logger.info(successText);
+	}
+	
+	public void addTableSync() {
+		WebElement addTableSync = driver.findElement(By.xpath(OR.getProperty("CS_ADD_TABLE_SYNC")));
+		String tableSyncText = addTableSync.getText();
+		addTableSync.click();
+		if(driver.findElement(By.xpath("//p[@class='text-muted']")).isDisplayed()) {
+			logger.info(tableSyncText + " is clicked");
+		} else {
+			logger.info("Not clicked on " + tableSyncText);
+		}
+	}
+	
+	public void tableSetup(String DBtype, String Dbname, String AddTableSync) {
+
+		List<WebElement> dblist = driver.findElements(By.xpath(OR.getProperty("DATABASE_MAIN_TREE")));
+		for (int i = 0; i < dblist.size(); i++) {
+			String selectDb = dblist.get(i).getText();
+			logger.info(selectDb);
+			if (selectDb.equals(DBtype)) {
+				dblist.get(i).click();
+				//pause(2000);
+				break;
+			}
+		}
+
+		List<WebElement> tableList = driver
+				.findElements(By.xpath(OR.getProperty("DATABASE_CHILD_TREE")));
+		for (int i = 0; i < tableList.size(); i++) {
+			if (tableList.get(i).getText().equals(Dbname)) {
+				logger.info("Child list: " + tableList.get(i).getText());
+				tableList.get(i).click();
+				pause(2000);
+				break;
+				
+			}
+		}
+
+		List<WebElement> subList = driver
+				.findElements(By.xpath(OR.getProperty("DATABASE_SUB_CHILD_TREE")));
+		for (int i = 0; i < subList.size(); i++) {
+			if (subList.get(i).getText().equals(AddTableSync)) {
+				logger.info("Sub list: " + subList.get(i).getText());
+				subList.get(i).click();
+				pause(2000);
+				break;
+			}
+		}
+
+	}
+	
+	public void clickOnSetUpSync(String AddTableSync) {
+		WebElement setUpSync = driver.findElement(By.xpath(OR.getProperty("CS_BUTTON_SETUP_SYNC")));
+		if(setUpSync.isDisplayed()) {
+			String selectedTableText = driver.findElement(By.xpath(OR.getProperty("CS_SELECTED_TABLE"))).getText();
+			Assert.assertEquals(selectedTableText, AddTableSync, "Actual table is not selected");
+			logger.info(selectedTableText + " is selected");
+		}
+		String setUpSyncText = setUpSync.getText();
+		setUpSync.click();
+		pause(1000);
+		if(driver.findElement(By.xpath(OR.getProperty("DROPDOWN_ALERT_NOTIFICATION"))).isDisplayed()) {
+			logger.info("Clicked on " + setUpSyncText);
+		} else {
+			logger.info("Not clicked on " + setUpSyncText);
+		}
+	}
+	
+	public void alertNotificationDropDown() {
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_ALERT_NOTIFICATION"))).click();
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_ALERT_NEVER"))).click();
+	}
+	
+	public void mapTableAndColumns() {
+		WebElement map = driver.findElement(By.xpath(OR.getProperty("CS_MAP_TABLES_COLUMNS")));
+		String mapText = map.getText();
+		map.click();
+		if(driver.findElement(By.xpath(OR.getProperty("CS_HEADER_MAP"))).isDisplayed()) {
+			logger.info("Clicked on " + mapText);	
+		} else {
+			logger.info("Not clicked on " + mapText);
+		}
+	}
+	
+	public void createNewTable(String snowFlakeTable) {
+		driver.findElement(By.xpath(OR.getProperty("CS_INPUT_SNOWFLAKE_TABLE"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("CS_INPUT_SNOWFLAKE_TABLE"))).sendKeys(snowFlakeTable);
+	}
+	
+	public void clickOnSaveAndSync() {
+		WebElement saveAndSync = driver.findElement(By.xpath(OR.getProperty("CS_BUTTON_SAVE_AND_SYNC")));
+		String saveAndSyncText =saveAndSync.getText();
+		saveAndSync.click();
+		logger.info("Clicked on " + saveAndSyncText);
+	}
+	
+	public void syncMonitor() {
+		WebElement syncMonitor = driver.findElement(By.xpath(OR.getProperty("CS_SYNC_MONITOR")));
+		String syncMonitorText = syncMonitor.getText();
+		syncMonitor.click();
+		if(driver.findElement(By.xpath(OR.getProperty("CS_SYNC_MONITOR_HEADER"))).isDisplayed()) {
+			logger.info("Clicked on " + syncMonitorText);
+		} else {
+			logger.info("Unable to click on " + syncMonitorText);
+		}
+	}
+	
+	public void selectSnowFlakeTable(String snowFlakeTable) {
+		List<WebElement> selectedConnName = driver
+				.findElements(By.xpath("//div[@class='tabulator-cell' and @tabulator-field='nm']"));
+		for (int i = 0; i < selectedConnName.size(); i++) {
+			String selectedTable = selectedConnName.get(i).getText();
+			if (selectedTable.equals(snowFlakeTable)) {
+				selectedConnName.get(i).click();
+				break;
+			}
+		}
+	}
+	
+	public void clickOnViewLogIcon() {
+		if (driver.findElement(By.xpath(OR.getProperty("SUCCESS_ICON"))).isDisplayed()) {
+			driver.findElement(By.xpath(OR.getProperty("ICON_VIEW_LOG"))).click();
+		} else {
+			driver.navigate().refresh();
+		}
+	}
+	
+	public void verifyExtractType(String extractType) {
+		WebElement getExtractType = driver.findElement(By.xpath(OR.getProperty("EXTRACT_TYPE")));
+		String extractTypeText = getExtractType.getText();
+		logger.info(extractTypeText);
+		Assert.assertEquals(extractTypeText, extractType, "extract type does not matched");
+	}
+
+	public void verifyExtractionMode(String extractionMode) {
+		WebElement getExtractionMode = driver.findElement(By.xpath(OR.getProperty("EXTRACTION_MODE")));
+		String extractionModeText = getExtractionMode.getText();
+		logger.info(extractionModeText);
+		Assert.assertEquals(extractionModeText, extractionMode, "extraction mode does not matched");
+	}
+
+	public void loadType(String expectedLoadType) {
+		WebElement loadType = driver.findElement(By.xpath(OR.getProperty("CS_LOAD_TYPE")));
+		String loadTypeText = loadType.getText();
+		logger.info(loadTypeText);
+		Assert.assertEquals(loadTypeText, expectedLoadType, "Load type does not matched");
+	}
+	
+	public void clickOnClose() {
+		WebElement close = driver.findElement(By.xpath(OR.getProperty("CS_BUTTON_CLOSE")));
+		String closeText = close.getText();
+		close.click();
+		logger.info("Clicked on " + closeText);			
+		}
+	
+	public void csLogout() {
+		driver.findElement(By.xpath(OR.getProperty("CS_PROFILE"))).click();
+		WebElement logout = driver.findElement(By.xpath(OR.getProperty("BUTTON_LOGOUT")));
+		String logoutText = logout.getText();
+		logout.click();
+		logger.info("Clicked on: " + logoutText);
+	}
+}

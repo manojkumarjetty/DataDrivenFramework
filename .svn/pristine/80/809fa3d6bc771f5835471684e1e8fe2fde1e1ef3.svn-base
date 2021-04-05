@@ -1,0 +1,407 @@
+#Studio elements
+HOME_PAGE_TITLE = Diyotta
+TS_HOME_PAGE_TITLE = TS DataFlow
+CS_HOME_PAGE_TITLE = CloudSync For Snowflake
+HOME_LOGIN = //input[@id='login_Id']
+HOME_PASSWORD = //input[@id='password']
+FORCIBLE_BUTTON = //span[contains(text(),'Forcible Login')]
+CS_FORCIBLE_BUTTON = //button[contains(text(),'Forcible Login')]
+TS_USERNAME = //input[@id='loginUsernameId']
+TS_PASSWORD = //input[@id='loginPasswordId']
+TS_LOGIN_BUTTON = //rd-button[@id='login-signin']
+TS_HEADER = //h2[contains(text(),'DataFlow Home')]
+HOME_LOGOUT = //a[contains(text(),'Logout')]
+LOGIN_BUTTON = //button[@class='btn btn-tc3 mr-2']
+MODULE_STUDIO = //span[contains(text(),'STUDIO')]
+LEFTMENU_DATAPOINT = //span[contains(text(),'Data Point')]
+LEFTMENU_DATAFLOW = //span[contains(text(),'Data Flow')]
+LEFTMENU_DATAOBJECT = //span[contains(text(),'Data Object')]
+LEFTMENU_IMPORTSCHEMA = //p[contains(text(),'Import Schema')]
+DO_DATAPOINT = //div[@id='importConnObjectsGridId']//div[@class='tabulator-cell'][contains(text(),'A_SPLICE')]
+DO_DP_RNITEST = //div[@id='importConnObjectsGridId']//div[@class='tabulator-cell'][contains(text(),'rni_test')]
+DO_IMPORT_SELECTION = //div[contains(text(),'emp_3')]
+DO_TECH_IMPORT = //div[contains(text(),'tech_details')]
+BUTTON_IMPORT = //button[contains(text(),'Import')]
+MENU_NEW = //div[contains(text(),'New')]
+SUB_MENU_NEW = //div[@class='dropdown dropdown-actions show']//a[1]
+SPLICEMACHINE_DATAPLATFORM = //p[contains(text(),'Splice Machine')]
+SNOWFLAKE_DATAPLATFORM = //p[contains(text(),'Snowflake')]
+GENERAL_PROPERTIES_DP = //input[@id='repConnName']
+BUTTON_OK_NEW = //div[@class='popup-frame large-popup']//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Ok')]
+PROPERTIES_BUTTON = //div[@class='p-0 h-100 overflow-hidden']//a[2]
+PROPERTIES_LINKTEXT = Properties
+INPUT_HOST = //div[@class='col-md-6 p-2']//app-repconn-properties//div//input[@id='input_1']
+INPUT_PORT = //div[@class='col-md-6 p-2']//app-repconn-properties//div//input[@id='input_2']
+INPUT_APP_USER = //div[@class='col-md-6 p-2']//app-repconn-properties//div//input[@id='input_3']
+INPUT_PASSWORD = //input[@id='input_4']
+INPUT_DATABASE = //input[@id='input_7']
+SELECT_DATABASE = //select[@id='input_8']
+SAVE_MENU = //div[contains(text(),'Save')]
+TEST_DATA_POINT = //div[contains(text(),'Test Data Point')]
+DP_SUCCESS_MESSAGE = //div[@class='toast-message ng-star-inserted']
+DP_SCHEMAS = //a[contains(text(),'Schemas')]
+DO_NEXT = //app-import-dataobjects-popup//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Next')]
+BUTTON_RUN = //div[contains(text(),'Run')]
+
+
+CHECKBOX_DATAPOINT = //div[@id='dataPointsList']//div[@class='tabulator-tableHolder']//input
+POPUP_NEXT = //app-design-create-popup//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Next')]
+DATAFLOW_OBJECT_NAME = //input[@id='objectName']
+CREATE_BUTTON = //button[contains(text(),'Create')]
+SOURCE_SPLICEMACHINE = //div[@id='cdk-drop-list-24']//p[contains(text(),'Splice Machine')]
+SOURCE_PGS = //div[@id='cdk-drop-list-22']//p[contains(text(),'PostgreSQL')]
+DATA_PLATFORM_PGS = //p[contains(text(),'PostgreSQL')]
+CANVAS = //div[@id='canvas']
+SOURCE_ONE_DATAPOINT = //a[contains(text(),'EMPLOYEE_DETAILS')]
+SOURCE_TWO_DATAPOINT = //a[contains(text(),'DEPT_DETAILS')]
+SOURCE_PGS = //a[contains(text(),'emp_3')]
+JOINER_TRANSFORM = //p[contains(text(),'Joiner')]
+FILTER_TRANSFORM = //p[contains(text(),'Filter')]
+SPLITTER_TRANSFORM = //p[contains(text(),'Splitter')]
+DERIVED_ATTRIBUTES = //a[contains(text(),'Derived Attributes')]
+EXPRESSION_NAME_TEXTBOX = //app-input-text-name//input[@id='input_1']
+SELECT_ATTRIBUTES = //button[2]//a[1]
+ATTRIBUTES_CHECKBOX = //input[@id='parent_checkbox_1']
+BUTTON_DA_OK = //app-add-carryforwardattributes-popup//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Ok')]
+CANVAS_NEXT = //body/app-root/div[@class='h-100 blackwhite']/div[@class='h-100']/div[@class='h-100 bc-3l']/app-fldrobject/div[@class='di-flex-row-100 fs-13']/div[@class='project-width']/div[@class='d-flex h-100 flex-column']/div[@class='p-0 flex-fill overflow-auto']/app-design-outlet/app-design-page/app-editname-popup/div[@class='popup-frame small-popup']/div[@class='popup-footer']/div[@class='float-right']/button[1]
+SECTION_TRANSFORM = //div[@id='headingThree']
+TRANSFORM_EXPRESSION = //p[contains(text(),'Expression')]
+CANVAS_SOURCE = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='transform_root_1']
+CANVAS_SOURCE_TWO = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='transform_root_2']
+ARROW_ICON = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='Layer_1-2']
+ARROW_ICON_TWO = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='Layer_2-2']
+ARROW_ICON_THREE = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='Layer_3-2']
+CANVAS_EXPRESSION = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='transform_root_name_3']
+CANVAS_FILTER_TRANSFORM = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='transform_root_4']
+CANVAS_SPLITTER_TRANSFORM = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@id='transform_root_5']
+BUTTON_FILTER_VALIDATE = //button[contains(text(),'Validate')]
+BUTTON_FILTER_OK = //app-expression-editor-popup//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Ok')]
+JOINER_PROPERTIES = //a[@class='nav-link'][contains(text(),'Properties')]
+JOINER_PROPERTIES_EXPRESSION_EDITOR = //button[@class='fa fa-external-link']
+SPLITTER_EXPR_EDITOR = //div[@class='tabulator-row tabulator-selectable tabulator-row-even tabulator-selected']//button[@class='fa fa-external-link']
+SPLITTER_EXPR3_EDITOR = //div[@class='tabulator-row tabulator-selectable tabulator-row-odd tabulator-selected']//button[@class='fa fa-external-link']
+JOINER_TRANSFORM_ONE = //a[@class='text-dark'][contains(text(),'SRC_EMPLOYEE_DETAILS')]
+JOINER_ATTRIBUTE_ONE = //a[@class='text-dark'][contains(text(),'DEPT_ID')]
+JOINER_ATTRIBUTE_TWO = //a[contains(text(),'SALARY')]
+JOINER_TRANSFORM_TWO = //a[@class='text-dark'][contains(text(),'SRC_DEPT_DETAILS')]
+TRANSFORM_CONDITION = //i[@class='input-group-text fa fa-angle-right bc-1']
+SPLITTER_CONDITION = //a[contains(text(),'Conditions')]
+SPLITTER_CLICK_HERE = //a[@class='c-2d']
+BUTTON_VALIDATE = //app-mjnr_inst_cnds-grid[@class='h-100']//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Validate')]
+BUTTON_OK = //app-mjnr_inst_cnds-grid[@class='h-100']//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Ok')]
+ATTRIBUTES_CHECKBOX_CHILD = //div[@class='tabulator-row tabulator-row-even']//input[@id='item_checkbox_2']
+EXPR_EDITOR_TEXT_AREA = //textarea[@id='expressionTextArea']
+LC_BUTTON_ADD = //small[contains(text(),'Add')]
+SPLITTER_BTN_OK = //div[@class='popup-frame large-popup ng-star-inserted']//button[@class='btn btn-sm btn-tc3 mr-1'][contains(text(),'Ok')]
+BUTTON_ARRANGE = //button[@class='btn p-1 mx-1']//div[@class='breadcrumb-list'][contains(text(),'Arrange')]
+BUTTON_EQUALS = //body//div[@class='h-100']//div[@class='h-100']//button[11]
+CANVAS_THREE_DOTS = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[@fill='white']
+CREATE_AS_TARGET = //*[local-name()='app-svg-canvas']/*[local-name()='svg']/*[local-name()='g'][17]/*[local-name()='g'][2]/*[local-name()='text'][3]
+TARGET_DATA_PLATFORM = //p[@class='mb-0'][contains(text(),'Splice Machine')]
+TARGET_DATA_POINT = //div[@class='tabulator-row tabulator-selectable tabulator-row-even']//div[@class='tabulator-cell'][contains(text(),'A_DILAB_TGT')]
+TARGET_NEXT = //button[@class='btn btn-sm btn-tc3 mr-1 ng-star-inserted']
+TARGET_TRANSFORM_NAME = //input[@id='tgt_Inst_NmTxt']
+TARGET_DATA_OBJECT_NAME = //input[@id='doName']
+WINDOW_SPACE = //div[@class='row']//div[@id='step2']
+MENU_SAVE = //button[@class='btn p-1 mx-2']//div[@class='breadcrumb-list'][contains(text(),'Save')]
+
+#Dropdown
+MENU_DROPDOWN = //li[@id='dropdownMenuButton']
+MENU_LIST = //div[@class='module-dropdown dropdown-menu show']
+MENU_MONITOR = //span[contains(text(),'Monitor')]
+
+#Monitor
+MESSAGE_SUCCEEDED = //span[contains(text(),'Succeeded')]
+
+#ThoughtSpot
+BUTTON_CONNECTIONS = //div[contains(text(),'CONNECTIONS')]
+ROW_CONNECTION_NAME = //div[contains(text(),'Connection name')]
+BUTTON_ADD_CONNECTION = //span[contains(text(),'Add connection')]
+CONNECTION_INPUT = //input[@id='repconn-create-layover-name']
+DROPDOWN_CONNECTION_TYPE = //div[@id='selectHeadId']
+CONNECTION_TYPE_INPUT = //input[@placeholder='Search data source']
+LIST_CONNECTIONS = //bk-action-menu[@class='bk-select-options']
+DROP_DOWN_VALUE = //div[@class='bk-dropdown-text']
+TS_INPUT_HOST = //bk-input[@label='Host']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+TS_INPUT_PORT = //bk-input[@label='Port']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+ENTER_USERNAME =//bk-input[@label='User']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+ACCOUNT_INPUT = //bk-input[@label='Account']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+ACCOUNT_ROLE = //bk-input[@label='Role']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+AMAZON_S3_URL = //bk-input[@label='Amazon S3 URL']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+AMAZON_S3_BUCKET = //bk-input[@label='Bucket']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+AMAZON_ACCESS_KEY = //bk-input[@label='Access key']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+AMAZON_SECRET_KEY = //bk-input[@label='Secret key']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+ENTER_PASSWORD = //input[@type='password']
+ENTER_SERVICE_NAME = //bk-input[@label='Service name']//div[@class='bk-input-container-inner']//input
+ENTER_DATABASE = //bk-input[@label='Database']//div[@class='bk-input-container-inner']//input
+CREATE_CONNECTION = //span[contains(text(),'Create Connection')]
+ADD_TABLE_SYNC = //div[@class='mt-4']//span[@class='rd-button-text'][contains(text(),'Add table sync')]
+TABLE_EXPAND = //li//li[1]//div[1]//div[1]//div[1]//div[1]//img[1]
+TABLE_SELECT = //a[contains(text(),'AccountInfo_SZ')]
+BUTTON_CLOSE = //span[contains(text(),'Close')]
+SET_UP_SYNC = //span[contains(text(),'Set up Sync')]
+SCHEDULE_REPEAT = //bk-select[@name='schTaskCalenderRepeatId']//div[@id='selectHeadId']
+SCHEDULE_DAILY = //bk-select[@name='schTaskCalenderDaily']//div[@id='selectHeadId']
+DROPDOWN_REPEAT = //bk-select[@name='schTaskCalenderRepeatId']
+DOES_NOT_REPEAT = //div[contains(text(),'Does not repeat')]
+REPEAT_HOURLY = //div[contains(text(),'Hourly')]
+DROPDOWN_CARET = //span[contains(text(),'01')]
+REPEAT_HOUR =  //div[contains(text(),'03')]
+ALERT_DROPDOWN = //bk-select[@name='schTaskCalenderDFCDAlertNotificationId']//div[@id='selectHeadId']
+DROPDOWN_NEVER = //div[contains(text(),'Never')]
+ADVANCED_SETUP = //div[@class='tbl-accordion']
+THOUGHTSPOT_TABLE = //input[@id='inputss_2aa']
+TOGGLE_PRIMARY_KEY = //div[@class='tabulator-table']//div[1]//div[8]//div[1]//div[1]//div[1]
+SAVE_AND_SYNC_NOW = //span[contains(text(),'Save and sync now')]
+MENU_TABLES = //div[contains(text(),'TABLES')]
+CONNECTION_NAME = //div[contains(text(),'AccountInfo_TDR_SZ')]
+ICON_VIEW_LOG = //div[@class='tabulator-cell']//span//a//img
+SUCCESS_ICON = //div[@class='text-success fs-12']
+SYNC_ICON = //div[@class='text-warning fs-12']
+SYNC_FAILED = //div[@class='text-error fs-12']
+EXTRACT_TYPE = //pre[contains(text(),'[Extract Type : ')]
+EXTRACTION_MODE = //pre[contains(text(),'[Extraction Mode : ')]
+LOAD_TYPE = //pre[contains(text(),'[Load Type : TSLOAD]')]
+ROWS_TOTAL = //pre[contains(text(),'[Number Of Recs Extracted :')]
+ROWS_LOADED = //pre[contains(text(),'Load completed. Total rows loaded : ')]
+TOAST_MESSAGE = //div[@class='rd-text']
+FILEPATH=//html//body//app-root//div//div//app-fldrobject//div//div//app-repconn-list-page//di-repconn-overlay//div//div//div//div//div//div//div//app-repconn-flatfile-properties//div//div//bk-input//div//div//div//input
+FILES_ON_REMOTE_LOCATION_CHECKBOX=//label[@class='bk-checkbox-label']
+FILE_PROTOCOL=//bk-select[@name='repconn-create-layover-name-fileProtocol']//div[@id='selectHeadId']//span
+SFTP_PROTOCOL=//div[contains(text(),'SFTP')]
+SELECT_AUTHENTICATIONTYPE_KEY=//bk-select[@name='repconn-create-layover-name-sftpAuthMode']//div[@id='selectHeadId']
+AUTHENTICATIONTYPE_KEY=//div[@class='bk-dropdown-item-info']//div[contains(text(),'Key')]
+SFTP_KEY_FILE=//bk-input[@label='Key file ']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+SFTP_ADVANCED_CONFIGURATION_BUTTON=//div[@class='bk-accordion-item-header bk-accordion-collapsed'
+SFTP_PASSPHRASE_KEY=//div[@class='bk-accordion-item-content bk-accordion-expanded']//input[@class='bk-input-field ng-untouched ng-pristine ng-valid']
+FILE_HOST1=//div[@class='popup-frame fullscreen ngdialog-content']//div[2]//bk-input[1]//div[1]//div[1]//div[1]//input[1]
+FILE_HOST=//bk-input[@label='Host']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+FILE_SFTP_HOST = //input[@class='bk-input-field ng-pristine ng-invalid ng-touched']
+FILE_PORT= //bk-input[@label='Port']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+FILE_USERNAME=//bk-input[@label='User']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+FILE_PASSWORD= //bk-input[@label='Password']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HEADER_H2 = //h2[contains(text(),'Add table sync')]
+FILE_TABLE_SEARCH = table-sync-add-all-search-id
+FILE_TABLE_SELECT = //div[@class='d-flex flex-row treeTooltipDI']//div[@class='flex-fill ellipsis']
+FILE_COLUMN_DELIMITER=//div[@class='checbox-col-no-space']//label
+CHECKBOX_HEADER_ROW = //input[@id='sync']
+
+AZURE_ACCOUNT_AND_GCS_PROJECT_ID=//bk-input[@label='Account' or @label='Project id']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+STORAGE_TYPE_DROPDOWN = //bk-select[@label='Storage type']//div[@class='bk-select-head']//span
+
+AUTHENTICATION_TYPE_DROPDOWN=//bk-select[@label='Authentication type']//div[@class='bk-select-head']//span
+AZURE_ACCOUNT_KEY_GCS_ACCESS_TOKEN_OPTION=//div[contains(text(),'Azure account key') or contains(text(),'Access Token')]
+AZURE_KEY_GCS_SERVIVE_TOKEN=//bk-input[@label='Key' or @label='Service account key/Access token']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+AZURE_CONTAINER_GCS_BUCKET=//bk-input[@label='Container' or @label='Bucket']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+
+# HIVE CONNECTION LOCATORS
+HIVE_SECUTITY_AUTHENTICATION=//bk-select[@name='repconn-create-layover-name-secAuth']//div[@id='selectHeadId']
+HIVE_TRANSPORTMODE=//bk-select[@name='repconn-create-layover-name-transportMode']//div[@id='selectHeadId']
+HIVE_HTTP_PATH=//bk-input[@label='Http path']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HIVE_DISTRIBUTION=//bk-select[@name='hivePropertieshadoop_DistId']//div[@id='selectHeadId']
+HIVE_DISTRIBUTION_VERSION=//bk-select[@name='hivePropertiesDBVersionId']//div[@id='selectHeadId']
+HIVE_PRINICIPAL=//bk-input[@label='Hive principal']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HIVE_USER_PRINCIPAL=//bk-input[@label='User principal']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HIVE_USER_KEYTAB=//bk-input[@label='User keytab']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HIVE_KDC_HOST=//bk-input[@label='KDC host']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HIVE_DEFAULT_REALM=//bk-input[@label='Default realm']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HIVE_DROPDOWN=//div[@class='bk-dropdown-item-info']
+HIVE_TRUST_STORE_PATH=//bk-input[@label='Trust store path']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+ADVANCED_CONFIGURATION_BUTTON=//button[@class='bk-accordion-toggle-btn']
+HIVE_DFS_HOST=//bk-input[@label='DFS Host']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HIVE_DFS_PORT=//bk-input[@label='DFS Port']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HIVE_DEFAULT_DFS_LOCATION=//bk-input[@label='Default DFS location']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HIVE_TEMP_DFS_LOCATION=//bk-input[@label='Temp DFS location']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+DFS_SECURITY_AUTHENTICATION_DROPDOWN=//bk-select[@name='repconn-create-layover-name-hdfs_SecAuth']//div[@id='selectHeadId']
+HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS=//div[@class='bk-dropdown-item-info']
+HIVESERVER2_ZOOKEEPER_NAMESPACE=//bk-input[@label='Hiveserver2 zookeeper namespace']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+ZOOKEEPER_QUORUM_HOST=//bk-input[@label='Zookeeper quorum host']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HADOOP_CONF_PATH=//bk-input[@label='Hadoop Conf Path']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+DFS_NAME_SERVICE=//bk-input[@label='DFS name service']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+DFS_NAME_NODE=//bk-input[starts-with(@label,'DFS name node')]//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+RPC_ADDRESS_NAMENODE1=//bk-input[@label='RPC address for namenode1']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+RPC_ADDRESS_NAMENODE2=//bk-input[@label='RPC address for namenode2']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HADOOP_RPC_PROTECTION_DROPDOWN=//bk-select[@name='repconn-create-layover-name-hdfs_Rpc_Protection']//div[@id='selectHeadId']
+HADOOP_RPC_PROTECTION_OPTIONS=//div[@class='bk-dropdown-item-info']
+NAMENODE_PRINICIPAL=//bk-input[@label='Namenode principal']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+ZOOKEEPER_CLIENT_PORT=//bk-input[@label='Zookeeper client port']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input 
+QUEUE_NAME=//bk-input[@label='Queue name']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+YARN_TIMELINE_WEBAPP_HOST=//bk-input[@label='Yarn timeline webapp host']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+YARN_TIMELINE_WEBAPP_PORT=//bk-input[@label='Yarn timeline webapp port']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+JDBC_OPTIONS=//bk-input[@label='JDBC options']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+HIVE_CONFIG_CHECKBOX=//label[@class='bk-checkbox-label']
+DFS_CONFIG_CHECKBOX=//label[contains(text(),'DFS HA configured')]
+ENTER_SERVICE/DBNAME_NAME = //bk-input[@label='Service name' or @label='Database']//div[@class='bk-input-container-inner']//input
+
+# DB2 CONNECTION LOCATORS
+PLATFORM_DROPDOWN=//bk-select[@name='repconn-create-layover-name-platform']//div[@id='selectHeadId']
+DB2_DATABASE=//bk-input[@label='Database']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+DB2_DATABASE_ALIAS=//bk-input[@label='Database alias']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+DB2_VERSION_DROPDOWN=//bk-select[@name='auroraPropertiesDBVersionId']//div[@id='selectHeadId']
+DB2_CODEPAGE_DROPDOWN=//bk-select[@name='repconn-create-layover-name-codepage']//div[@id='selectHeadId']
+
+#Presto CONNECTION LOCATORS
+
+PRESTO_AUTHENTICATION_TYPE=//bk-select[@name='repconn-create-layover-name-hdfs_SecAuth']//div[@id='selectHeadId']
+PRESTO_CATALOG_NAME=//bk-input[@label='Catalog name']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+PRESTO_SCHEMA_NAME=//bk-input[@label='Schema name']//div[@class='bk-input']//div[@class='bk-input-container-inner']//input
+
+#JDBC Connection Locators
+DRIVER_NAME=//body//div[@class='bk-auth-form bk-input-fields']//label[contains(text(),' Driver name ')]/following-sibling::div/input
+JDBC_URL=//input[@placeholder='<protocol>//<Host>:<Port>/<Database>']
+JDBC_DRIVER_JAR=//div[@class='bk-text'][contains(text(),'Upload')]
+USER=//div[@class='popup-frame fullscreen ngdialog-content']//div[2]//div[1]//div[1]//div[2]//bk-input[1]//div[1]//div[1]//div[1]//input[1]
+PASSWORD=//body//div[@class='bk-auth-form bk-input-fields']//div//div[3]//div[1]//div[1]//div[2]//bk-input[1]//div[1]//div[1]//div[1]//input[1]
+
+#DataBrick Datalake Connection Locators
+SERVER_HOST_NAME=//div[@class='bk-input-container bk-input-legacy']//label[contains(text(),' Server hostname ')]/following-sibling::div/input
+PORT=//div[@class='bk-input-container bk-input-legacy']//label[contains(text(),' Port ')]/following-sibling::div/input
+HTTP_PATH=//div[@class='bk-input-container bk-input-legacy']//label[contains(text(),' HTTP path ')]/following-sibling::div/input
+PROTOCOL=//div[@class='bk-input-container bk-input-legacy']//label[contains(text(),' Protocol ')]/following-sibling::div/input
+CLUSTER_ID=//div[@class='bk-input-container bk-input-legacy']//label[contains(text(),' Cluster id ')]/following-sibling::div/input
+ACCESS_TOKEN=//div[@class='bk-input-container bk-input-legacy']//label[contains(text(),' Access token ')]/following-sibling::div/input
+DBFS_STAGE_LOCATION=//div[@class='bk-input-container bk-input-legacy']//label[contains(text(),' DBFS stage location ')]/following-sibling::div/input
+  										 
+#SyncProperties Locators
+SYNC_PRPERTIES_TAB=//li[@class='rd-tab-header-item rd-clickable']
+MAP_TABLES_COLUMNS_TAB=//span[contains(text(),'Map tables and columns')]
+ADD_CONDITION_EXPRESSION_EDITOR_LINK=//label[contains(text(),'Add condition')]//a[@class='float-right']										 
+ADD_CONDITION_EXPRESSION_EDITOR=//div[@class='accrodian-list']//textarea[@id='expressionTextArea']
+EXPRESSION_EDITOR_OK_BUTTON=//div[@class='accrodian-list']//button[@class='rd-button rd-button-primary rd-button-size-m rd-button-background-light rd-button-with-text']
+APPEND_RADIO_BUTTON=//div[@class='tbl-panel d-block']//div[3]//div[1]//input[1]
+UPON_SUCCESSFULL_SYNC_COMPLETION_RADIO=//input[@name='syncRadio']/../label
+SYNC_ADVANCED_CONFIGURTION_DROPDOWN=//div[@class='bk-accordion-item-header bk-accordion-collapsed']//div[@aria-label='Advanced configuration']
+WAIT_FOR_FILE_FIELD=//input[@id='Wait for file']
+PRE_SYNC_EXPRESSION_EDITOR_LINK=//label[contains(text(),'Pre-Sync TQL')]//a[@class='float-right']
+POST_SYNC_EXPRESSION_EDITOR_LINK=//label[contains(text(),'Post-Sync TQL')]//a[@class='float-right']
+SYNC_CONNECTOR_PROPERTIES=//div[@class='bk-accordion-item-header bk-accordion-collapsed']//div[@aria-label='Sync connector properties']
+EXTRACTION_MODE_DROPDOWN=//bk-select[@name='repconn-create-layover-name-connType']//div//div[@id='selectHeadId']
+DATA_LOADING_MODE_DROPDOWN=//bk-select[@ng-reflect-label='Data loading mode']//div[@class='bk-select bk-select-radiant']//div[@id='selectHeadId']
+SYNC_COLUMN_DELIMEITER=//input[@id='input_Column delimiter']
+ESCAPE_CHARACTER=//input[@id='input_Escape character']
+ENCLOSING_CHARACTER_DROPDOWN=//bk-select[starts-with(@ng-reflect-label,'Enclosing')]//div[@class='bk-select bk-select-radiant']//div[@id='selectHeadId']
+FETCH_SIZE=//input[@id='input_Fetch size' or @id='input_FetchSize']
+TS_LOAD_OPTIONS=//input[@id='input_tsload options']
+NULL_VALUE_DROPDOWN=//bk-select[@ng-reflect-label='Null value']//div[@class='bk-select bk-select-radiant']//div[@id='selectHeadId']
+NULL_VALUE_FIELD=//input[@id='input_Null value']
+EMPTY_OPTION_PATH=//label[contains(text(),' Null value ')]//following-sibling::div//bk-action-menu[1]/div[1]/div[1]/div[1]/div[1]
+NULL_OPTION_PATH=//div[@name='NULLVALUE,NULL']
+NA_OPTION_PATH=//div[@name='NULLVALUE,NA']
+DATE_DELIMITER=//input[@id='input_Date delimiter']
+DATE_STYLE_DROPDOWN=//bk-select[@ng-reflect-label='Date style']//div[@class='bk-select bk-select-radiant']//div[@id='selectHeadId']
+TIME_STYLE_DROPDOWN=//bk-select[@ng-reflect-label='Time style']//div[@class='bk-select bk-select-radiant']//div[@id='selectHeadId']
+TIME_DELIMITER=//input[@id='input_Time delimiter']
+BOOLEAN_REPRESENTATION_DROPDOWN=//bk-select[@ng-reflect-label='Boolean Representation']//div[@class='bk-select bk-select-radiant']//div[@id='selectHeadId']
+SKIP_TRAILER_ROWS=//input[@id='input_Skip trailer rows']
+READER_ENCODER_DROPDOWN=//bk-select[@ng-reflect-label='Reader encoder']//div[@class='bk-select bk-select-radiant']//div[@id='selectHeadId']
+ESCAPE_UNCLOSED_FIELD=//label[contains(text(),' Escape unclosed field ')]//following-sibling::div/input
+ALLOW_LARGE_RESULT_SET_DROPDOWN=//label[contains(text(),' Allow large resultset ')]//following-sibling::div/div[1]
+NULL_IF=//label[contains(text(),' Null If ')]//following-sibling::div/input
+MAX_FILE_SIZE=//label[contains(text(),' Max file size(bytes) ')]//following-sibling::div/input
+PARALLEL=//label[contains(text(),' Parallel ')]//following-sibling::div/input
+STAGE_lOCATION=//label[contains(text(),' Stage location ')]//following-sibling::div/input
+SOCKET_BUFFER_SIZE=//input[@id='input_Socket buffer size']
+FIELD_OPTIONALLY_ENCLOSED_BY=//label[contains(text(),' Field optionally enclosed by ')]//following-sibling::div/div[1]
+READ_TIMEOUT=//input[@id='input_Read Timeout']
+
+#CloudSync
+LOGIN_ID = loginEmailId
+PASSWORD_ID = textUid
+CS_LOGIN_BUTTON = //ds-button[@text='Login']//button[@class='btn btn-primary px-3 rounded-pill btn-md'][contains(text(),'Login')]
+CS_LINK_CONNECTIONS = //a[contains(text(),'Connections')]
+CS_ADD_CONNECTION = //button[contains(text(),'Add connection')]
+CS_SEARCH_DATABASE = searchDatabaseId
+CS_DATABASE_SELECT = conn-name
+CS_CONNECTION_HEADER = //h3[contains(text(),'Create connection')]
+
+#CloudSync
+LOGIN_ID = loginEmailId
+PASSWORD_ID = textUid
+CS_HEADER = //h3[contains(text(),'CloudSync')]
+CS_LOGIN_BUTTON = //ds-button[@text='Login']//button[@class='btn btn-primary px-3 rounded-pill btn-md'][contains(text(),'Login')]
+CS_LINK_CONNECTIONS = //a[contains(text(),'Connections')]
+CS_ADD_CONNECTION = //button[contains(text(),'Add connection')]
+CS_SEARCH_DATABASE = searchDatabaseId
+CS_DATABASE_SELECT = conn-name
+CS_CONNECTION_HEADER = //h3[contains(text(),'Create connection')]
+CS_INPUT_CONNECTION_NAME = displayNmId
+CS_MYSQL_HOST_INPUT = mysqlHostId
+CS_MYSQL_PORT_INPUT = mysqlPortId
+CS_MYSQL_USERNAME_INPUT = mysqlconn_UsrId
+CS_MYSQL_PASSWORD_INPUT = mysqlpasswordId
+CS_HEADER_SOURCE = //h4[contains(text(),'MySQL')]
+BUTTON_TEST_CONNECCTION = //button[contains(text(),'Test connection')]
+BUTTON_CREATE_CONNECCTION = //button[contains(text(),'Create connection')]
+CS_ADD_TABLE_SYNC = //div[@class='button-wrap']//button[@class='btn btn-primary px-3 rounded-pill btn-md'][contains(text(),'Add table sync')]
+
+CS_SQLSERVER_CONNECTION_HEADER = //h4[contains(text(),'SQL Server')]
+CS_MSSQL_HOST_INPUT = mssqlHostId
+CS_MSSQL_PORT_INPUT = mssqlPortId
+CS_MSSQL_USERNAME_INPUT = mssqlconn_UsrId
+CS_MSSQL_PASSWORD_INPUT = mssqlPasswordId
+DATABASE_MAIN_TREE = //div[@class='tree-menu-main']//a
+DATABASE_CHILD_TREE = //div[@class='sql-list-grid-child']//div[@class='tree-menu-main']//a
+DATABASE_SUB_CHILD_TREE = //div[@class='sql-list-grid-child']//div[@class='sql-list-grid-child']//ul[@class='treeview m-0 p-0']//a
+CS_BUTTON_SETUP_SYNC = //button[contains(text(),'Set up sync')]
+CS_SELECTED_TABLE = //h5[@class='m-0']
+CS_BUTTON_SAVE_AND_SYNC = //button[contains(text(),'Save and sync now')]
+DROPDOWN_ALERT_NOTIFICATION = //span[contains(text(),'Failures')]
+DROPDOWN_ALERT_NEVER = //a[contains(text(),'Never')]
+CS_MAP_TABLES_COLUMNS = //a[contains(text(),'Map tables and columns')]
+CS_HEADER_MAP = //h5[contains(text(),'Choose the database ,schema and table in Snowflake')]
+CS_INPUT_SNOWFLAKE_TABLE = //input[@id='syncTableNmId']
+CS_SYNC_MONITOR_HEADER = //h4[@class='m-0']
+CS_SYNC_MONITOR = //a[contains(text(),'Sync Monitor')]
+CS_LOAD_TYPE = //pre[contains(text(),'[Load Type : ')]
+CS_BUTTON_CLOSE = //button[contains(text(),'Close')]
+CS_PROFILE = //span[@class='ml-2 text-dark']
+
+TOAST_CONNECTION_SUCCESS_MESSAGE = //ds-toast[@ng-reflect-message='Test connection successful.']
+TOAST_CREATE_SUCCESS_MESSAGE = //ds-toast[@ng-reflect-message='Connection created successfully. ']
+BUTTON_LOGOUT = //span[contains(text(),'Logout')]
+
+#CloudSync
+LOGIN_ID = loginEmailId
+PASSWORD_ID = textUid
+CS_HEADER = //h3[contains(text(),'CloudSync')]
+CS_LOGIN_BUTTON = //ds-button[@text='Login']//button[@class='btn btn-primary px-3 rounded-pill btn-md'][contains(text(),'Login')]
+CS_LINK_CONNECTIONS = //a[contains(text(),'Connections')]
+CS_ADD_CONNECTION = //button[contains(text(),'Add connection')]
+CS_SEARCH_DATABASE = searchDatabaseId
+CS_DATABASE_SELECT = conn-name
+CS_CONNECTION_HEADER = //h3[contains(text(),'Create connection')]
+CS_INPUT_CONNECTION_NAME = displayNmId
+CS_MYSQL_HOST_INPUT = mysqlHostId
+CS_MYSQL_PORT_INPUT = mysqlPortId
+CS_MYSQL_USERNAME_INPUT = mysqlconn_UsrId
+CS_MYSQL_PASSWORD_INPUT = mysqlpasswordId
+CS_HEADER_SOURCE = //h4[contains(text(),'MySQL')]
+BUTTON_TEST_CONNECCTION = //button[contains(text(),'Test connection')]
+BUTTON_CREATE_CONNECCTION = //button[contains(text(),'Create connection')]
+CS_ADD_TABLE_SYNC = //div[@class='button-wrap']//button[@class='btn btn-primary px-3 rounded-pill btn-md'][contains(text(),'Add table sync')]
+
+CS_SQLSERVER_CONNECTION_HEADER = //h4[contains(text(),'SQL Server')]
+CS_MSSQL_HOST_INPUT = mssqlHostId
+CS_MSSQL_PORT_INPUT = mssqlPortId
+CS_MSSQL_USERNAME_INPUT = mssqlconn_UsrId
+CS_MSSQL_PASSWORD_INPUT = mssqlPasswordId
+DATABASE_MAIN_TREE = //div[@class='tree-menu-main']//a
+DATABASE_CHILD_TREE = //div[@class='sql-list-grid-child']//div[@class='tree-menu-main']//a
+DATABASE_SUB_CHILD_TREE = //div[@class='sql-list-grid-child']//div[@class='sql-list-grid-child']//ul[@class='treeview m-0 p-0']//a
+CS_BUTTON_SETUP_SYNC = //button[contains(text(),'Set up sync')]
+CS_SELECTED_TABLE = //h5[@class='m-0']
+CS_BUTTON_SAVE_AND_SYNC = //button[contains(text(),'Save and sync now')]
+DROPDOWN_ALERT_NOTIFICATION = //span[contains(text(),'Failures')]
+DROPDOWN_ALERT_NEVER = //a[contains(text(),'Never')]
+CS_MAP_TABLES_COLUMNS = //a[contains(text(),'Map tables and columns')]
+CS_HEADER_MAP = //h5[contains(text(),'Choose the database ,schema and table in Snowflake')]
+CS_INPUT_SNOWFLAKE_TABLE = //input[@id='syncTableNmId']
+CS_SYNC_MONITOR_HEADER = //h4[@class='m-0']
+CS_SYNC_MONITOR = //a[contains(text(),'Sync Monitor')]
+CS_LOAD_TYPE = //pre[contains(text(),'[Load Type : ')]
+CS_BUTTON_CLOSE = //button[contains(text(),'Close')]
+CS_PROFILE = //span[@class='ml-2 text-dark']
+
+TOAST_CONNECTION_SUCCESS_MESSAGE = //ds-toast[@ng-reflect-message='Test connection successful.']
+TOAST_CREATE_SUCCESS_MESSAGE = //ds-toast[@ng-reflect-message='Connection created successfully. ']
+BUTTON_LOGOUT = //span[contains(text(),'Logout')]

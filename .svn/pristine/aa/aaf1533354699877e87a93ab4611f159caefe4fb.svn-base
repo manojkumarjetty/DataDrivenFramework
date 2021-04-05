@@ -1,0 +1,471 @@
+package com.disuite.pages.thoughtspot;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class SyncProperties extends DataFlowCreation {
+	public void tsSyncProperties(String SelectValue, String addCondition, String syncMode, String synCompletionValue,
+			String moveItPath, String waitForFile, String preSyncQuery, String postSyncQuery,
+			String extractionModeInput, String dataloadingModeInput, String syncColumnDelimiter, String nullValue,
+			String nullValuedrp, String escapeCharacter, String enclosingCharacterInput, String escapeUnclosedField,
+			String fieldOptionallyEnclosedBy, String bufferSize, String dateStyleValue, String dateDelimiter,
+			String timeStyleValue, String timeDelimiter, String timeDelimiterValue, String booleanRepresentationValue,
+			String skipTrailerRowsValue, String readerEncoderValue, String fetchSize, String nullIfValue,
+			String maxFileSize, String parallelValue, String stageLocation, String allowLargeResultSet,
+			String readTimeout, String tsLoadOptions) {
+
+		driver.findElement(By.xpath(OR.getProperty("SYNC_PRPERTIES_TAB"))).click();
+		logger.info("Sync Properties Tab Clicked");
+		if (!(SelectValue.equals("Files"))) {
+			addCondition(addCondition);
+		}
+		selectSyncMode(syncMode);
+		if (SelectValue.equals("Files")) {
+			logger.info("inside upom");
+			uponSuccessfulSyncCompletion(synCompletionValue, moveItPath);
+		}
+		waitFile(waitForFile);
+		preSyncTql(preSyncQuery);
+		postSyncTql(postSyncQuery);
+		driver.findElement(By.xpath(OR.getProperty("SYNC_CONNECTOR_PROPERTIES"))).click();
+
+		if (SelectValue.equals("Files")) {
+			escapeCharacter(escapeCharacter);
+			enclosingCharacter(enclosingCharacterInput);
+			nullValueDropdwn(nullValuedrp);
+			dateStyle(dateStyleValue);
+			dateDelimiter(dateDelimiter);
+			timeStyle(timeStyleValue);
+			timeDelimiter(timeDelimiterValue);
+			booleanRepresentation(booleanRepresentationValue);
+			skipTrailerRows(skipTrailerRowsValue);
+			readerEncoder(readerEncoderValue);
+		} else {
+			selectExtractionMode(extractionModeInput);
+			selectDataLoadingMode(dataloadingModeInput);
+			syncColumnDelimiter(syncColumnDelimiter);
+			if (extractionModeInput != null) {
+				switch (extractionModeInput) {
+				case "JDBC":
+					if (nullValue != null) {
+						nullValue(nullValue);
+					}
+					escapeCharacter(escapeCharacter);
+					enclosingCharacter(enclosingCharacterInput);
+					break;
+				case "External Table":
+					escapeCharacter(escapeCharacter);
+					enclosingCharacter(enclosingCharacterInput);
+					socketBufferSize(bufferSize);
+					break;
+				case "TPT":
+				case "OCI":
+				case "BCP":
+				case "DB2 Export":
+				case "Hadoop Extract":
+				case "PSQL":
+					nullValueDropdwn(nullValuedrp);
+					escapeCharacter(escapeCharacter);
+					enclosingCharacter(enclosingCharacterInput);
+					break;
+				case "Bulk Export":
+					escapeCharacter(escapeCharacter);
+					if (SelectValue.equalsIgnoreCase("Snowflake")) {
+						escapeUnclosedField(escapeUnclosedField);
+						fieldOptionallyEnclosedBy(fieldOptionallyEnclosedBy);
+						nullIfValue(nullIfValue);
+						maxFileSize(maxFileSize);
+						parallelValue(parallelValue);
+						stageLocation(stageLocation);
+					} else {
+						enclosingCharacter(enclosingCharacterInput);
+					}
+					break;
+
+				}
+			} else {
+				if (escapeCharacter != null)
+					escapeCharacter(escapeCharacter);
+				enclosingCharacter(enclosingCharacterInput);
+				if (allowLargeResultSet != null)
+					selectAllowLargeResultSet(allowLargeResultSet);
+				if (readTimeout != null)
+					readTimeout(readTimeout);
+
+			}
+			if (fetchSize != null) {
+				fetchSize(fetchSize);
+			}
+			if (tsLoadOptions != null) {
+				tsLoadOptions(tsLoadOptions);
+			}
+		}
+	}
+
+//****************************************METHODS IMPLEMENTATION  ********************************************************************	
+
+	// Method for entering Waitforfile field
+	public void waitFile(String waitForFile) {
+		driver.findElement(By.xpath(OR.getProperty("SYNC_ADVANCED_CONFIGURTION_DROPDOWN"))).click();
+		driver.findElement(By.xpath(OR.getProperty("WAIT_FOR_FILE_FIELD"))).sendKeys(waitForFile);
+	}
+
+	// Method for Add(where) Condition
+	public void addCondition(String addCondition) {
+		driver.findElement(By.xpath(OR.getProperty("ADD_CONDITION_EXPRESSION_EDITOR_LINK"))).click();
+		logger.info("Clicked on Add Condition Expression editor");
+		pause(500);
+		driver.findElement(By.xpath(OR.getProperty("ADD_CONDITION_EXPRESSION_EDITOR"))).sendKeys(addCondition);
+		validateCondition();
+		logger.info("Entered Add Condition :" + addCondition);
+	}
+
+	// Method for select Sync Mode
+	public void selectSyncMode(String syncMode) {
+		if (syncMode.equals("Append")) {
+			driver.findElement(By.xpath(OR.getProperty("APPEND_RADIO_BUTTON"))).click();
+			logger.info("Selected Sync Mode : Append");
+		} else {
+			logger.info("Selected Sync Mode : Overwrite");
+		}
+	}
+
+	// Method for Pre Sync TQL
+	public void preSyncTql(String preSyncQuery) {
+		driver.findElement(By.xpath(OR.getProperty("PRE_SYNC_EXPRESSION_EDITOR_LINK"))).click();
+		driver.findElement(By.xpath(OR.getProperty("ADD_CONDITION_EXPRESSION_EDITOR"))).sendKeys(preSyncQuery);
+		validateCondition();
+		logger.info("Entered Pre Sync TQL :" + preSyncQuery);
+	}
+
+	// Method for Post Sync TQL
+	public void postSyncTql(String postSyncQuery) {
+		driver.findElement(By.xpath(OR.getProperty("POST_SYNC_EXPRESSION_EDITOR_LINK"))).click();
+		driver.findElement(By.xpath(OR.getProperty("ADD_CONDITION_EXPRESSION_EDITOR"))).sendKeys(postSyncQuery);
+		validateCondition();
+		logger.info(" Entered Post Sync TQL entered :" + postSyncQuery);
+	}
+
+	// Method for validating entered condition
+	public void validateCondition() {
+		if (driver.findElement(By.xpath(OR.getProperty("EXPRESSION_EDITOR_OK_BUTTON"))).isEnabled()) {
+			driver.findElement(By.xpath(OR.getProperty("EXPRESSION_EDITOR_OK_BUTTON"))).click();
+		} else {
+			logger.info("Entered Condition is invalid");
+		}
+
+	}
+
+	/*
+	 *
+	 * Loop for selecting Extraction Mode
+	 */
+	public void selectExtractionMode(String extractionModeInput) {
+		if (!(extractionModeInput == null)) {
+			driver.findElement(By.xpath(OR.getProperty("EXTRACTION_MODE_DROPDOWN"))).click();
+			List<WebElement> extractionModeList = driver
+					.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+			for (int i = 0; i < extractionModeList.size(); i++) {
+				String selectedExtractionMode = extractionModeList.get(i).getText();
+				if (selectedExtractionMode.equals(extractionModeInput)) {
+					extractionModeList.get(i).click();
+					logger.info("Selected ExtractionMode :" + selectedExtractionMode);
+					break;
+
+				}
+			}
+		}
+	}
+
+	/*
+	 * Loop for selecting Data Loading mode
+	 */
+	public void selectDataLoadingMode(String dataloadingModeInput) {
+
+		driver.findElement(By.xpath(OR.getProperty("DATA_LOADING_MODE_DROPDOWN"))).click();
+		;
+		List<WebElement> dataloadingModeList = driver
+				.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+		for (int i = 0; i < dataloadingModeList.size(); i++) {
+			String selectedDataLoadingMode = dataloadingModeList.get(i).getText();
+			if (selectedDataLoadingMode.equals(dataloadingModeInput)) {
+				dataloadingModeList.get(i).click();
+				logger.info("Selected Data Loading mode : " + selectedDataLoadingMode);
+				break;
+			}
+		}
+	}
+
+	// Method for entering ColumnDelimiter value
+	public void syncColumnDelimiter(String syncColumnDelimiter) {
+		driver.findElement(By.xpath(OR.getProperty("SYNC_COLUMN_DELIMEITER"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("SYNC_COLUMN_DELIMEITER"))).sendKeys(syncColumnDelimiter);
+		logger.info("Entered ColumnDelimiter :" + syncColumnDelimiter);
+	}
+
+	// Method for entering escapeCharacter value
+	public void escapeCharacter(String escapeCharacter) {
+		driver.findElement(By.xpath(OR.getProperty("ESCAPE_CHARACTER"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("ESCAPE_CHARACTER"))).sendKeys(escapeCharacter);
+		logger.info("Entered Escape Character :" + escapeCharacter);
+
+	}
+
+	// Method for Escape unclosed field
+	public void escapeUnclosedField(String escapeUnclosedField) {
+		driver.findElement(By.xpath(OR.getProperty("ESCAPE_UNCLOSED_FIELD"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("ESCAPE_UNCLOSED_FIELD"))).sendKeys(escapeUnclosedField);
+		logger.info("Entered unclosed field :" + escapeUnclosedField);
+
+	}
+
+	// Method for fieldOptionallyEnclosedBy
+	public void fieldOptionallyEnclosedBy(String fieldOptionallyEnclosedBy) {
+		driver.findElement(By.xpath(OR.getProperty("FIELD_OPTIONALLY_ENCLOSED_BY"))).click();
+		List<WebElement> fieldOptionallyEnclosedByList = driver
+				.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+		for (int i = 0; i < fieldOptionallyEnclosedByList.size(); i++) {
+			String selectedFieldOptionallyEnclosedBy = fieldOptionallyEnclosedByList.get(i).getText();
+			if (selectedFieldOptionallyEnclosedBy.equals(fieldOptionallyEnclosedBy)) {
+				fieldOptionallyEnclosedByList.get(i).click();
+				logger.info("field Optionally Enclosed By : " + selectedFieldOptionallyEnclosedBy);
+				break;
+			}
+		}
+	}
+
+	// Method for selecting Enclosing Character
+	public void enclosingCharacter(String enclosingCharacterInput) {
+
+		/*
+		 * Loop for selecting ENCLOSING CHARACTER
+		 */
+
+		driver.findElement(By.xpath(OR.getProperty("ENCLOSING_CHARACTER_DROPDOWN"))).click();
+		List<WebElement> enclosingCharacterList = driver
+				.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+
+		for (int i = 0; i < enclosingCharacterList.size(); i++) {
+			String selectedEnclosingCharacter = enclosingCharacterList.get(i).getText();
+			if (selectedEnclosingCharacter.equals(enclosingCharacterInput)) {
+				enclosingCharacterList.get(i).click();
+				logger.info("Selected enclosing Character : " + selectedEnclosingCharacter);
+				break;
+			}
+		}
+	}
+
+	// Method for enetering SOCKET_BUFFER_SIZE field
+	public void socketBufferSize(String bufferSize) {
+		driver.findElement(By.xpath(OR.getProperty("SOCKET_BUFFER_SIZE"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("SOCKET_BUFFER_SIZE"))).sendKeys(bufferSize);
+		logger.info("Entered buffer size" + bufferSize);
+
+	}
+
+	// Method for entering Read Timeout field
+	public void readTimeout(String readTimeout) {
+		driver.findElement(By.xpath(OR.getProperty("READ_TIMEOUT"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("READ_TIMEOUT"))).sendKeys(readTimeout);
+		logger.info("Entered Read Timeout value" + readTimeout);
+	}
+
+	// Method for entering Fetch Size value
+	public void fetchSize(String fetchSize) {
+		driver.findElement(By.xpath(OR.getProperty("FETCH_SIZE"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("FETCH_SIZE"))).sendKeys(fetchSize);
+		logger.info("Entered Fetch Size :" + fetchSize);
+	}
+
+	// Method for Null If NULL_IF
+	public void nullIfValue(String nullIfValue) {
+		driver.findElement(By.xpath(OR.getProperty("NULL_IF"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("NULL_IF"))).sendKeys(nullIfValue);
+		logger.info("Entered NULL_IF value :" + nullIfValue);
+
+	}
+
+	// Method for Max file size(bytes)
+	public void maxFileSize(String maxFileSize) {
+		driver.findElement(By.xpath(OR.getProperty("MAX_FILE_SIZE"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("MAX_FILE_SIZE"))).sendKeys(maxFileSize);
+		logger.info("Entered Max file size :" + maxFileSize);
+
+	}
+
+	// Method for Parallel PARALLEL
+	public void parallelValue(String parallelValue) {
+		driver.findElement(By.xpath(OR.getProperty("PARALLEL"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("PARALLEL"))).sendKeys(parallelValue);
+		logger.info("Entered PARALLEL Value :" + parallelValue);
+
+	}
+
+	// Method for Stage location STAGE_lOCATION
+	public void stageLocation(String stageLocation) {
+		driver.findElement(By.xpath(OR.getProperty("STAGE_lOCATION"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("STAGE_lOCATION"))).sendKeys(stageLocation);
+		logger.info("Entered STAGE lOCATION :" + stageLocation);
+
+	}
+
+	// Method for entering allow large result set values
+	public void selectAllowLargeResultSet(String allowLargeResultSet) {
+		if (!(allowLargeResultSet == null)) {
+			driver.findElement(By.xpath(OR.getProperty("ALLOW_LARGE_RESULT_SET_DROPDOWN"))).click();
+			pause(2000);
+			List<WebElement> allowLargeResultSetList = driver
+					.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+			for (int i = 0; i < allowLargeResultSetList.size(); i++) {
+				String selectedAllowLargeResultSet = allowLargeResultSetList.get(i).getText();
+				if (selectedAllowLargeResultSet.equalsIgnoreCase(allowLargeResultSet)) {
+					allowLargeResultSetList.get(i).click();
+					logger.info("selected AllowLargeResultSet :" + selectedAllowLargeResultSet);
+					break;
+				}
+			}
+		}
+	}
+
+	// Method for entering ts loadoptions value
+	public void tsLoadOptions(String tsLoadOptions) {
+		driver.findElement(By.xpath(OR.getProperty("TS_LOAD_OPTIONS"))).sendKeys(tsLoadOptions);
+		logger.info("Entered LOAD Options  :" + tsLoadOptions);
+	}
+
+	// Method for selecting radio button Upon successful completion of sync
+	public void uponSuccessfulSyncCompletion(String synCompletionValue, String moveItPath) {
+
+		List<WebElement> succSyncRadioList = driver
+				.findElements(By.xpath(OR.getProperty("UPON_SUCCESSFULL_SYNC_COMPLETION_RADIO")));
+		for (int i = 0; i < succSyncRadioList.size(); i++) {
+			String selectedSyncCompletionText = succSyncRadioList.get(i).getText();
+			logger.info("upon value" + selectedSyncCompletionText);
+			if (selectedSyncCompletionText.equals(synCompletionValue)) {
+				logger.info("Selected  Sync Completion Radio Button : " + selectedSyncCompletionText);
+				succSyncRadioList.get(i).click();
+				if (synCompletionValue.equalsIgnoreCase("Move it to"))
+					driver.findElement(By.xpath("//input[@id='Wildcard']")).sendKeys(moveItPath);
+				logger.info("Selected Sync Completion Radio Button : " + selectedSyncCompletionText);
+				break;
+			}
+		}
+
+	}
+
+	// Method for selecting Null value from dropdown
+	public void nullValueDropdwn(String nullValuedrp) {
+		driver.findElement(By.xpath(OR.getProperty("NULL_VALUE_DROPDOWN"))).click();
+		if (nullValuedrp.equalsIgnoreCase("Space")) {
+			driver.findElement(By.xpath(OR.getProperty("EMPTY_OPTION_PATH"))).click();
+			logger.info("Empty option is selected");
+		} else {
+			List<WebElement> nullValuedrpList = driver
+					.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+			for (int i = 0; i < nullValuedrpList.size(); i++) {
+				String selectedNullValuedrp = nullValuedrpList.get(i).getText();
+				if ((selectedNullValuedrp.trim()).equals((nullValuedrp.trim()))) {
+					nullValuedrpList.get(i).click();
+					logger.info("Selected Null option : " + selectedNullValuedrp);
+					break;
+				}
+			}
+		}
+
+	}
+
+	// Method for entering null value
+	public void nullValue(String nullValue) {
+		driver.findElement(By.xpath(OR.getProperty("NULL_VALUE_FIELD"))).sendKeys(nullValue);
+		logger.info("Entered Null Value" + nullValue);
+
+	}
+
+	// Method for entering Date Delimiter value
+	public void dateDelimiter(String dateDelimiter) {
+		driver.findElement(By.xpath(OR.getProperty("DATE_DELIMITER"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("DATE_DELIMITER"))).sendKeys(dateDelimiter);
+		logger.info("Entered Date Delimiter :" + dateDelimiter);
+	}
+
+	// Method for selecting Date Style
+	public void dateStyle(String dateStyleValue) {
+		driver.findElement(By.xpath(OR.getProperty("DATE_STYLE_DROPDOWN"))).click();
+		List<WebElement> dateStyleList = driver
+				.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+		for (int i = 0; i < dateStyleList.size(); i++) {
+			String selecteddateStyleText = dateStyleList.get(i).getText();
+			if (selecteddateStyleText.equals(dateStyleValue)) {
+				dateStyleList.get(i).click();
+				logger.info("Selected Date Style Option : " + selecteddateStyleText);
+				break;
+			}
+		}
+
+	}
+
+	// Method for selecting Time Style
+	public void timeStyle(String timeStyleValue) {
+		driver.findElement(By.xpath(OR.getProperty("TIME_STYLE_DROPDOWN"))).click();
+		List<WebElement> timeStyleList = driver
+				.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+		for (int i = 0; i < timeStyleList.size(); i++) {
+			String selectedtimeStyleText = timeStyleList.get(i).getText();
+			if (selectedtimeStyleText.equals(timeStyleValue)) {
+				timeStyleList.get(i).click();
+				logger.info("Selected Time Style Option : " + selectedtimeStyleText);
+				break;
+			}
+		}
+
+	}
+
+	// Method for entering Time Delimiter
+	public void timeDelimiter(String timeDelimiterValue) {
+		driver.findElement(By.xpath(OR.getProperty("TIME_DELIMITER"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("TIME_DELIMITER"))).sendKeys(timeDelimiterValue);
+		logger.info("Entered Time Delimiter :" + timeDelimiterValue);
+	}
+
+	// Method for selecting Boolean Representation
+	public void booleanRepresentation(String booleanRepresentationValue) {
+		driver.findElement(By.xpath(OR.getProperty("BOOLEAN_REPRESENTATION_DROPDOWN"))).click();
+		List<WebElement> boolRepList = driver
+				.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+		for (int i = 0; i < boolRepList.size(); i++) {
+			String selectedboolRepText = boolRepList.get(i).getText();
+			if (selectedboolRepText.equals(booleanRepresentationValue)) {
+				boolRepList.get(i).click();
+				logger.info("Selected Boolean Representation Option : " + selectedboolRepText);
+				break;
+			}
+		}
+
+	}
+
+	// Method for entering skip trailer rows
+	public void skipTrailerRows(String skipTrailerRowsValue) {
+		driver.findElement(By.xpath(OR.getProperty("SKIP_TRAILER_ROWS"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("SKIP_TRAILER_ROWS"))).sendKeys(skipTrailerRowsValue);
+		logger.info("Entered SKIP TRAILER ROWS value: " + skipTrailerRowsValue);
+	}
+
+	// Method for Reader Encoder
+	public void readerEncoder(String readerEncoderValue) {
+		driver.findElement(By.xpath(OR.getProperty("READER_ENCODER_DROPDOWN"))).click();
+		List<WebElement> encoderList = driver
+				.findElements(By.xpath(OR.getProperty("HIVE_DFS_SECURITY_AUTHENTICATION_OPTIONS")));
+		for (int i = 0; i < encoderList.size(); i++) {
+			String selectedboolRepText = encoderList.get(i).getText();
+			if (selectedboolRepText.equals(readerEncoderValue)) {
+				encoderList.get(i).click();
+				logger.info("Selected Reader Encoder Option : " + selectedboolRepText);
+				break;
+			}
+		}
+
+	}
+
+}

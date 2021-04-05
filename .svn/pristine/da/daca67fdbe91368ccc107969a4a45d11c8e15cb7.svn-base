@@ -1,0 +1,46 @@
+package com.disuite.test.cloudsync;
+
+import java.util.Hashtable;
+
+import org.testng.SkipException;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.disuite.base.BaseClass;
+import com.disuite.pages.cloudsync.CreateConnection;
+import com.disuite.util.TestUtil;
+
+public class CreateConnectionTest {
+	@Test(dataProvider = "getData")
+    public void createConnectionTest(Hashtable<String, String> data) throws InterruptedException {
+		
+		// check the run mode of test case
+				if (!TestUtil.isExecutable("CS_SQLServer",
+						BaseClass.xls1)) {
+					throw new SkipException("Runmode set to NO");
+				}
+
+		// check runmode for data set
+				if (!data.get("Runmode").equals("Y")) {
+					throw new SkipException("Test Case Data Set Runmode is no.");
+				}
+				CreateConnection cc =new CreateConnection();
+				cc.createConnection(data.get("Source"), data.get("ConnectionName"), data.get("Host"), 
+						data.get("Port"), data.get("User"), data.get("Password"), 
+						data.get("DBtype"), data.get("Dbname"), data.get("AddTableSync"), data.get("SnowFlakeTable"), 
+						data.get("ExtractType"), data.get("ExtractionMode"), data.get("ExpectedLoadType"));	        
+   }
+	
+	@DataProvider
+	public Object[][] getData() {
+		return TestUtil.getData("CS_SQLServer", BaseClass.xls1);
+	}
+
+	
+	/*
+	 * @AfterMethod public void tearDown() throws Exception {
+	 * BaseClass.closeBrowser();
+	 * 
+	 * }
+	 */
+}

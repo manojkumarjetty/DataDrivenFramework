@@ -1,0 +1,62 @@
+package com.disuite.test.thoughtspot;
+
+import java.util.Hashtable;
+
+import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.disuite.base.BaseClass;
+import com.disuite.pages.thoughtspot.DataFlowCreation;
+import com.disuite.pages.thoughtspot.MySqlDataFlowCreation;
+import com.disuite.util.TestUtil;
+
+public class MySqlDataFlowCreationTest {
+
+	@Test(dataProvider = "getData")
+	public void sfDfCreationTest(Hashtable<String, String> data) throws InterruptedException {
+
+		// check the run mode of test case
+		if (!TestUtil.isExecutable("MySqlConnection", BaseClass.xls1)) {
+			throw new SkipException("Runmode set to NO");
+		}
+
+		// check runmode for data set
+		if (!data.get("Runmode").equals("Y")) {
+			throw new SkipException("Test Case Data Set Runmode is no.");
+		}
+
+		MySqlDataFlowCreation testdf = new MySqlDataFlowCreation();
+		testdf.createMySqlConnection(data.get("ConnectionName"), data.get("SelectValue"), data.get("Host"),
+				data.get("Port"), data.get("tdAuthenticationType"), data.get("prestoAuthenticationType"),
+				data.get("Username"), data.get("User"), data.get("Password"), data.get("Database"), data.get("Version"),
+				data.get("catalogName"), data.get("schemaName"), data.get("jdbcoptions"), data.get("Config_Version"),
+				data.get("FilePath"), data.get("FileProtocol"), data.get("FileHost"), data.get("FilePort"),
+				data.get("FileUsername"), data.get("FilePassword"), data.get("KeyFile"), data.get("AuthenticationType"),
+				data.get("TsTable"), data.get("Passphrasekey"), data.get("DBtype"), data.get("Dbname"),
+				data.get("AddTableSync"), data.get("Account"), data.get("AzureauthTypeInput"), data.get("azureKey"),
+				data.get("Container"), data.get("syncProperty"), data.get("addCondition"), data.get("syncMode"),
+				data.get("synCompletionValue"), data.get("moveItPath"), data.get("waitForFile"),
+				data.get("preSyncQuery"), data.get("postSyncQuery"), data.get("extractionModeInput"),
+				data.get("dataloadingModeInput"), data.get("syncColumnDelimiter"), data.get("nullValue"),
+				data.get("nullValuedrp"), data.get("escapeCharacter"), data.get("enclosingCharacterInput"),
+				data.get("escapeUnclosedField"), data.get("fieldOptionallyEnclosedBy"), data.get("bufferSize"),
+				data.get("dateStyleValue"), data.get("dateDelimiter"), data.get("timeStyleValue"),
+				data.get("timeDelimiter"), data.get("timeDelimiterValue"), data.get("booleanRepresentationValue"),
+				data.get("skipTrailerRowsValue"), data.get("readerEncoderValue"), data.get("fetchSize"),
+				data.get("nullIfValue"), data.get("maxFileSize"), data.get("parallelValue"), data.get("stageLocation"),
+				data.get("allowLargeResultSet"), data.get("readTimeout"), data.get("tsLoadOptions"),
+				data.get("ExtractType"), data.get("ExtractionMode"));
+	}
+
+	@DataProvider
+	public Object[][] getData() {
+		return TestUtil.getData("MySqlConnection", BaseClass.xls1);
+	}
+
+	@AfterMethod
+	public void tearDown() throws Exception {
+		BaseClass.closeBrowser();
+	}
+}

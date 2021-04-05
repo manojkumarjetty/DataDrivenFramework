@@ -1,0 +1,11 @@
+#firefox, chrome, ie
+browser=chrome
+chromeDriverUrl=C:\\Users\\sysadmin\\Chrome\\chromedriver.exe
+ieDriverUrl=
+newLeadURL=
+UserName=Selenium
+Password=P2wd_1234
+TSUserName = test
+TSPassword = P2wd_4321
+csUserName = test@diyotta.com
+csPassword = P2wd_4321

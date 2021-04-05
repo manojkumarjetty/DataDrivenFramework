@@ -1,0 +1,63 @@
+package com.disuite.test.thoughtspot;
+
+import java.util.Hashtable;
+import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import com.disuite.base.BaseClass;
+import com.disuite.pages.thoughtspot.HiveConnectionMethods;
+import com.disuite.util.TestUtil;
+
+public class HiveDataFlowCreationTest {
+	@Test(dataProvider = "getData")
+	public void smDfCreationTest(Hashtable<String, String> data) throws InterruptedException {
+
+		// check the run mode of test case
+		if (!TestUtil.isExecutable("HiveConnection", BaseClass.xls1)) {
+			throw new SkipException("Runmode set to NO");
+		}
+
+		
+		// check runmode for data set
+		if (!data.get("Runmode").equals("Y")) {
+			throw new SkipException("Test Case Data Set Runmode is no.");
+		}
+
+		HiveConnectionMethods hm = new HiveConnectionMethods();
+		hm.createHiveConnection(data.get("ConnectionName"), data.get("SelectValue"), data.get("hiveConfigChecked"),
+				data.get("hiveHost"), data.get("hivePort"), data.get("hiveZookeeperNamespace"),
+				data.get("zooperQuorumHost"), data.get("hiveSecurityAuthentication"), data.get("user"),
+				data.get("trustStorePath"), data.get("password"), data.get("hiveTransportMode"), data.get("httpPath"),
+				data.get("hadoopDistribution"), data.get("distributionVersion"), data.get("hivePrincipal"),
+				data.get("userPrincipal"), data.get("userKeytab"), data.get("kDCHost"), data.get("defaultRealm"),
+				data.get("hdpConfigPath"), data.get("dfsConfigChecked"), data.get("dfsNameService"),
+				data.get("dfsNameNode"), data.get("RpcAddressNode1"), data.get("RpcAddressNode2"), data.get("dfsHost"),
+				data.get("dfsPort"), data.get("dfsLocation"), data.get("tempLocation"), data.get("dfssecAuth"),
+				data.get("rpcProtectionInput"), data.get("nameNodePrinicipal"), data.get("zookeeperClientPort"),
+				data.get("queueName"), data.get("yarnTimelineWebappHost"), data.get("yarnTimelineWebappPort"),
+				data.get("hiveJdbcOptions"), data.get("DBtype"), data.get("Dbname"), data.get("AddTableSync"),
+				data.get("syncProperty"), data.get("addCondition"), data.get("syncMode"),
+				data.get("synCompletionValue"), data.get("moveItPath"), data.get("waitForFile"),
+				data.get("preSyncQuery"), data.get("postSyncQuery"), data.get("extractionModeInput"),
+				data.get("dataloadingModeInput"), data.get("syncColumnDelimiter"), data.get("nullValue"),
+				data.get("nullValuedrp"), data.get("escapeCharacter"), data.get("enclosingCharacterInput"),
+				data.get("escapeUnclosedField"), data.get("fieldOptionallyEnclosedBy"), data.get("bufferSize"),
+				data.get("dateStyleValue"), data.get("dateDelimiter"), data.get("timeStyleValue"),
+				data.get("timeDelimiter"), data.get("timeDelimiterValue"), data.get("booleanRepresentationValue"),
+				data.get("skipTrailerRowsValue"), data.get("readerEncoderValue"), data.get("fetchSize"),
+				data.get("nullIfValue"), data.get("maxFileSize"), data.get("parallelValue"), data.get("stageLocation"),
+				data.get("allowLargeResultSet"),data.get("readTimeout"), data.get("tsLoadOptions"), data.get("TsTable"),
+				data.get("ExtractType"), data.get("ExtractionMode"));
+	}
+
+	@DataProvider
+	public Object[][] getData() {
+		return TestUtil.getData("HiveConnection", BaseClass.xls1);
+	}
+
+	@AfterMethod
+	public void tearDown() throws Exception {
+		BaseClass.closeBrowser();
+	}
+}

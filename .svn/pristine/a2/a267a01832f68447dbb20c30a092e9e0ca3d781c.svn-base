@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>  
+     <class name="com.disuite.test.thoughtspot.CreateFileConnectionTest"/>
+  <!--    <class name="com.disuite.test.thoughtspot.CreateSFTPConnectionTest"/>  -->
+     <class name="com.disuite.test.thoughtspot.AmazonS3DfCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.AzureBlobStorageDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.CassandraDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.DbdlDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.DenodoFileCreationTest"/> 
+     <class name="com.disuite.test.thoughtspot.BigQueryDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.GCSDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.HiveDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.DB2DataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.JdbcDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.MariaDbDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.MongoDBDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.MySqlDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.NetezzaDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.OracleDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.PostGreSqlDfCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.SAPSQLAnywhereDataFlowCreationTest"/>	
+     <class name="com.disuite.test.thoughtspot.SQLServerDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.SalesforceDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.SnowflakeDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.SpliceMachineDataFlowCreationTest"/>
+     <class name="com.disuite.test.thoughtspot.TeraDataDataFlowCreationTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

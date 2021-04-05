@@ -1,0 +1,41 @@
+package com.disuite.test.thoughtspot;
+
+import java.util.Hashtable;
+import org.testng.SkipException;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import com.disuite.base.BaseClass;
+import com.disuite.pages.thoughtspot.VerifyConnection;
+import com.disuite.util.TestUtil;
+
+public class VerifyConnectionTest {
+	@Test(dataProvider = "getData")
+	public void verifyConnectionTest(Hashtable<String, String> data) throws InterruptedException {
+		
+		// check the run mode of test case
+				if (!TestUtil.isExecutable("VerifyConnection",
+						BaseClass.xls1)) {
+					throw new SkipException("Runmode set to NO");
+				}
+
+		// check runmode for data set
+				if (!data.get("Runmode").equals("Y")) {
+					throw new SkipException("Test Case Data Set Runmode is no.");
+				}
+
+				VerifyConnection vc = new VerifyConnection();
+				vc.verifyConnection();
+	}
+	
+	@DataProvider
+	public Object[][] getData() {
+		return TestUtil.getData("VerifyConnection", BaseClass.xls1);
+	}
+
+	
+	
+	/*
+	 * @AfterMethod public void tearDown() throws Exception {
+	 * BaseClass.closeBrowser(); }
+	 */
+}

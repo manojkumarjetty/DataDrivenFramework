@@ -1,0 +1,112 @@
+package com.disuite.pages.thoughtspot;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class JdbcConnectionMethods extends BaseClass{
+	DataFlowCreation dfc = new DataFlowCreation();
+	SQLServerDataFlowCreation ssc= new SQLServerDataFlowCreation();
+	URLNavigations url = new URLNavigations();
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+
+	/*
+	 * Method for Creating Hive Connection
+	 */
+	public void createJdbcConnection(String connectionName, String SelectValue, String DriverName,
+			String JDBCUrl, String JDBCDriverJar, String Username, String Password, String DBtype,
+			String Dbname, String AddTableSync, String TsTable, String schEncChar, 
+			String ExtractType, String ExtractionMode) throws InterruptedException, AWTException{
+		url.openThoughtSpot();
+		dfc.clickOnConnections();
+		dfc.addConnection();
+		jdbcConnectionDetails(connectionName, SelectValue, DriverName, JDBCUrl, JDBCDriverJar, Username, Password, 
+				AddTableSync, DBtype, Dbname, TsTable, schEncChar, ExtractionMode, ExtractType);
+		pause(10000);
+		// verifyConnectionSuccess();
+		dfc.addTableSync();
+		pause(5000);
+		ssc.tableSetup(DBtype, Dbname, AddTableSync);
+		dfc.setUpSync();
+		dfc.scheduleDoesNotRepeat();
+		// repeatHourly();
+		dfc.advancedSetup();
+		dfc.mapTableAndColumns(TsTable);
+		pause(10000);
+		// verifyToastMessage();
+		// clickOnConnections();
+		dfc.clickOnTable();
+		dfc.selectConnection(TsTable);
+		//Thread.sleep(3000);
+		dfc.pageRefresh();
+		dfc.clickOnViewLogIcon();
+		dfc.verifyExtractType(ExtractType);
+		dfc.verifyExtractionMode(ExtractionMode);
+		dfc.loadType();
+		dfc.numberOfRows();
+		dfc.clickOnClose();
+		dfc.tsLogout();
+	}
+
+	public void jdbcConnectionDetails(String connectionName, String SelectValue, String DriverName,
+			String JDBCUrl, String JDBCDriverJar, String Username, String Password, String DBtype,
+			String Dbname, String AddTableSync, String TsTable, String schEncChar,
+			String ExtractType, String ExtractionMode) throws AWTException {
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_INPUT"))).sendKeys(connectionName);
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_CONNECTION_TYPE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_TYPE_INPUT"))).sendKeys(SelectValue);
+		driver.findElement(By.xpath(OR.getProperty("DROP_DOWN_VALUE"))).click();
+		
+		driver.findElement(By.xpath(OR.getProperty("DRIVER_NAME"))).sendKeys(DriverName);
+		driver.findElement(By.xpath(OR.getProperty("JDBC_URL"))).sendKeys(JDBCUrl);
+		driver.findElement(By.xpath(OR.getProperty("JDBC_DRIVER_JAR"))).click();
+		
+		pause(3000);
+		StringSelection s=new StringSelection(CONFIG.getProperty("mssqljar"));
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_CONTROL);
+		r.keyPress(KeyEvent.VK_V);
+		r.keyRelease(KeyEvent.VK_V);
+		r.keyRelease(KeyEvent.VK_CONTROL);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+
+		
+		driver.findElement(By.xpath(OR.getProperty("USER"))).sendKeys(Username);
+		driver.findElement(By.xpath(OR.getProperty("PASSWORD"))).sendKeys(Password);
+		
+
+		WebElement createbutton = driver
+				.findElement(By.xpath("//div[@class='rd-button-wrapper']//span[text()='Create Connection']"));
+		if (createbutton.isEnabled()) {
+			// createbutton.click();
+			js.executeScript("arguments[0].click();", createbutton);
+			logger.info("Create Connection clicked");
+		} else {
+			logger.info("Enter all required fields to enable create connection button");
+		}
+		pause(10000);
+		/*
+		 * driver.findElement(By.xpath("//a[contains(text(),' diappdb_stg ')]")).click()
+		 * ; pause(10000);
+		 * driver.findElement(By.xpath("//a[contains(text(),' dbo ')]")).click();
+		 * pause(10000);
+		 * driver.findElement(By.xpath("//a[contains(text(),'sel_medium')]")).click();
+		 */
+		 
+	}
+	
+
+	
+}

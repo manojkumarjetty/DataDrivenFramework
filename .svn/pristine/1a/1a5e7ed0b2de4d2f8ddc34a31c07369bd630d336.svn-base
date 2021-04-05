@@ -1,0 +1,182 @@
+package com.disuite.pages.thoughtspot;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import com.disuite.base.BaseClass;
+import com.disuite.base.URLNavigations;
+
+public class SnowFlakeDataFlowCreation extends BaseClass {
+
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	DataFlowCreation df = new DataFlowCreation();
+	URLNavigations url = new URLNavigations();
+	SQLServerDataFlowCreation sql = new SQLServerDataFlowCreation();
+	SyncProperties syncp = new SyncProperties();
+
+	String Host = null;
+	String Port = null;
+	String Username = null;
+	String Password = null;
+	String Database = null;
+	String Version = null;
+
+	public SnowFlakeDataFlowCreation snowFlakeDataFlowCreation(String connectionName, String SelectValue,
+			String Account, String Username, String Password, String Role, String Warehouse, String TsTable,
+			String DBtype, String Dbname, String AddTableSync, String syncProperty, String addCondition,
+			String syncMode, String synCompletionValue, String moveItPath, String waitForFile, String preSyncQuery,
+			String postSyncQuery, String extractionModeInput, String dataloadingModeInput, String syncColumnDelimiter,
+			String nullValue, String nullValuedrp, String escapeCharacter, String enclosingCharacterInput,
+			String escapeUnclosedField, String fieldOptionallyEnclosedBy, String bufferSize, String dateStyleValue,
+			String dateDelimiter, String timeStyleValue, String timeDelimiter, String timeDelimiterValue,
+			String booleanRepresentationValue, String skipTrailerRowsValue, String readerEncoderValue, String fetchSize,
+			String nullIfValue, String maxFileSize, String parallelValue, String stageLocation,
+			String allowLargeResultSet,String readTimeout, String tsLoadOptions, String ExtractType, String ExtractionMode)
+			throws InterruptedException {
+		url.openThoughtSpot();
+		df.headerVerification();
+		df.clickOnConnections();
+		df.addConnection();
+		/*
+		 * df.enterConnectionDetails(ConnectionName, SelectValue, Host, Port, Username,
+		 * Password, Database, Version, jdbcoptions, Config_Version, FilePath,
+		 * FileProtocol, FileHost, FilePort, FileUsername, FilePassword, Keyfile,
+		 * AuthenticationType, Passphrasekey);
+		 */
+		snowFlakeConnectionDetails(connectionName, SelectValue, Account, Username, Password, Role, Warehouse);
+		pause(1000);
+		createButton();
+		// verifyConnectionSuccess();
+		df.addTableSync();
+		sql.tableSetup(DBtype, Dbname, AddTableSync);
+		df.setUpSync();
+		df.scheduleDoesNotRepeat();
+		// repeatHourly();
+		df.advancedSetup();
+		if ((syncProperty != null) && (syncProperty.equals("Yes"))) {
+			syncp.tsSyncProperties(SelectValue, addCondition, syncMode, synCompletionValue, moveItPath, waitForFile,
+					preSyncQuery, postSyncQuery, extractionModeInput, dataloadingModeInput, syncColumnDelimiter,
+					nullValue, nullValuedrp, escapeCharacter, enclosingCharacterInput, escapeUnclosedField,
+					fieldOptionallyEnclosedBy, bufferSize, dateStyleValue, dateDelimiter, timeStyleValue, timeDelimiter,
+					timeDelimiterValue, booleanRepresentationValue, skipTrailerRowsValue, readerEncoderValue, fetchSize,
+					nullIfValue, maxFileSize, parallelValue, stageLocation, allowLargeResultSet, readTimeout,
+					tsLoadOptions);
+			driver.findElement(By.xpath(OR.getProperty("MAP_TABLES_COLUMNS_TAB"))).click();
+		}
+
+
+		mapTableAndColumns(TsTable);
+		pause(10000);
+		df.clickOnConnections();
+		pause(2000);
+		// verifyToastMessage();
+		// clickOnConnections();
+		df.selectConnection(connectionName);
+		pause(2000);
+		df.clickOnTable();
+		df.selectTable(TsTable);
+		df.pageRefresh();
+		df.clickOnViewLogIcon();
+		df.verifyExtractType(ExtractType);
+		df.verifyExtractionMode(ExtractionMode);
+		df.loadType();
+		df.numberOfRows();
+		df.clickOnClose();
+		df.tsLogout();
+
+		return new SnowFlakeDataFlowCreation();
+	}
+
+	public void snowFlakeConnectionDetails(String connectionName, String selectValue, String Account, String Username,
+			String Password, String Role, String Warehouse) {
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_INPUT"))).sendKeys(connectionName);
+		driver.findElement(By.xpath(OR.getProperty("DROPDOWN_CONNECTION_TYPE"))).click();
+		driver.findElement(By.xpath(OR.getProperty("CONNECTION_TYPE_INPUT"))).sendKeys(selectValue);
+		logger.info("---------------Executing " + selectValue + " dataflow---------------");
+		driver.findElement(By.xpath(OR.getProperty("DROP_DOWN_VALUE"))).click();
+		String Connectin_type = driver.findElement(By.id("selectHeadId")).getText();
+		logger.info("Displaying header: " + Connectin_type);
+		driver.findElement(By.xpath(OR.getProperty("ACCOUNT_INPUT"))).sendKeys(Account);
+		driver.findElement(By.xpath(OR.getProperty("ENTER_USERNAME"))).sendKeys(Username);
+		logger.info("Entered username in the username textbox");
+		driver.findElement(By.xpath(OR.getProperty("ENTER_PASSWORD"))).sendKeys(Password);
+		logger.info("Entered password in the password textbox");
+		driver.findElement(By.xpath(OR.getProperty("ACCOUNT_ROLE"))).sendKeys(Role);
+
+		driver.findElement(By.xpath("//bk-select[@name='repconn-create-layover-name-wrhloc']//div[@id='selectHeadId']"))
+				.click();
+		pause(1000);
+		// driver.findElement(By.xpath("//div[contains(text(),'DIYOTTA')]")).click();
+
+		List<WebElement> wareHouseList = driver.findElements(By.xpath("//bk-action-menu[@class='bk-select-options']"));
+		// logger.info("WareHouse list: " + wareHouseList);
+		for (WebElement sample : wareHouseList) {
+			if (sample.getText().equals(Warehouse)) {
+				sample.click();
+				logger.info(sample);
+				break;
+			}
+		}
+
+	}
+
+	public void createButton() {
+		WebElement createbutton = driver
+				.findElement(By.xpath("//div[@class='rd-button-wrapper']//span[text()='Create Connection']"));
+		if (createbutton.isEnabled()) {
+			// createbutton.click();
+			js.executeScript("arguments[0].click();", createbutton);
+			logger.info("Create Connection clicked");
+		} else {
+			logger.info("Enter all required fields to enable create connection button");
+		}
+	}
+
+	public void tableSetupMedium() {
+		driver.findElement(By.xpath("//a[contains(text(),'DEMO_SRC')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'PUBLIC')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'SEL_MEDIUM')]")).click();
+	}
+
+	public void tableSetupAdt() {
+		driver.findElement(By.xpath("//a[contains(text(),'DEMO_SRC')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'PUBLIC')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'SEL_ALL_DATA_TYPES')]")).click();
+	}
+
+	public void tableSetupStrictNames() {
+		driver.findElement(By.xpath("//a[contains(text(),'DEMO_SRC')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'PUBLIC')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'sel_$tr!ct #%^&*()_+-=n@me')]")).click();
+	}
+
+	public void mapTableAndColumns(String tsTable) {
+		driver.findElement(By.xpath(OR.getProperty("THOUGHTSPOT_TABLE"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("THOUGHTSPOT_TABLE"))).sendKeys(tsTable);
+		pause(1000);
+		driver.findElement(By.xpath(OR.getProperty("TOGGLE_PRIMARY_KEY"))).click();
+		pause(1000);
+		driver.findElement(By.xpath(OR.getProperty("SAVE_AND_SYNC_NOW"))).click();
+	}
+
+	public void mapTableAndColumnsStrictNames(String tsTable2) {
+		driver.findElement(By.xpath(OR.getProperty("THOUGHTSPOT_TABLE"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("THOUGHTSPOT_TABLE"))).sendKeys(tsTable2);
+		pause(1000);
+		driver.findElement(By.xpath(OR.getProperty("TOGGLE_PRIMARY_KEY"))).click();
+		pause(1000);
+		driver.findElement(By.xpath(OR.getProperty("SAVE_AND_SYNC_NOW"))).click();
+	}
+
+	public void mapTableAndColumnsADT(String tsTable3) {
+		driver.findElement(By.xpath(OR.getProperty("THOUGHTSPOT_TABLE"))).clear();
+		driver.findElement(By.xpath(OR.getProperty("THOUGHTSPOT_TABLE"))).sendKeys(tsTable3);
+		pause(1000);
+		driver.findElement(By.xpath(OR.getProperty("TOGGLE_PRIMARY_KEY"))).click();
+		pause(1000);
+		driver.findElement(By.xpath(OR.getProperty("SAVE_AND_SYNC_NOW"))).click();
+	}
+}
